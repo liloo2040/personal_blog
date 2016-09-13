@@ -1,0 +1,111 @@
+body {
+  font-family: Arial,'Free Sans',sans-serif;
+font-size: 14px;
+  color: #011b1d;
+  background: transparent;
+  padding: 0px;
+}
+
+a:link {
+  text-decoration:none;
+  color: #045097;
+}
+
+a:visited {
+  text-decoration:none;
+  color: #001222;
+}
+
+a:hover {
+  text-decoration:none;
+  color: #022A50;
+}
+/* Barre de navigation */
+
+/*--- Fixer la navbar ----*/
+#barre_nav{
+position: fixed;
+top: -20px;
+width: 100%;
+left: 0;
+z-index: 9999;
+}
+/* Espacement avant et après barre de navigation */ 
+#barre_nav {
+margin-top: -20px;
+margin-bottom: 20px;
+width: 100%;
+postion: fixed;
+top: 0px;
+}
+
+#barre_nav .section:last-child li {
+padding-right: 0
+}
+
+/* Espacement et bordure premier lien */
+#barre_nav .section:first-child li {
+padding-left: 0px;}
+
+/* Fond et bordure barre de navigation */
+#barre_nav ul {
+text-align: center;
+padding: 10px;
+background-color: #6fb88e;
+opacity: 0.8;
+top: 0px;}
+
+/* Police et couleur des liens */
+#barre_nav li a {
+font-family: 'Century Gothic','URW Gothic L', sans-serif;
+font-size: 16px;
+margin-right: 20px;
+text-transform: uppercase;
+color: #ffffff;
+}
+
+/* Visiblité liens */
+#barre_nav ul {
+overflow: visible;}
+
+/* Police et couleur des liens survolés */
+#barre_nav li.selected a, #barre_nav li a:hover {
+text-decoration: bold;
+padding: 5px;
+letter-spacing: 5px;
+-moz-transition-duration: 0.4s;
+-webkit-transition-duration: 0.4s;
+-o-transition-duration: 0.4s;
+transition-duration: 0.4s;
+
+}
+
+/* Centrer la barre de navigation */
+#barre_nav li, #barre_nav li {
+display: inline-block;
+float: none;}
+
+/* Barre de rechercher */
+#searchThis{
+float:right;
+}
+
+#searchBox{
+border: 1px solid #FFFFFF;
+background: #6fb88e;
+padding: 4px;
+border-radius: 4px;
+color: #FFFFFF;
+font-family: Arial,'Free Sans',sans-serif;
+}
+
+#searchButton{
+background: #FFFFFF;
+color: #6fb88e;
+padding: 4px;
+text-transform: uppercase;
+font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
+font-weight: bold;
+border: none;
+letter-spacing: 1px;
+}

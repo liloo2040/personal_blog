@@ -1,0 +1,64 @@
+<html>
+<head>
+<meta charset="utf-8"/>
+	<meta content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1' name='viewport'/>
+	<link rel="stylesheet" type="text/css" href="css.css">
+</head>
+<body>
+<nav>
+<div id='barre_nav'>
+<ul>
+<li><a href='http://cinetvevents.blogspot.fr'>Accueil</a></li>
+<li>On en parle</li>
+<li><a href='http://cinetvevents.blogspot.fr/p/mes-series-cultes.html'>Du Petit...</a></li> 
+<li>au grand écran</li>
+  <li><a href='http://cinetvevents.blogspot.fr/p/blog-page_10.html'>Pages après pages</a></li>
+<li>Ici et là-bas</li>
+<li><a href='http://cinetvevents.blogspot.fr/p/blog-page_5.html'>A propos</a></li>
+<li><form action='/search' id='searchThis' method='get' style='display: inline;'><input id='searchBox' name='q' onblur='if(this.value==&apos;&apos;)this.value=this.defaultValue;' onfocus='if(this.value==this.defaultValue)this.value=&apos;&apos;;' type='text' value='Rechercher sur ce blog' vinput=''/> <input id='searchButton' type='submit' value='Go'/></form></li></ul>
+
+</div>
+</nav>
+<div class="container">
+<header>
+<div class="slider-container">
+  <img class="slide" src="challengeseries2016_01.png">
+  <img class="slide" src="startrekbeyond_review_01.jpg">
+  <img class="slide" src="img_mountains.jpg">
+  <div class="w3-center w3-display-bottomleft" style="width:100%">
+    <div class="arrow-left" onclick="plusDivs(-1)">&#10094;</div>
+    <div class="arrow-right" onclick="plusDivs(1)">&#10095;</div>
+    <span class="w3-badge demo w3-border" onclick="currentDiv(1)">qsdfghjkl</span>
+    <span class="w3-badge demo w3-border" onclick="currentDiv(2)">sdfghjk</span>
+    <span class="w3-badge demo w3-border" onclick="currentDiv(3)">azertyuiop</span>
+  </div>
+</div>
+</header>
+<div class="content">
+<p>sdfghjklgrergorijesgjsvfyjzbqkjsnclkzdnc</p>
+</div>
+<footer>
+	<p>qsdfghjklm</p>
+</footer>
+</div>
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+    showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length} ;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    x[slideIndex-1].style.display = "block";
+}
+</script>
+</body>
+</html>
