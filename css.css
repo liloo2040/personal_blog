@@ -51,7 +51,7 @@ padding-left: 0px;}
 #barre_nav ul {
 text-align: center;
 padding: 10px;
-background-color: #6fb88e;
+background-color: #011b1d;
 opacity: 0.8;
 top: 0px;}
 
@@ -88,11 +88,12 @@ float: none;}
 /* Barre de rechercher */
 #searchThis{
 float:right;
+vertical-align: center;
 }
 
 #searchBox{
 border: 1px solid #FFFFFF;
-background: #6fb88e;
+background: #011b1d;
 padding: 4px;
 border-radius: 4px;
 color: #FFFFFF;
@@ -101,11 +102,60 @@ font-family: Arial,'Free Sans',sans-serif;
 
 #searchButton{
 background: #FFFFFF;
-color: #6fb88e;
+color: #011b1d;
 padding: 4px;
 text-transform: uppercase;
 font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
 font-weight: bold;
 border: none;
 letter-spacing: 1px;
+}
+
+
+/----Header----/
+header{
+	margin-top: 100px;
+	width: 100%;
+}
+
+/---- Slideshow---/
+.slideshow { 
+	list-style: none;
+	margin: 0;
+	margin-top: 200px;
+	padding: 0;
+    overflow: hidden;
+}
+
+.slideshow li { 
+	display: none;
+	list-style: none;
+	margin: 0 -100% 0 0;
+	width: 100%;
+   
+}
+
+.slideshow li:first-child{
+	display: block;
+}
+.slideshow img {
+	max-width: 100%;
+	vertical-align: top;
+	background-size: cover;
+}
+.caption {
+	position: absolute;
+	margin-bottom: -20px;
+	background: rgba(0, 0, 0, 0.8);
+	padding: 4px;
+	text-align: center;
+	margin-left: -10px;
+	font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
+	width: 100%;
+
+}
+/----- Content -----/
+.content {
+	width: 100%;
+	margin: auto;
 }
