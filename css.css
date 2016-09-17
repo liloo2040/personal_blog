@@ -4,6 +4,7 @@ font-size: 14px;
   color: #011b1d;
   background: transparent;
   padding: 0px;
+  margin: 0;
 }
 
 a:link {
@@ -35,7 +36,7 @@ z-index: 9999;
 margin-top: -20px;
 margin-bottom: 20px;
 width: 100%;
-postion: fixed;
+position: fixed;
 top: 0px;
 }
 
