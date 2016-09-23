@@ -117,6 +117,7 @@ letter-spacing: 1px;
 header{
 	margin-top: 100px;
 	width: 100%;
+	height: 300px;
 }
 
 /---- Slideshow---/
@@ -126,6 +127,8 @@ header{
 	margin-top: 200px;
 	padding: 0;
     overflow: hidden;
+    width: 100%;
+    height: 400px;
 }
 
 .slideshow li { 
@@ -133,6 +136,7 @@ header{
 	list-style: none;
 	margin: 0 -100% 0 0;
 	width: 100%;
+	height: 400px;
    
 }
 
@@ -140,23 +144,118 @@ header{
 	display: block;
 }
 .slideshow img {
+	width: 100%;
+	height: 400px;
 	max-width: 100%;
 	vertical-align: top;
 	background-size: cover;
 }
-.caption {
-	position: absolute;
-	margin-bottom: -20px;
-	background: rgba(0, 0, 0, 0.8);
-	padding: 4px;
-	text-align: center;
-	margin-left: -10px;
-	font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
-	width: 100%;
 
 }
 /----- Content -----/
 .content {
 	width: 100%;
 	margin: auto;
+}
+
+/---- Aside --- /
+
+.container {
+	display: flex;
+	flex-direction: row;
+	align-content: center;
+}
+#agenda{
+	width: 300px;
+	flex-direction: row;
+	align-content: center;
+	border: 1px solid black;
+	padding: 4px;
+	margin: 10px;
+	float: left;
+}	
+#sortiescine {
+	width: 300px;
+	flex-direction: row;
+	align-content: center;
+	border: 1px solid #00001A;
+	margin: 10px;
+	padding: 4px;
+	clear: both;
+}
+
+/-- Challenge Séries --/
+
+/* Galerie Photo */
+#galerie_photo {
+max-width: 100%;
+text-align: center;
+}
+
+#galerie_photo .GPimg {
+max-width: 40%;
+width: 150px;
+height: 150px;
+display: inline-block;
+background-position: 50% 50%;
+background-size: cover;
+padding: 0;
+margin: 4px;
+border-radius: 70px;
+}
+
+#galerie_photo .GPimg:hover {
+transformation: scale (1.25);
+
+}
+
+#challengeseries {
+background-color: #6AB7FE;
+text-align: center;
+margin: auto;
+padding: 10px;
+width: 600px;
+float: right;
+}
+
+#challengeseries h3{
+color: #001222;
+font-size: 18px;
+text-transform: uppercase;
+font-weight: bold;
+border-bottom: 1px solid #001222;
+font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
+}
+
+.statut {
+color: transparent;
+}
+
+.statut:hover{
+background-color:#004445;
+opacity: 0.8;
+color: #FFFFFF;
+font-weight: lighter;
+font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
+transition-duration: 0.4s;
+z-index: 9999;
+width: 150px;
+height: 150px;
+border-radius: 70px;
+font-size: 25px;
+vertical-align: middle;
+}
+
+.statuttermine {
+background-color: #022330;
+opacity: 0.8;
+color: #FFFFFF;
+width: 150px;
+height: 150px;
+font-weight: lighter;
+border-radius: 70px;
+text-transform: uppercase;
+font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
+z-index: 9999;
+vertical-align: middle;
 }
