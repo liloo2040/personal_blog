@@ -1,10 +1,15 @@
 body {
   font-family: Arial,'Free Sans',sans-serif;
-font-size: 14px;
+  font-size: 14px;
   color: #011b1d;
   background: transparent;
   padding: 0px;
   margin: 0;
+  background: white; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(white, #011b1d); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(white, #011b1d); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(white, #011b1d); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(white, #011b1d); /* Standard syntax */
 }
 
 a:link {
@@ -54,7 +59,7 @@ text-align: center;
 padding: 10px;
 background-color: #011b1d;
 opacity: 0.8;
-top: 0px;}
+top: -20px;}
 
 /* Police et couleur des liens */
 #barre_nav li a {
@@ -73,7 +78,7 @@ overflow: visible;}
 #barre_nav li.selected a, #barre_nav li a:hover {
 text-decoration: bold;
 padding: 5px;
-letter-spacing: 5px;
+letter-spacing: 2px;
 -moz-transition-duration: 0.4s;
 -webkit-transition-duration: 0.4s;
 -o-transition-duration: 0.4s;
@@ -90,6 +95,7 @@ float: none;}
 #searchThis{
 float:right;
 vertical-align: center;
+margin-top: 10px;
 }
 
 #searchBox{
@@ -118,6 +124,7 @@ header{
 	margin-top: 100px;
 	width: 100%;
 	height: 300px;
+	border: 1px solid black;
 }
 
 /---- Slideshow---/
@@ -159,29 +166,49 @@ header{
 }
 
 /---- Aside --- /
-
-.container {
-	display: flex;
-	flex-direction: row;
-	align-content: center;
+.contenu {
+	overflow: auto;
 }
-#agenda{
-	width: 300px;
-	flex-direction: row;
-	align-content: center;
-	border: 1px solid black;
+
+#agendatv{
+	width: 290px;
+	border: 5px solid black;
 	padding: 4px;
-	margin: 10px;
+	margin-left: 10px;
+	height: 200px;
 	float: left;
 }	
 #sortiescine {
 	width: 300px;
-	flex-direction: row;
-	align-content: center;
 	border: 1px solid #00001A;
-	margin: 10px;
+	background-color: #000000;
+	color: #FFFFFF;
+	margin-left: 10px;
 	padding: 4px;
-	clear: both;
+	height: 200px;
+	float: left;
+}
+#sortiescine h3{
+	text-align: center;
+	font-family: 'Open Sans', serif;
+	text-transform: uppercase;
+	border-bottom: 1px solid #FFFFFF;
+}
+#leonardnimoy {
+	width: 300px;
+	height: 200px;
+	padding: 4px;
+	margin-left: 10px;
+	border: 1px solid blue;
+	float: left;
+}
+#billetspop{
+	width: 300px;
+	height: 200px;
+	margin-left: 10px;
+	border: 1px solid yellow;
+	padding: 4px;
+	float: left;
 }
 
 /-- Challenge Séries --/
@@ -189,11 +216,12 @@ header{
 /* Galerie Photo */
 #galerie_photo {
 max-width: 100%;
+width: 100%;
 text-align: center;
 }
 
 #galerie_photo .GPimg {
-max-width: 40%;
+max-width: 100%;
 width: 150px;
 height: 150px;
 display: inline-block;
@@ -201,21 +229,13 @@ background-position: 50% 50%;
 background-size: cover;
 padding: 0;
 margin: 4px;
-border-radius: 70px;
-}
-
-#galerie_photo .GPimg:hover {
-transformation: scale (1.25);
-
+border-radius: 80px;
 }
 
 #challengeseries {
-background-color: #6AB7FE;
 text-align: center;
 margin: auto;
-padding: 10px;
-width: 600px;
-float: right;
+width: 100%;
 }
 
 #challengeseries h3{
@@ -225,6 +245,7 @@ text-transform: uppercase;
 font-weight: bold;
 border-bottom: 1px solid #001222;
 font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
+letter-spacing: 4px;
 }
 
 .statut {
@@ -241,21 +262,39 @@ transition-duration: 0.4s;
 z-index: 9999;
 width: 150px;
 height: 150px;
-border-radius: 70px;
+border-radius: 80px;
 font-size: 25px;
 vertical-align: middle;
 }
 
 .statuttermine {
-background-color: #022330;
+background-color: #ffffff;
+opacity: 0.5;
+width: 150px;
+height: 150px;
+font-weight: lighter;
+border-radius: 80px;
+text-transform: uppercase;
+font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
+z-index: 9999;
+}
+.statuttermine:hover {
+background-color: #011b1d;
 opacity: 0.8;
 color: #FFFFFF;
 width: 150px;
 height: 150px;
 font-weight: lighter;
-border-radius: 70px;
+border-radius: 80px;
+content: 'Terminé';
+transition-duration: 0.4s;
 text-transform: uppercase;
 font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
 z-index: 9999;
-vertical-align: middle;
+}
+/---- Billets ----/
+main {
+	width: 100%;
+	max-width: 100%;
+	margin: auto;
 }
