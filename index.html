@@ -20,13 +20,41 @@
 </div>
 </nav>
 <header>
-<p>sdfghjklgrergorijesgjsvfyjzbqkjsnclkzdnc</p>
+ <div class="slideshow-container">
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="img.jpg" style="width:100%">
+    <div class="text">Caption Text</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="img2.jpg" style="width:100%">
+    <div class="text">Caption Two</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="img3.jpg" style="width:100%">
+    <div class="text">Caption Three</div>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
 </header>
 <div class="contenu">
 <div id="agendatv">
-<h1>Agenda TV</h1>
+<h3>Agenda TV</h1>
 <p>-<b>Scrubs</b><br /> - Intégrale - Du lundi au vendredi - de 15 h 20 à 17 h 10 - France Ô<br/>
--<b>2 Broke Girls</b><br/> - Saisons 1 et 2 - Samedi et dimanche à partir de 9 h 50 - NT1<br/>
+-<b>2 Broke Girls</b><br/> -<img src="https://3.bp.blogspot.com/-C2zQuUZyi38/V73CS1659bI/AAAAAAAAAbM/fOF7on-WsSgLlyXo0QKT3XroDAZNCWnggCLcB/s1600/cs2016_2brokegirls.jpg" class="tv" align="middle" /> Saison 3 - Dimanche à partir de 9 h 00 - NT1<br/>
 </p>
 </div>
 <div id="sortiescine">
@@ -80,18 +108,20 @@ Lorem ipsum
 			  integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
 			  crossorigin="anonymous"></script>
 <script>
-  (function($){
-    var slideInterval = 2000,
-        fadeDuration = 600,
-        $slideshow = $('.slideshow');
-    setInterval(function(){
-      var $slides = $slideshow.children();
-      $slides.eq(0).fadeOut(fadeDuration, function(){
-        $(this).appendTo($slideshow);
-      });
-      $slides.eq(1).fadeIn(fadeDuration);
-    }, slideInterval);
-  })(jQuery);
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}
+    slides[slideIndex-1].style.display = "block";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
 </script>
 </body>
 </html>
