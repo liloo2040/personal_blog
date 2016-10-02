@@ -23,14 +23,14 @@
  <div class="slideshow-container">
   <div class="mySlides fade">
     <div class="numbertext">1 / 3</div>
-    <img src="img.jpg" style="width:100%">
-    <div class="text">Caption Text</div>
+    <img src="challengeseries2016_banniere_01.png" style="width:100%">
+    <div class="text">Bilan du mois de septembre</div>
   </div>
 
   <div class="mySlides fade">
     <div class="numbertext">2 / 3</div>
-    <img src="img2.jpg" style="width:100%">
-    <div class="text">Caption Two</div>
+    <img src="startrekbeyond_review_01.jpg" style="width:100%">
+    <div class="text">Critique #StarTrekBeyond</div>
   </div>
 
   <div class="mySlides fade">
@@ -65,7 +65,48 @@
 <div id="leonardnimoy">
 </div>
 <div id="billetspop">
-Lorem ipsum
+ <b:widget id='PopularPosts1' locked='false' title='Billets les plus consultés' type='PopularPosts' visible='true'>
+    <b:includable id='main'>
+  <b:if cond='data:title != &quot;&quot;'><h2><data:title/></h2></b:if>
+  <div class='widget-content popular-posts'>
+    <ul>
+      <b:loop values='data:posts' var='post'>
+      <li>
+        <b:if cond='!data:showThumbnails'>
+          <b:if cond='!data:showSnippets'>
+            <!-- (1) No snippet/thumbnail -->
+            <a expr:href='data:post.href'><data:post.title/></a>
+          <b:else/>
+            <!-- (2) Show only snippets -->
+            <div class='item-title'><a expr:href='data:post.href'><data:post.title/></a></div>
+            <div class='item-snippet'><data:post.snippet/></div>
+          </b:if>
+        <b:else/>
+          <!-- (3) Show only thumbnails or (4) Snippets and thumbnails. -->
+          <div expr:class='data:showSnippets ? &quot;item-content&quot; : &quot;item-thumbnail-only&quot;'>
+            <b:if cond='data:post.featuredImage.isResizable or data:post.thumbnail'>
+              <div class='item-thumbnail'>
+                <a expr:href='data:post.href' target='_blank'>
+                  <b:with value='data:post.featuredImage.isResizable                                  ? resizeImage(data:post.featuredImage, 72, &quot;1:1&quot;)                                  : data:post.thumbnail' var='image'>
+                    <img alt='' border='0' expr:src='data:image'/>
+                  </b:with>
+                </a>
+              </div>
+            </b:if>
+            <div class='item-title'><a expr:href='data:post.href'><data:post.title/></a></div>
+            <b:if cond='data:showSnippets'>
+              <div class='item-snippet'><data:post.snippet/></div>
+            </b:if>
+          </div>
+          <div style='clear: both;'/>
+        </b:if>
+      </li>
+      </b:loop>
+    </ul>
+    <b:include name='quickedit'/>
+  </div>
+</b:includable>
+  </b:widget>
 </div>
 </div>
 <main>
@@ -75,11 +116,11 @@ Lorem ipsum
 <div id="challengeseries">
 <h3>Challenge Séries 2016 - #ChallengeSéries2016</h3>
 <div id="galerie_photo">
-<div class="GPimg" style="background-image: url('https://3.bp.blogspot.com/-C2zQuUZyi38/V73CS1659bI/AAAAAAAAAbM/fOF7on-WsSgLlyXo0QKT3XroDAZNCWnggCLcB/s1600/cs2016_2brokegirls.jpg');"><div class="statut">1.6 %</div></div>
+<div class="GPimg" style="background-image: url('https://3.bp.blogspot.com/-C2zQuUZyi38/V73CS1659bI/AAAAAAAAAbM/fOF7on-WsSgLlyXo0QKT3XroDAZNCWnggCLcB/s1600/cs2016_2brokegirls.jpg');"><div class="statut">18.6 %</div></div>
 <div class="GPimg" style="background-image:url('http://1.bp.blogspot.com/-LolVZWAS3Y0/VnnSRB8XrMI/AAAAAAAAAY0/t41Nn92DYsM/s1600/cs2016_agentcarter.jpg');">
 <div class="statuttermine">Terminé</div></div>
 
-<div class="GPimg" style="background-image: url('https://2.bp.blogspot.com/-l4wm72hgEgU/V73E5WqJsSI/AAAAAAAAAbY/b7qNaa9JxfIqEGtTWxbrd3AmKQS_aRD2wCLcB/s1600/cs2016_janethevirgin.jpg');"><div class="statut">6.8 %</div></div>
+<div class="GPimg" style="background-image: url('https://2.bp.blogspot.com/-l4wm72hgEgU/V73E5WqJsSI/AAAAAAAAAbY/b7qNaa9JxfIqEGtTWxbrd3AmKQS_aRD2wCLcB/s1600/cs2016_janethevirgin.jpg');"><div class="statut">13.6 %</div></div>
 <div class="GPimg" style="background-image: url('https://3.bp.blogspot.com/-XPS9G8NwJHc/VnsUewuymwI/AAAAAAAAAZM/LnYtGffIBWc/s1600/cs2016_justified.jpg');">
 <div class="statut">33.3%</div></div>
 
@@ -100,6 +141,7 @@ Lorem ipsum
 <a href='http://cinetvevents.blogspot.fr/p/challengeseries2015.html'>Mes autres Challenge Séries</a>
 </div>
 <footer>
+
 	<p>FOOTER qsdfghjklm</p>
 </footer>
 </div>
