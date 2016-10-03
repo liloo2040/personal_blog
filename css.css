@@ -429,6 +429,24 @@ color: #00688b;
 width: 100%;
 }
 
+.backtotop {
+position: fixed;
+bottom: 10px; /* increase value to move position up */
+right: 0px; /* increase value to move position left */
+color: #000000; /* color of text */
+background-color: #ffffff; /* background color of button */ 
+font-size: 12px; /* changes size of text */ 
+padding: 10px; /* add space around the text */
+text-transform: uppercase; /* change text to all caps */ 
+letter-spacing: 1.0px; /* space between letters */
+}
+
+.backtotop:hover {
+background-color: #333333; /* color of background on hover over */
+color: #ffffff; /* color of text on hover over */
+text-decoration: none; /* no underline */
+}
+
 /---------------------  MEDIA QUERIES ---------------------/
 
 /* Mobiles */
@@ -464,8 +482,8 @@ a:hover {
 
 /*--- Fixer la navbar ----*/
 #barre_nav{
-position: fixed;
-top: -20px;
+position: relative;
+top: 0px;
 width: 100%;
 left: 0;
 z-index: 9999;
@@ -475,7 +493,7 @@ z-index: 9999;
 margin-top: -20px;
 margin-bottom: 20px;
 width: 100%;
-position: fixed;
+position: relative;
 top: 0px;
 }
 
@@ -604,6 +622,8 @@ header{
   bottom: 8px;
   width: 100%;
   text-align: center;
+  background-color: rgba(0,0,0,0.8);
+  font-family: 'URW Gothic L','Century Gothic', sans-serif;
 }
 
 /* Number text (1/3 etc) */
@@ -861,4 +881,22 @@ color: #00688b;
 
 .footer {
 width: 100%;
+}
+
+.backtotop {
+position: fixed;
+bottom: 10px; /* increase value to move position up */
+right: 0px; /* increase value to move position left */
+color: #000000; /* color of text */
+background-color: #ffffff; /* background color of button */ 
+font-size: 12px; /* changes size of text */ 
+padding: 10px; /* add space around the text */
+text-transform: uppercase; /* change text to all caps */ 
+letter-spacing: 1.0px; /* space between letters */
+}
+
+.backtotop:hover {
+background-color: #333333; /* color of background on hover over */
+color: #ffffff; /* color of text on hover over */
+text-decoration: none; /* no underline */
 }

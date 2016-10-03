@@ -16,7 +16,9 @@
   <li><a href='http://cinetvevents.blogspot.fr/p/blog-page_10.html'>Pages après pages</a></li>
 <li><a href='#'>Ici et là-bas</a></li>
 <li><a href='http://cinetvevents.blogspot.fr/p/blog-page_5.html'>A propos</a></li>
-<li><form action='/search' id='searchThis' method='get' style='display: inline;'><input id='searchBox' name='q' onblur='if(this.value==&apos;&apos;)this.value=this.defaultValue;' onfocus='if(this.value==this.defaultValue)this.value=&apos;&apos;;' type='text' value='Rechercher sur ce blog' vinput=''/> <input id='searchButton' type='submit' value='Go'/></form></li></ul>
+<li><form action='/search' id='searchThis' method='get' style='display: inline;'><input id='searchBox' name='q' onblur='if(this.value==&apos;&apos;)this.value=this.defaultValue;' onfocus='if(this.value==this.defaultValue)this.value=&apos;&apos;;' type='text' value='Rechercher sur ce blog' vinput=''/> <input id='searchButton' type='submit' value='Go'/></form>
+</li>
+</ul>
 </div>
 </nav>
 <header>
@@ -143,6 +145,8 @@
 <footer>
 
 	<p>FOOTER qsdfghjklm</p>
+
+	<a href="#" class="backtotop">&uarr;</a>
 </footer>
 </div>
 <script
@@ -164,6 +168,26 @@ function showSlides() {
     slides[slideIndex-1].style.display = "block";
     setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
+</script>
+
+<script>
+jQuery(document).ready(function() {
+var offset = 300;
+var duration = 500;
+jQuery(window).scroll(function() {
+if (jQuery(this).scrollTop() > offset) {
+jQuery('.backtotop').fadeIn(duration);
+} else {
+jQuery('.backtotop').fadeOut(duration);
+}
+});
+
+jQuery('.backtotop').click(function(event) {
+event.preventDefault();
+jQuery('html, body').animate({scrollTop: 0}, duration);
+return false;
+})
+});
 </script>
 </body>
 </html>
