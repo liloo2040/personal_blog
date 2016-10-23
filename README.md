@@ -12,7 +12,7 @@
 * Search form in navbar
 * Posts previews
 * New layout for several features
-* New Blogger template created
+* New Blogger template created on XML file, with special tags
 
 **Coming Soon**
 * New social media icons
