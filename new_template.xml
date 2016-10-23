@@ -1,0 +1,2798 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+  <head>
+<link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two' rel='stylesheet' type='text/css'/>
+    
+    	<meta content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1' name='viewport'/>
+    <b:include data='blog' name='all-head-content'/>
+    <title><data:blog.pageTitle/></title>
+    <b:skin>
+    	<![CDATA[
+    	/
+    	---------------------
+    	Template design by Cine TV Events
+    	---------------------
+	body {
+  font-family: Arial,'Free Sans',sans-serif;
+  font-size: 14px;
+  color: #011b1d;
+  background: transparent;
+  padding: 0px;
+  margin: 0;
+  background: white; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(white, #011b1d); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(white, #011b1d); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(white, #011b1d); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(white, #011b1d); /* Standard syntax */
+}
+
+a:link {
+  text-decoration:none;
+  color: #045097;
+}
+
+a:visited {
+  text-decoration:none;
+  color: #001222;
+}
+
+a:hover {
+  text-decoration:none;
+  color: #022A50;
+}
+/* Barre de navigation */
+
+/*--- Fixer la navbar ----*/
+#barre_nav{
+position: fixed;
+top: -20px;
+width: 100%;
+left: 0;
+z-index: 9999;
+}
+/* Espacement avant et après barre de navigation */ 
+#barre_nav {
+margin-top: -20px;
+margin-bottom: 20px;
+width: 100%;
+position: fixed;
+top: 0px;
+}
+
+#barre_nav .section:last-child li {
+padding-right: 0
+}
+
+/* Espacement et bordure premier lien */
+#barre_nav .section:first-child li {
+padding-left: 0px;}
+
+/* Fond et bordure barre de navigation */
+#barre_nav ul {
+text-align: center;
+padding: 10px;
+background-color: #011b1d;
+opacity: 0.8;
+top: -20px;}
+
+/* Police et couleur des liens */
+#barre_nav li a {
+font-family: 'Century Gothic','URW Gothic L', sans-serif;
+font-size: 16px;
+margin-right: 20px;
+text-transform: uppercase;
+color: #ffffff;
+}
+
+/* Visiblité liens */
+#barre_nav ul {
+overflow: visible;}
+
+/* Police et couleur des liens survolés */
+#barre_nav li.selected a, #barre_nav li a:hover {
+text-decoration: bold;
+padding: 5px;
+letter-spacing: 2px;
+-moz-transition-duration: 0.4s;
+-webkit-transition-duration: 0.4s;
+-o-transition-duration: 0.4s;
+transition-duration: 0.4s;
+
+}
+
+/* Centrer la barre de navigation */
+#barre_nav li, #barre_nav li {
+display: inline-block;
+float: none;}
+
+/* Barre de rechercher */
+#searchThis{
+float:right;
+vertical-align: center;
+margin-top: 10px;
+}
+
+#searchBox{
+border: 1px solid #FFFFFF;
+background: #011b1d;
+padding: 4px;
+border-radius: 4px;
+color: #FFFFFF;
+font-family: Arial,'Free Sans',sans-serif;
+}
+
+#searchButton{
+background: #FFFFFF;
+color: #011b1d;
+padding: 4px;
+text-transform: uppercase;
+font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
+font-weight: bold;
+border: none;
+letter-spacing: 1px;
+}
+
+
+/----Header----/
+header{
+	margin-top: 100px;
+	width: 100%;
+	height: 300px;
+	border: 1px solid black;
+}
+
+/---- Slideshow---/
+ /* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+/----- Content -----/
+.content {
+	width: 100%;
+	margin: auto;
+}
+
+/---- Aside --- /
+.contenu {
+	overflow: auto;
+	margin-top: 20px;
+}
+
+#agendatv{
+	width: 290px;
+	padding: 4px;
+	margin-left: 10px;
+	height: auto;
+	float: left;
+	background-color: #FFFFFF;
+	box-shadow: 0px 1px 3px #000000;
+	font-family: 'Free Sans', Arial, sans-serif;
+}	
+#agendatv h3 {
+	background-color: red;
+	color: #FFFFFF;
+	text-transform: uppercase;
+	margin-top: -5px;
+	width: 99%;
+	margin-left: -5px;
+	padding: 6px;
+	font-size: 18px;
+	text-align: center;
+}
+
+.tv {
+	width: 80px;
+}
+#sortiescine {
+	width: 300px;
+	border: 1px solid #00001A;
+	background-color: #000000;
+	color: #FFFFFF;
+	margin-left: 10px;
+	padding: 4px;
+	height: 200px;
+	float: left;
+}
+#sortiescine h3{
+	text-align: center;
+	font-family: 'Open Sans', serif;
+	text-transform: uppercase;
+	border-bottom: 1px solid #FFFFFF;
+}
+#leonardnimoy {
+	width: 300px;
+	height: 200px;
+	padding: 4px;
+	margin-left: 10px;
+	border: 1px solid blue;
+	float: left;
+}
+#billetspop{
+	width: 300px;
+	height: 200px;
+	margin-left: 10px;
+	border: 1px solid yellow;
+	padding: 4px;
+	float: left;
+}
+
+/-- Challenge Séries --/
+
+/* Galerie Photo */
+#galerie_photo {
+max-width: 100%;
+width: 100%;
+text-align: center;
+}
+
+#galerie_photo .GPimg {
+max-width: 100%;
+width: 150px;
+height: 150px;
+display: inline-block;
+background-position: 50% 50%;
+background-size: cover;
+padding: 0;
+margin: 4px;
+border-radius: 80px;
+}
+
+#challengeseries {
+text-align: center;
+margin: auto;
+width: 100%;
+}
+
+#challengeseries h3{
+color: #001222;
+font-size: 18px;
+text-transform: uppercase;
+font-weight: bold;
+border-bottom: 1px solid #001222;
+font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
+letter-spacing: 4px;
+}
+
+.statut {
+color: transparent;
+}
+
+.statut:hover{
+background-color:#004445;
+opacity: 0.8;
+color: #FFFFFF;
+font-weight: lighter;
+font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
+transition-duration: 0.4s;
+z-index: 9999;
+width: 150px;
+height: 150px;
+border-radius: 80px;
+font-size: 25px;
+vertical-align: middle;
+}
+
+.statuttermine {
+background-color: #ffffff;
+opacity: 0.5;
+width: 150px;
+height: 150px;
+font-weight: lighter;
+border-radius: 80px;
+text-transform: uppercase;
+font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
+z-index: 9999;
+}
+.statuttermine:hover {
+background-color: #011b1d;
+opacity: 0.8;
+color: #FFFFFF;
+width: 150px;
+height: 150px;
+font-weight: lighter;
+border-radius: 80px;
+content: 'Terminé';
+transition-duration: 0.4s;
+text-transform: uppercase;
+font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
+z-index: 9999;
+}
+/---- Billets ----/
+main {
+	width: 100%;
+	max-width: 100%;
+	margin: auto;
+}
+
+.jump-link {
+display: none;
+}
+
+.jump-link a {
+}
+
+.jump-link a:hover {
+border: 1px solid #004445;
+}
+
+/----- Pied de page ----/
+#encart-intro {
+background-color: #8dc0b1;
+border-radius: 4px;
+border: 4px solid #a4d7c8;
+padding: 20px;
+}
+#encart-intro img {
+position: relative;
+float: none;
+}
+
+#encart-intro h2 {
+font-family: 'Trebuchet MS', sans-serif;
+font-weight: italic;
+font-size: 16px;
+color: #ddd;
+padding: 0;
+}
+
+.blog-pager {
+  background: none;
+}
+
+.blog-pager-older-link, .home-link,
+.blog-pager-newer-link {
+  background-color: none;
+font-family: 'Free Sans', Arial, sans-serif;
+text-transform: uppercase;
+font-size: 16px;
+  padding: 4px;
+}
+
+.footer-outer {
+background-color: #87cefa;
+color: #000000;
+}
+
+.footer-outer a:link {
+color: #00688b;
+}
+
+.footer {
+width: 100%;
+}
+
+.backtotop {
+position: fixed;
+bottom: 10px; /* increase value to move position up */
+right: 0px; /* increase value to move position left */
+color: #000000; /* color of text */
+background-color: #ffffff; /* background color of button */ 
+font-size: 12px; /* changes size of text */ 
+padding: 10px; /* add space around the text */
+text-transform: uppercase; /* change text to all caps */ 
+letter-spacing: 1.0px; /* space between letters */
+}
+
+.backtotop:hover {
+background-color: #333333; /* color of background on hover over */
+color: #ffffff; /* color of text on hover over */
+text-decoration: none; /* no underline */
+}
+
+/---------------------  MEDIA QUERIES ---------------------/
+
+/* Mobiles */
+@media only screen and (max-width : 480px) {body {
+  font-family: Arial,'Free Sans',sans-serif;
+  font-size: 14px;
+  color: #011b1d;
+  background: transparent;
+  padding: 0px;
+  margin: 0;
+  background: white; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(white, #011b1d); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(white, #011b1d); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(white, #011b1d); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(white, #011b1d); /* Standard syntax */
+}
+
+a:link {
+  text-decoration:none;
+  color: #045097;
+}
+
+a:visited {
+  text-decoration:none;
+  color: #001222;
+}
+
+a:hover {
+  text-decoration:none;
+  color: #022A50;
+}
+/* Barre de navigation */
+
+/*--- Fixer la navbar ----*/
+#barre_nav{
+position: relative;
+top: 0px;
+width: 100%;
+left: 0;
+z-index: 9999;
+}
+/* Espacement avant et après barre de navigation */ 
+#barre_nav {
+margin-top: -20px;
+margin-bottom: 20px;
+width: 100%;
+position: relative;
+top: 0px;
+}
+
+#barre_nav .section:last-child li {
+padding-right: 0
+}
+
+/* Espacement et bordure premier lien */
+#barre_nav .section:first-child li {
+padding-left: 0px;}
+
+/* Fond et bordure barre de navigation */
+#barre_nav ul {
+text-align: center;
+padding: 10px;
+background-color: #011b1d;
+opacity: 0.8;
+top: -20px;}
+
+/* Police et couleur des liens */
+#barre_nav li a {
+font-family: 'Century Gothic','URW Gothic L', sans-serif;
+font-size: 16px;
+margin-right: 20px;
+text-transform: uppercase;
+color: #ffffff;
+}
+
+/* Visiblité liens */
+#barre_nav ul {
+overflow: visible;}
+
+/* Police et couleur des liens survolés */
+#barre_nav li.selected a, #barre_nav li a:hover {
+text-decoration: bold;
+padding: 5px;
+letter-spacing: 2px;
+-moz-transition-duration: 0.4s;
+-webkit-transition-duration: 0.4s;
+-o-transition-duration: 0.4s;
+transition-duration: 0.4s;
+
+}
+
+/* Centrer la barre de navigation */
+#barre_nav li, #barre_nav li {
+display: inline-block;
+float: none;}
+
+/* Barre de rechercher */
+#searchThis{
+float:right;
+vertical-align: center;
+margin-top: 10px;
+}
+
+#searchBox{
+border: 1px solid #FFFFFF;
+background: #011b1d;
+padding: 4px;
+border-radius: 4px;
+color: #FFFFFF;
+font-family: Arial,'Free Sans',sans-serif;
+}
+
+#searchButton{
+background: #FFFFFF;
+color: #011b1d;
+padding: 4px;
+text-transform: uppercase;
+font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
+font-weight: bold;
+border: none;
+letter-spacing: 1px;
+}
+
+
+/----Header----/
+header{
+	margin-top: 100px;
+	width: 100%;
+	height: 300px;
+	border: 1px solid black;
+}
+
+/---- Slideshow---/
+ /* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0,0,0,0.8);
+  font-family: 'URW Gothic L','Century Gothic', sans-serif;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+/----- Content -----/
+.content {
+	width: 100%;
+	margin: auto;
+}
+
+/---- Aside --- /
+.contenu {
+	overflow: auto;
+	margin-top: 20px;
+}
+
+#agendatv{
+	width: 290px;
+	padding: 4px;
+	margin-left: 10px;
+	height: auto;
+	float: left;
+	background-color: #FFFFFF;
+	box-shadow: 0px 1px 3px #000000;
+	font-family: 'Free Sans', Arial, sans-serif;
+}	
+#agendatv h3 {
+	background-color: red;
+	color: #FFFFFF;
+	text-transform: uppercase;
+	margin-top: -5px;
+	width: 99%;
+	margin-left: -5px;
+	padding: 6px;
+	font-size: 18px;
+	text-align: center;
+}
+
+.tv {
+	width: 80px;
+}
+#sortiescine {
+	width: 300px;
+	border: 1px solid #00001A;
+	background-color: #000000;
+	color: #FFFFFF;
+	margin-left: 10px;
+	padding: 4px;
+	height: 200px;
+	float: left;
+}
+#sortiescine h3{
+	text-align: center;
+	font-family: 'Open Sans', serif;
+	text-transform: uppercase;
+	border-bottom: 1px solid #FFFFFF;
+}
+#leonardnimoy {
+	width: 300px;
+	height: 200px;
+	padding: 4px;
+	margin-left: 10px;
+	border: 1px solid blue;
+	float: left;
+}
+#billetspop{
+	width: 300px;
+	height: 200px;
+	margin-left: 10px;
+	border: 1px solid yellow;
+	padding: 4px;
+	float: left;
+}
+
+/-- Challenge Séries --/
+
+/* Galerie Photo */
+#galerie_photo {
+max-width: 100%;
+width: 100%;
+text-align: center;
+}
+
+#galerie_photo .GPimg {
+max-width: 100%;
+width: 150px;
+height: 150px;
+display: inline-block;
+background-position: 50% 50%;
+background-size: cover;
+padding: 0;
+margin: 4px;
+border-radius: 80px;
+}
+
+#challengeseries {
+text-align: center;
+margin: auto;
+width: 100%;
+}
+
+#challengeseries h3{
+color: #001222;
+font-size: 18px;
+text-transform: uppercase;
+font-weight: bold;
+border-bottom: 1px solid #001222;
+font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
+letter-spacing: 4px;
+}
+
+.statut {
+color: transparent;
+}
+
+.statut:hover{
+background-color:#004445;
+opacity: 0.8;
+color: #FFFFFF;
+font-weight: lighter;
+font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
+transition-duration: 0.4s;
+z-index: 9999;
+width: 150px;
+height: 150px;
+border-radius: 80px;
+font-size: 25px;
+vertical-align: middle;
+}
+
+.statuttermine {
+background-color: #ffffff;
+opacity: 0.5;
+width: 150px;
+height: 150px;
+font-weight: lighter;
+border-radius: 80px;
+text-transform: uppercase;
+font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
+z-index: 9999;
+}
+.statuttermine:hover {
+background-color: #011b1d;
+opacity: 0.8;
+color: #FFFFFF;
+width: 150px;
+height: 150px;
+font-weight: lighter;
+border-radius: 80px;
+content: 'Terminé';
+transition-duration: 0.4s;
+text-transform: uppercase;
+font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
+z-index: 9999;
+}
+/---- Billets ----/
+main {
+	width: 100%;
+	max-width: 100%;
+	margin: auto;
+}
+
+.jump-link {
+display: none;
+}
+
+.jump-link a {
+}
+
+.jump-link a:hover {
+border: 1px solid #004445;
+}
+
+/----- Pied de page ----/
+#encart-intro {
+background-color: #8dc0b1;
+border-radius: 4px;
+border: 4px solid #a4d7c8;
+padding: 20px;
+}
+#encart-intro img {
+position: relative;
+float: none;
+}
+
+#encart-intro h2 {
+font-family: 'Trebuchet MS', sans-serif;
+font-weight: italic;
+font-size: 16px;
+color: #ddd;
+padding: 0;
+}
+
+.blog-pager {
+  background: none;
+}
+
+.blog-pager-older-link, .home-link,
+.blog-pager-newer-link {
+  background-color: none;
+font-family: 'Free Sans', Arial, sans-serif;
+text-transform: uppercase;
+font-size: 16px;
+  padding: 4px;
+}
+
+.footer-outer {
+background-color: #87cefa;
+color: #000000;
+}
+
+.footer-outer a:link {
+color: #00688b;
+}
+
+.footer {
+width: 100%;
+}
+
+.backtotop {
+position: fixed;
+bottom: 10px; /* increase value to move position up */
+right: 0px; /* increase value to move position left */
+color: #000000; /* color of text */
+background-color: #ffffff; /* background color of button */ 
+font-size: 12px; /* changes size of text */ 
+padding: 10px; /* add space around the text */
+text-transform: uppercase; /* change text to all caps */ 
+letter-spacing: 1.0px; /* space between letters */
+}
+
+.backtotop:hover {
+background-color: #333333; /* color of background on hover over */
+color: #ffffff; /* color of text on hover over */
+text-decoration: none; /* no underline */
+}
+/---------------------  MEDIA QUERIES ---------------------/
+
+/* Mobiles */
+@media only screen and (max-width : 480px) {body {
+  font-family: Arial,'Free Sans',sans-serif;
+  font-size: 14px;
+  color: #011b1d;
+  background: transparent;
+  padding: 0px;
+  margin: 0;
+  background: white; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(white, #011b1d); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(white, #011b1d); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(white, #011b1d); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(white, #011b1d); /* Standard syntax */
+}
+
+a:link {
+  text-decoration:none;
+  color: #045097;
+}
+
+a:visited {
+  text-decoration:none;
+  color: #001222;
+}
+
+a:hover {
+  text-decoration:none;
+  color: #022A50;
+}
+/* Barre de navigation */
+
+/*--- Fixer la navbar ----*/
+#barre_nav{
+position: relative;
+top: 0px;
+width: 100%;
+left: 0;
+z-index: 9999;
+}
+/* Espacement avant et après barre de navigation */ 
+#barre_nav {
+margin-top: -20px;
+margin-bottom: 20px;
+width: 100%;
+position: relative;
+top: 0px;
+}
+
+#barre_nav .section:last-child li {
+padding-right: 0
+}
+
+/* Espacement et bordure premier lien */
+#barre_nav .section:first-child li {
+padding-left: 0px;}
+
+/* Fond et bordure barre de navigation */
+#barre_nav ul {
+text-align: center;
+padding: 10px;
+background-color: #011b1d;
+opacity: 0.8;
+top: -20px;}
+
+/* Police et couleur des liens */
+#barre_nav li a {
+font-family: 'Century Gothic','URW Gothic L', sans-serif;
+font-size: 16px;
+margin-right: 20px;
+text-transform: uppercase;
+color: #ffffff;
+}
+
+/* Visiblité liens */
+#barre_nav ul {
+overflow: visible;}
+
+/* Police et couleur des liens survolés */
+#barre_nav li.selected a, #barre_nav li a:hover {
+text-decoration: bold;
+padding: 5px;
+letter-spacing: 2px;
+-moz-transition-duration: 0.4s;
+-webkit-transition-duration: 0.4s;
+-o-transition-duration: 0.4s;
+transition-duration: 0.4s;
+
+}
+
+/* Centrer la barre de navigation */
+#barre_nav li, #barre_nav li {
+display: inline-block;
+float: none;}
+
+/* Barre de rechercher */
+#searchThis{
+float:right;
+vertical-align: center;
+margin-top: 10px;
+}
+
+#searchBox{
+border: 1px solid #FFFFFF;
+background: #011b1d;
+padding: 4px;
+border-radius: 4px;
+color: #FFFFFF;
+font-family: Arial,'Free Sans',sans-serif;
+}
+
+#searchButton{
+background: #FFFFFF;
+color: #011b1d;
+padding: 4px;
+text-transform: uppercase;
+font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
+font-weight: bold;
+border: none;
+letter-spacing: 1px;
+}
+
+
+/----Header----/
+header{
+	margin-top: 100px;
+	width: 100%;
+	height: 300px;
+	border: 1px solid black;
+}
+
+/---- Slideshow---/
+ /* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0,0,0,0.8);
+  font-family: 'URW Gothic L','Century Gothic', sans-serif;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+/----- Content -----/
+.content {
+	width: 100%;
+	margin: auto;
+}
+
+/---- Aside --- /
+.contenu {
+	overflow: auto;
+	margin-top: 20px;
+}
+
+#agendatv{
+	width: 290px;
+	padding: 4px;
+	margin-left: 10px;
+	height: auto;
+	float: left;
+	background-color: #FFFFFF;
+	box-shadow: 0px 1px 3px #000000;
+	font-family: 'Free Sans', Arial, sans-serif;
+}	
+#agendatv h3 {
+	background-color: red;
+	color: #FFFFFF;
+	text-transform: uppercase;
+	margin-top: -5px;
+	width: 99%;
+	margin-left: -5px;
+	padding: 6px;
+	font-size: 18px;
+	text-align: center;
+}
+
+.tv {
+	width: 80px;
+}
+#sortiescine {
+	width: 300px;
+	border: 1px solid #00001A;
+	background-color: #000000;
+	color: #FFFFFF;
+	margin-left: 10px;
+	padding: 4px;
+	height: 200px;
+	float: left;
+}
+#sortiescine h3{
+	text-align: center;
+	font-family: 'Open Sans', serif;
+	text-transform: uppercase;
+	border-bottom: 1px solid #FFFFFF;
+}
+#leonardnimoy {
+	width: 300px;
+	height: 200px;
+	padding: 4px;
+	margin-left: 10px;
+	border: 1px solid blue;
+	float: left;
+}
+#billetspop{
+	width: 300px;
+	height: 200px;
+	margin-left: 10px;
+	border: 1px solid yellow;
+	padding: 4px;
+	float: left;
+}
+
+/-- Challenge Séries --/
+
+/* Galerie Photo */
+#galerie_photo {
+max-width: 100%;
+width: 100%;
+text-align: center;
+}
+
+#galerie_photo .GPimg {
+max-width: 100%;
+width: 150px;
+height: 150px;
+display: inline-block;
+background-position: 50% 50%;
+background-size: cover;
+padding: 0;
+margin: 4px;
+border-radius: 80px;
+}
+
+#challengeseries {
+text-align: center;
+margin: auto;
+width: 100%;
+}
+
+#challengeseries h3{
+color: #001222;
+font-size: 18px;
+text-transform: uppercase;
+font-weight: bold;
+border-bottom: 1px solid #001222;
+font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
+letter-spacing: 4px;
+}
+
+.statut {
+color: transparent;
+}
+
+.statut:hover{
+background-color:#004445;
+opacity: 0.8;
+color: #FFFFFF;
+font-weight: lighter;
+font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
+transition-duration: 0.4s;
+z-index: 9999;
+width: 150px;
+height: 150px;
+border-radius: 80px;
+font-size: 25px;
+vertical-align: middle;
+}
+
+.statuttermine {
+background-color: #ffffff;
+opacity: 0.5;
+width: 150px;
+height: 150px;
+font-weight: lighter;
+border-radius: 80px;
+text-transform: uppercase;
+font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
+z-index: 9999;
+}
+.statuttermine:hover {
+background-color: #011b1d;
+opacity: 0.8;
+color: #FFFFFF;
+width: 150px;
+height: 150px;
+font-weight: lighter;
+border-radius: 80px;
+content: 'Terminé';
+transition-duration: 0.4s;
+text-transform: uppercase;
+font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
+z-index: 9999;
+}
+/---- Billets ----/
+main {
+	width: 100%;
+	max-width: 100%;
+	margin: auto;
+}
+
+.jump-link {
+display: none;
+}
+
+.jump-link a {
+}
+
+.jump-link a:hover {
+border: 1px solid #004445;
+}
+
+/----- Pied de page ----/
+#encart-intro {
+background-color: #8dc0b1;
+border-radius: 4px;
+border: 4px solid #a4d7c8;
+padding: 20px;
+}
+#encart-intro img {
+position: relative;
+float: none;
+}
+
+#encart-intro h2 {
+font-family: 'Trebuchet MS', sans-serif;
+font-weight: italic;
+font-size: 16px;
+color: #ddd;
+padding: 0;
+}
+
+.blog-pager {
+  background: none;
+}
+
+.blog-pager-older-link, .home-link,
+.blog-pager-newer-link {
+  background-color: none;
+font-family: 'Free Sans', Arial, sans-serif;
+text-transform: uppercase;
+font-size: 16px;
+  padding: 4px;
+}
+
+.footer-outer {
+background-color: #87cefa;
+color: #000000;
+}
+
+.footer-outer a:link {
+color: #00688b;
+}
+
+.footer {
+width: 100%;
+}
+
+.backtotop {
+position: fixed;
+bottom: 10px; /* increase value to move position up */
+right: 0px; /* increase value to move position left */
+color: #000000; /* color of text */
+background-color: #ffffff; /* background color of button */ 
+font-size: 12px; /* changes size of text */ 
+padding: 10px; /* add space around the text */
+text-transform: uppercase; /* change text to all caps */ 
+letter-spacing: 1.0px; /* space between letters */
+}
+
+.backtotop:hover {
+background-color: #333333; /* color of background on hover over */
+color: #ffffff; /* color of text on hover over */
+text-decoration: none; /* no underline */
+}
+
+    	]]></b:skin>
+    	
+<b:template-skin>
+  <![CDATA[
+
+  	body {
+  font-family: Arial,'Free Sans',sans-serif;
+  font-size: 14px;
+  color: #011b1d;
+  background: transparent;
+  padding: 0px;
+  margin: 0;
+  background: white; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(white, #011b1d); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(white, #011b1d); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(white, #011b1d); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(white, #011b1d); /* Standard syntax */
+}
+
+a:link {
+  text-decoration:none;
+  color: #045097;
+}
+
+a:visited {
+  text-decoration:none;
+  color: #001222;
+}
+
+a:hover {
+  text-decoration:none;
+  color: #022A50;
+}
+/* Barre de navigation */
+
+/*--- Fixer la navbar ----*/
+#barre_nav{
+position: fixed;
+top: -20px;
+width: 100%;
+left: 0;
+z-index: 9999;
+}
+/* Espacement avant et après barre de navigation */ 
+#barre_nav {
+margin-top: -20px;
+margin-bottom: 20px;
+width: 100%;
+position: fixed;
+top: 0px;
+}
+
+#barre_nav .section:last-child li {
+padding-right: 0
+}
+
+/* Espacement et bordure premier lien */
+#barre_nav .section:first-child li {
+padding-left: 0px;}
+
+/* Fond et bordure barre de navigation */
+#barre_nav ul {
+text-align: center;
+padding: 10px;
+background-color: #011b1d;
+opacity: 0.8;
+top: -20px;}
+
+/* Police et couleur des liens */
+#barre_nav li a {
+font-family: 'Century Gothic','URW Gothic L', sans-serif;
+font-size: 16px;
+margin-right: 20px;
+text-transform: uppercase;
+color: #ffffff;
+}
+
+/* Visiblité liens */
+#barre_nav ul {
+overflow: visible;}
+
+/* Police et couleur des liens survolés */
+#barre_nav li.selected a, #barre_nav li a:hover {
+text-decoration: bold;
+padding: 5px;
+letter-spacing: 2px;
+-moz-transition-duration: 0.4s;
+-webkit-transition-duration: 0.4s;
+-o-transition-duration: 0.4s;
+transition-duration: 0.4s;
+
+}
+
+/* Centrer la barre de navigation */
+#barre_nav li, #barre_nav li {
+display: inline-block;
+float: none;}
+
+/* Barre de rechercher */
+#searchThis{
+float:right;
+vertical-align: center;
+margin-top: 10px;
+}
+
+#searchBox{
+border: 1px solid #FFFFFF;
+background: #011b1d;
+padding: 4px;
+border-radius: 4px;
+color: #FFFFFF;
+font-family: Arial,'Free Sans',sans-serif;
+}
+
+#searchButton{
+background: #FFFFFF;
+color: #011b1d;
+padding: 4px;
+text-transform: uppercase;
+font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
+font-weight: bold;
+border: none;
+letter-spacing: 1px;
+}
+
+
+/----Header----/
+header{
+	margin-top: 100px;
+	width: 100%;
+	height: 300px;
+	border: 1px solid black;
+}
+
+/---- Slideshow---/
+ /* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+/----- Content -----/
+.content {
+	width: 100%;
+	margin: auto;
+}
+
+/---- Aside --- /
+.contenu {
+	overflow: auto;
+	margin-top: 20px;
+}
+
+#agendatv{
+	width: 290px;
+	padding: 4px;
+	margin-left: 10px;
+	height: auto;
+	float: left;
+	background-color: #FFFFFF;
+	box-shadow: 0px 1px 3px #000000;
+	font-family: 'Free Sans', Arial, sans-serif;
+}	
+#agendatv h3 {
+	background-color: red;
+	color: #FFFFFF;
+	text-transform: uppercase;
+	margin-top: -5px;
+	width: 99%;
+	margin-left: -5px;
+	padding: 6px;
+	font-size: 18px;
+	text-align: center;
+}
+
+.tv {
+	width: 80px;
+}
+#sortiescine {
+	width: 300px;
+	border: 1px solid #00001A;
+	background-color: #000000;
+	color: #FFFFFF;
+	margin-left: 10px;
+	padding: 4px;
+	height: 200px;
+	float: left;
+}
+#sortiescine h3{
+	text-align: center;
+	font-family: 'Open Sans', serif;
+	text-transform: uppercase;
+	border-bottom: 1px solid #FFFFFF;
+}
+#leonardnimoy {
+	width: 300px;
+	height: 200px;
+	padding: 4px;
+	margin-left: 10px;
+	border: 1px solid blue;
+	float: left;
+}
+#billetspop{
+	width: 300px;
+	height: 200px;
+	margin-left: 10px;
+	border: 1px solid yellow;
+	padding: 4px;
+	float: left;
+}
+
+/-- Challenge Séries --/
+
+/* Galerie Photo */
+#galerie_photo {
+max-width: 100%;
+width: 100%;
+text-align: center;
+}
+
+#galerie_photo .GPimg {
+max-width: 100%;
+width: 150px;
+height: 150px;
+display: inline-block;
+background-position: 50% 50%;
+background-size: cover;
+padding: 0;
+margin: 4px;
+border-radius: 80px;
+}
+
+#challengeseries {
+text-align: center;
+margin: auto;
+width: 100%;
+}
+
+#challengeseries h3{
+color: #001222;
+font-size: 18px;
+text-transform: uppercase;
+font-weight: bold;
+border-bottom: 1px solid #001222;
+font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
+letter-spacing: 4px;
+}
+
+.statut {
+color: transparent;
+}
+
+.statut:hover{
+background-color:#004445;
+opacity: 0.8;
+color: #FFFFFF;
+font-weight: lighter;
+font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
+transition-duration: 0.4s;
+z-index: 9999;
+width: 150px;
+height: 150px;
+border-radius: 80px;
+font-size: 25px;
+vertical-align: middle;
+}
+
+.statuttermine {
+background-color: #ffffff;
+opacity: 0.5;
+width: 150px;
+height: 150px;
+font-weight: lighter;
+border-radius: 80px;
+text-transform: uppercase;
+font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
+z-index: 9999;
+}
+.statuttermine:hover {
+background-color: #011b1d;
+opacity: 0.8;
+color: #FFFFFF;
+width: 150px;
+height: 150px;
+font-weight: lighter;
+border-radius: 80px;
+content: 'Terminé';
+transition-duration: 0.4s;
+text-transform: uppercase;
+font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
+z-index: 9999;
+}
+/---- Billets ----/
+main {
+	width: 100%;
+	max-width: 100%;
+	margin: auto;
+}
+
+.jump-link {
+display: none;
+}
+
+.jump-link a {
+}
+
+.jump-link a:hover {
+border: 1px solid #004445;
+}
+
+/----- Pied de page ----/
+#encart-intro {
+background-color: #8dc0b1;
+border-radius: 4px;
+border: 4px solid #a4d7c8;
+padding: 20px;
+}
+#encart-intro img {
+position: relative;
+float: none;
+}
+
+#encart-intro h2 {
+font-family: 'Trebuchet MS', sans-serif;
+font-weight: italic;
+font-size: 16px;
+color: #ddd;
+padding: 0;
+}
+
+.blog-pager {
+  background: none;
+}
+
+.blog-pager-older-link, .home-link,
+.blog-pager-newer-link {
+  background-color: none;
+font-family: 'Free Sans', Arial, sans-serif;
+text-transform: uppercase;
+font-size: 16px;
+  padding: 4px;
+}
+
+.footer-outer {
+background-color: #87cefa;
+color: #000000;
+}
+
+.footer-outer a:link {
+color: #00688b;
+}
+
+.footer {
+width: 100%;
+}
+
+.backtotop {
+position: fixed;
+bottom: 10px; /* increase value to move position up */
+right: 0px; /* increase value to move position left */
+color: #000000; /* color of text */
+background-color: #ffffff; /* background color of button */ 
+font-size: 12px; /* changes size of text */ 
+padding: 10px; /* add space around the text */
+text-transform: uppercase; /* change text to all caps */ 
+letter-spacing: 1.0px; /* space between letters */
+}
+
+.backtotop:hover {
+background-color: #333333; /* color of background on hover over */
+color: #ffffff; /* color of text on hover over */
+text-decoration: none; /* no underline */
+}
+
+/---------------------  MEDIA QUERIES ---------------------/
+
+/* Mobiles */
+@media only screen and (max-width : 480px) {body {
+  font-family: Arial,'Free Sans',sans-serif;
+  font-size: 14px;
+  color: #011b1d;
+  background: transparent;
+  padding: 0px;
+  margin: 0;
+  background: white; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(white, #011b1d); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(white, #011b1d); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(white, #011b1d); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(white, #011b1d); /* Standard syntax */
+}
+
+a:link {
+  text-decoration:none;
+  color: #045097;
+}
+
+a:visited {
+  text-decoration:none;
+  color: #001222;
+}
+
+a:hover {
+  text-decoration:none;
+  color: #022A50;
+}
+/* Barre de navigation */
+
+/*--- Fixer la navbar ----*/
+#barre_nav{
+position: relative;
+top: 0px;
+width: 100%;
+left: 0;
+z-index: 9999;
+}
+/* Espacement avant et après barre de navigation */ 
+#barre_nav {
+margin-top: -20px;
+margin-bottom: 20px;
+width: 100%;
+position: relative;
+top: 0px;
+}
+
+#barre_nav .section:last-child li {
+padding-right: 0
+}
+
+/* Espacement et bordure premier lien */
+#barre_nav .section:first-child li {
+padding-left: 0px;}
+
+/* Fond et bordure barre de navigation */
+#barre_nav ul {
+text-align: center;
+padding: 10px;
+background-color: #011b1d;
+opacity: 0.8;
+top: -20px;}
+
+/* Police et couleur des liens */
+#barre_nav li a {
+font-family: 'Century Gothic','URW Gothic L', sans-serif;
+font-size: 16px;
+margin-right: 20px;
+text-transform: uppercase;
+color: #ffffff;
+}
+
+/* Visiblité liens */
+#barre_nav ul {
+overflow: visible;}
+
+/* Police et couleur des liens survolés */
+#barre_nav li.selected a, #barre_nav li a:hover {
+text-decoration: bold;
+padding: 5px;
+letter-spacing: 2px;
+-moz-transition-duration: 0.4s;
+-webkit-transition-duration: 0.4s;
+-o-transition-duration: 0.4s;
+transition-duration: 0.4s;
+
+}
+
+/* Centrer la barre de navigation */
+#barre_nav li, #barre_nav li {
+display: inline-block;
+float: none;}
+
+/* Barre de rechercher */
+#searchThis{
+float:right;
+vertical-align: center;
+margin-top: 10px;
+}
+
+#searchBox{
+border: 1px solid #FFFFFF;
+background: #011b1d;
+padding: 4px;
+border-radius: 4px;
+color: #FFFFFF;
+font-family: Arial,'Free Sans',sans-serif;
+}
+
+#searchButton{
+background: #FFFFFF;
+color: #011b1d;
+padding: 4px;
+text-transform: uppercase;
+font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
+font-weight: bold;
+border: none;
+letter-spacing: 1px;
+}
+
+
+/----Header----/
+header{
+	margin-top: 100px;
+	width: 100%;
+	height: 300px;
+	border: 1px solid black;
+}
+
+/---- Slideshow---/
+ /* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0,0,0,0.8);
+  font-family: 'URW Gothic L','Century Gothic', sans-serif;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+/----- Content -----/
+.content {
+	width: 100%;
+	margin: auto;
+}
+
+/---- Aside --- /
+.contenu {
+	overflow: auto;
+	margin-top: 20px;
+}
+
+#agendatv{
+	width: 290px;
+	padding: 4px;
+	margin-left: 10px;
+	height: auto;
+	float: left;
+	background-color: #FFFFFF;
+	box-shadow: 0px 1px 3px #000000;
+	font-family: 'Free Sans', Arial, sans-serif;
+}	
+#agendatv h3 {
+	background-color: red;
+	color: #FFFFFF;
+	text-transform: uppercase;
+	margin-top: -5px;
+	width: 99%;
+	margin-left: -5px;
+	padding: 6px;
+	font-size: 18px;
+	text-align: center;
+}
+
+.tv {
+	width: 80px;
+}
+#sortiescine {
+	width: 300px;
+	border: 1px solid #00001A;
+	background-color: #000000;
+	color: #FFFFFF;
+	margin-left: 10px;
+	padding: 4px;
+	height: 200px;
+	float: left;
+}
+#sortiescine h3{
+	text-align: center;
+	font-family: 'Open Sans', serif;
+	text-transform: uppercase;
+	border-bottom: 1px solid #FFFFFF;
+}
+#leonardnimoy {
+	width: 300px;
+	height: 200px;
+	padding: 4px;
+	margin-left: 10px;
+	border: 1px solid blue;
+	float: left;
+}
+#billetspop{
+	width: 300px;
+	height: 200px;
+	margin-left: 10px;
+	border: 1px solid yellow;
+	padding: 4px;
+	float: left;
+}
+
+/-- Challenge Séries --/
+
+/* Galerie Photo */
+#galerie_photo {
+max-width: 100%;
+width: 100%;
+text-align: center;
+}
+
+#galerie_photo .GPimg {
+max-width: 100%;
+width: 150px;
+height: 150px;
+display: inline-block;
+background-position: 50% 50%;
+background-size: cover;
+padding: 0;
+margin: 4px;
+border-radius: 80px;
+}
+
+#challengeseries {
+text-align: center;
+margin: auto;
+width: 100%;
+}
+
+#challengeseries h3{
+color: #001222;
+font-size: 18px;
+text-transform: uppercase;
+font-weight: bold;
+border-bottom: 1px solid #001222;
+font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
+letter-spacing: 4px;
+}
+
+.statut {
+color: transparent;
+}
+
+.statut:hover{
+background-color:#004445;
+opacity: 0.8;
+color: #FFFFFF;
+font-weight: lighter;
+font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
+transition-duration: 0.4s;
+z-index: 9999;
+width: 150px;
+height: 150px;
+border-radius: 80px;
+font-size: 25px;
+vertical-align: middle;
+}
+
+.statuttermine {
+background-color: #ffffff;
+opacity: 0.5;
+width: 150px;
+height: 150px;
+font-weight: lighter;
+border-radius: 80px;
+text-transform: uppercase;
+font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
+z-index: 9999;
+}
+.statuttermine:hover {
+background-color: #011b1d;
+opacity: 0.8;
+color: #FFFFFF;
+width: 150px;
+height: 150px;
+font-weight: lighter;
+border-radius: 80px;
+content: 'Terminé';
+transition-duration: 0.4s;
+text-transform: uppercase;
+font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
+z-index: 9999;
+}
+/---- Billets ----/
+main {
+	width: 100%;
+	max-width: 100%;
+	margin: auto;
+}
+
+.jump-link {
+display: none;
+}
+
+.jump-link a {
+}
+
+.jump-link a:hover {
+border: 1px solid #004445;
+}
+
+/----- Pied de page ----/
+#encart-intro {
+background-color: #8dc0b1;
+border-radius: 4px;
+border: 4px solid #a4d7c8;
+padding: 20px;
+}
+#encart-intro img {
+position: relative;
+float: none;
+}
+
+#encart-intro h2 {
+font-family: 'Trebuchet MS', sans-serif;
+font-weight: italic;
+font-size: 16px;
+color: #ddd;
+padding: 0;
+}
+
+.blog-pager {
+  background: none;
+}
+
+.blog-pager-older-link, .home-link,
+.blog-pager-newer-link {
+  background-color: none;
+font-family: 'Free Sans', Arial, sans-serif;
+text-transform: uppercase;
+font-size: 16px;
+  padding: 4px;
+}
+
+.footer-outer {
+background-color: #87cefa;
+color: #000000;
+}
+
+.footer-outer a:link {
+color: #00688b;
+}
+
+.footer {
+width: 100%;
+}
+
+.backtotop {
+position: fixed;
+bottom: 10px; /* increase value to move position up */
+right: 0px; /* increase value to move position left */
+color: #000000; /* color of text */
+background-color: #ffffff; /* background color of button */ 
+font-size: 12px; /* changes size of text */ 
+padding: 10px; /* add space around the text */
+text-transform: uppercase; /* change text to all caps */ 
+letter-spacing: 1.0px; /* space between letters */
+}
+
+.backtotop:hover {
+background-color: #333333; /* color of background on hover over */
+color: #ffffff; /* color of text on hover over */
+text-decoration: none; /* no underline */
+}
+/---------------------  MEDIA QUERIES ---------------------/
+
+/* Mobiles */
+@media only screen and (max-width : 480px) {body {
+  font-family: Arial,'Free Sans',sans-serif;
+  font-size: 14px;
+  color: #011b1d;
+  background: transparent;
+  padding: 0px;
+  margin: 0;
+  background: white; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(white, #011b1d); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(white, #011b1d); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(white, #011b1d); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(white, #011b1d); /* Standard syntax */
+}
+
+a:link {
+  text-decoration:none;
+  color: #045097;
+}
+
+a:visited {
+  text-decoration:none;
+  color: #001222;
+}
+
+a:hover {
+  text-decoration:none;
+  color: #022A50;
+}
+/* Barre de navigation */
+
+/*--- Fixer la navbar ----*/
+#barre_nav{
+position: relative;
+top: 0px;
+width: 100%;
+left: 0;
+z-index: 9999;
+}
+/* Espacement avant et après barre de navigation */ 
+#barre_nav {
+margin-top: -20px;
+margin-bottom: 20px;
+width: 100%;
+position: relative;
+top: 0px;
+}
+
+#barre_nav .section:last-child li {
+padding-right: 0
+}
+
+/* Espacement et bordure premier lien */
+#barre_nav .section:first-child li {
+padding-left: 0px;}
+
+/* Fond et bordure barre de navigation */
+#barre_nav ul {
+text-align: center;
+padding: 10px;
+background-color: #011b1d;
+opacity: 0.8;
+top: -20px;}
+
+/* Police et couleur des liens */
+#barre_nav li a {
+font-family: 'Century Gothic','URW Gothic L', sans-serif;
+font-size: 16px;
+margin-right: 20px;
+text-transform: uppercase;
+color: #ffffff;
+}
+
+/* Visiblité liens */
+#barre_nav ul {
+overflow: visible;}
+
+/* Police et couleur des liens survolés */
+#barre_nav li.selected a, #barre_nav li a:hover {
+text-decoration: bold;
+padding: 5px;
+letter-spacing: 2px;
+-moz-transition-duration: 0.4s;
+-webkit-transition-duration: 0.4s;
+-o-transition-duration: 0.4s;
+transition-duration: 0.4s;
+
+}
+
+/* Centrer la barre de navigation */
+#barre_nav li, #barre_nav li {
+display: inline-block;
+float: none;}
+
+/* Barre de rechercher */
+#searchThis{
+float:right;
+vertical-align: center;
+margin-top: 10px;
+}
+
+#searchBox{
+border: 1px solid #FFFFFF;
+background: #011b1d;
+padding: 4px;
+border-radius: 4px;
+color: #FFFFFF;
+font-family: Arial,'Free Sans',sans-serif;
+}
+
+#searchButton{
+background: #FFFFFF;
+color: #011b1d;
+padding: 4px;
+text-transform: uppercase;
+font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
+font-weight: bold;
+border: none;
+letter-spacing: 1px;
+}
+
+
+/----Header----/
+header{
+	margin-top: 100px;
+	width: 100%;
+	height: 300px;
+	border: 1px solid black;
+}
+
+/---- Slideshow---/
+ /* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0,0,0,0.8);
+  font-family: 'URW Gothic L','Century Gothic', sans-serif;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+/----- Content -----/
+.content {
+	width: 100%;
+	margin: auto;
+}
+
+/---- Aside --- /
+.contenu {
+	overflow: auto;
+	margin-top: 20px;
+}
+
+#agendatv{
+	width: 290px;
+	padding: 4px;
+	margin-left: 10px;
+	height: auto;
+	float: left;
+	background-color: #FFFFFF;
+	box-shadow: 0px 1px 3px #000000;
+	font-family: 'Free Sans', Arial, sans-serif;
+}	
+#agendatv h3 {
+	background-color: red;
+	color: #FFFFFF;
+	text-transform: uppercase;
+	margin-top: -5px;
+	width: 99%;
+	margin-left: -5px;
+	padding: 6px;
+	font-size: 18px;
+	text-align: center;
+}
+
+.tv {
+	width: 80px;
+}
+#sortiescine {
+	width: 300px;
+	border: 1px solid #00001A;
+	background-color: #000000;
+	color: #FFFFFF;
+	margin-left: 10px;
+	padding: 4px;
+	height: 200px;
+	float: left;
+}
+#sortiescine h3{
+	text-align: center;
+	font-family: 'Open Sans', serif;
+	text-transform: uppercase;
+	border-bottom: 1px solid #FFFFFF;
+}
+#leonardnimoy {
+	width: 300px;
+	height: 200px;
+	padding: 4px;
+	margin-left: 10px;
+	border: 1px solid blue;
+	float: left;
+}
+#billetspop{
+	width: 300px;
+	height: 200px;
+	margin-left: 10px;
+	border: 1px solid yellow;
+	padding: 4px;
+	float: left;
+}
+
+/-- Challenge Séries --/
+
+/* Galerie Photo */
+#galerie_photo {
+max-width: 100%;
+width: 100%;
+text-align: center;
+}
+
+#galerie_photo .GPimg {
+max-width: 100%;
+width: 150px;
+height: 150px;
+display: inline-block;
+background-position: 50% 50%;
+background-size: cover;
+padding: 0;
+margin: 4px;
+border-radius: 80px;
+}
+
+#challengeseries {
+text-align: center;
+margin: auto;
+width: 100%;
+}
+
+#challengeseries h3{
+color: #001222;
+font-size: 18px;
+text-transform: uppercase;
+font-weight: bold;
+border-bottom: 1px solid #001222;
+font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
+letter-spacing: 4px;
+}
+
+.statut {
+color: transparent;
+}
+
+.statut:hover{
+background-color:#004445;
+opacity: 0.8;
+color: #FFFFFF;
+font-weight: lighter;
+font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
+transition-duration: 0.4s;
+z-index: 9999;
+width: 150px;
+height: 150px;
+border-radius: 80px;
+font-size: 25px;
+vertical-align: middle;
+}
+
+.statuttermine {
+background-color: #ffffff;
+opacity: 0.5;
+width: 150px;
+height: 150px;
+font-weight: lighter;
+border-radius: 80px;
+text-transform: uppercase;
+font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
+z-index: 9999;
+}
+.statuttermine:hover {
+background-color: #011b1d;
+opacity: 0.8;
+color: #FFFFFF;
+width: 150px;
+height: 150px;
+font-weight: lighter;
+border-radius: 80px;
+content: 'Terminé';
+transition-duration: 0.4s;
+text-transform: uppercase;
+font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
+z-index: 9999;
+}
+/---- Billets ----/
+main {
+	width: 100%;
+	max-width: 100%;
+	margin: auto;
+}
+
+.jump-link {
+display: none;
+}
+
+.jump-link a {
+}
+
+.jump-link a:hover {
+border: 1px solid #004445;
+}
+
+/----- Pied de page ----/
+#encart-intro {
+background-color: #8dc0b1;
+border-radius: 4px;
+border: 4px solid #a4d7c8;
+padding: 20px;
+}
+#encart-intro img {
+position: relative;
+float: none;
+}
+
+#encart-intro h2 {
+font-family: 'Trebuchet MS', sans-serif;
+font-weight: italic;
+font-size: 16px;
+color: #ddd;
+padding: 0;
+}
+
+.blog-pager {
+  background: none;
+}
+
+.blog-pager-older-link, .home-link,
+.blog-pager-newer-link {
+  background-color: none;
+font-family: 'Free Sans', Arial, sans-serif;
+text-transform: uppercase;
+font-size: 16px;
+  padding: 4px;
+}
+
+.footer-outer {
+background-color: #87cefa;
+color: #000000;
+}
+
+.footer-outer a:link {
+color: #00688b;
+}
+
+.footer {
+width: 100%;
+}
+
+.backtotop {
+position: fixed;
+bottom: 10px; /* increase value to move position up */
+right: 0px; /* increase value to move position left */
+color: #000000; /* color of text */
+background-color: #ffffff; /* background color of button */ 
+font-size: 12px; /* changes size of text */ 
+padding: 10px; /* add space around the text */
+text-transform: uppercase; /* change text to all caps */ 
+letter-spacing: 1.0px; /* space between letters */
+}
+
+.backtotop:hover {
+background-color: #333333; /* color of background on hover over */
+color: #ffffff; /* color of text on hover over */
+text-decoration: none; /* no underline */
+}
+    
+  ]]>
+</b:template-skin>
+
+  </head>
+
+  <body>
+  	<b:if cond='data:blog.pageType == &quot;index&quot;'>
+    <div itemscope='itemscope' itemtype='http://schema.org/Blog' style='display: none;'>
+      <meta expr:content='data:blog.title' itemprop='name'/>
+      <b:if cond='data:blog.metaDescription'>
+        <meta expr:content='data:blog.metaDescription' itemprop='description'/>
+      </b:if>
+    </div>
+  </b:if>
+<nav> 
+	<div id='barre_nav'>
+<ul>
+<li><a href='http://cinetvevents.blogspot.fr'>Accueil</a></li>
+<li><a href='#'>On en parle</a></li>
+<li><a href='http://cinetvevents.blogspot.fr/p/mes-series-cultes.html'>Du Petit...</a></li> 
+<li><a href='#'>au grand écran</a></li>
+  <li><a href='http://cinetvevents.blogspot.fr/p/blog-page_10.html'>Pages après pages</a></li>
+<li><a href='#'>Ici et là-bas</a></li>
+<li><a href='http://cinetvevents.blogspot.fr/p/blog-page_5.html'>A propos</a></li>
+<li><form action='/search' id='searchThis' method='get' style='display: inline;'><input id='searchBox' name='q' onblur='if(this.value==&apos;&apos;)this.value=this.defaultValue;' onfocus='if(this.value==this.defaultValue)this.value=&apos;&apos;;' type='text' value='Rechercher sur ce blog' vinput=''/> <input id='searchButton' type='submit' value='Go'/></form>
+</li>
+</ul>
+</div>
+</nav> 
+<b:section class='header' id='header' showaddelement='yes'>	
+ <div class="slideshow-container">
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="challengeseries2016_banniere_01.png" style="width:100%"></img>
+    <div class="text">Bilan du mois de septembre</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="startrekbeyond_review_01.jpg" style="width:100%"></img>
+    <div class="text">Critique #StarTrekBeyond</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="img3.jpg" style="width:100%"></img>
+    <div class="text">Caption Three</div>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+</b:section>
+<b:section class='main' id='main' showaddelement='yes'>
+      <b:widget id='Blog1' locked='true' title='Articles du blog' type='Blog'></b:widget>
+    </b:section>
+
+</body>
+</html>
