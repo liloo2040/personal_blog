@@ -1,7 +1,233 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <html xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
 <head>
-<b:skin><![CDATA[>
+<title><data:blog.pageTitle/></title>
+  <meta content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1' name='viewport'/>
+<b:skin><![CDATA[
+*/
+body {
+color: #FFFFFF;
+font-family: Arial,'Free Sans',sans-serif;
+font-size: 14px;
+}
+
+a:link {
+text-decoration: none;
+}
+a:hover {
+text-decoration: none;
+}
+a:visited {
+text-decoration: none;
+}
+*--- Fixer la navbar ----*/
+#barre_nav{
+position: fixed;
+top: -20px;
+width: 100%;
+left: 0px;
+z-index: 9999;
+}
+/* Espacement avant et après barre de navigation */ 
+#barre_nav {
+margin-top: -20px;
+margin-bottom: 10px;
+margin-left: -10px;
+margin-right: 20px;
+width: 100%;
+position: fixed;
+top: 0px;
+}
+
+#barre_nav .section:last-child li {
+padding-right: 0
+}
+
+/* Espacement et bordure premier lien */
+#barre_nav .section:first-child li {
+padding-left: 0px;}
+
+/* Fond et bordure barre de navigation */
+#barre_nav ul {
+text-align: center;
+padding: 8px;
+background-color: #011b1d;
+opacity: 0.8;
+top: -20px;}
+
+/* Police et couleur des liens */
+#barre_nav li a {
+font-family: 'Century Gothic','URW Gothic L', sans-serif;
+font-size: 18px;
+margin-right: 20px;
+text-transform: uppercase;
+color: #ffffff;
+}
+
+/* Visiblité liens */
+#barre_nav ul {
+overflow: visible;}
+
+/* Police et couleur des liens survolés */
+#barre_nav li.selected a, #barre_nav li a:hover {
+text-decoration: bold;
+padding: 5px;
+letter-spacing: 2px;
+-moz-transition-duration: 0.4s;
+-webkit-transition-duration: 0.4s;
+-o-transition-duration: 0.4s;
+transition-duration: 0.4s;
+
+}
+
+/* Centrer la barre de navigation */
+#barre_nav li, #barre_nav li {
+display: inline-block;
+float: none;}
+
+/* Barre de recherche */
+#searchThis{
+float:right;
+margin-top: 10px;
+}
+
+#searchBox{
+border: 1px solid #FFFFFF;
+background: #011b1d;
+padding: 4px;
+border-radius: 12px;
+color: #FFFFFF;
+text-align:center;
+font-family: 'Century Gothic','URW Gothic L',sans-serif;
+}
+
+#searchButton{
+background: #FFFFFF;
+color: #011b1d;
+padding: 4px;
+text-transform: uppercase;
+font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
+font-weight: bold;
+text-align:center;
+border: none;
+letter-spacing: 1px;
+}
+
+
+
+/* Galerie Photo */
+#galerie_photo {
+max-width: 100%;
+text-align: center;
+}
+
+#galerie_photo .GPimg {
+max-width: 40%;
+width: 150px;
+height: 150px;
+display: inline-block;
+background-position: 50% 50%;
+background-size: cover;
+padding: 0;
+margin: 4px;
+border-radius: 70px;
+}
+
+#galerie_photo .GPimg:hover {
+transformation: scale (1.25);
+
+}
+
+.statut {
+color: transparent;
+}
+
+.statut:hover{
+background-color:#004445;
+opacity: 0.8;
+color: #FFFFFF;
+font-weight: lighter;
+font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
+transition-duration: 0.4s;
+z-index: 9999;
+width: 150px;
+height: 150px;
+border-radius: 70px;
+font-size: 25px;
+vertical-align: middle;
+}
+
+.statuttermine {
+background-color: #022330;
+opacity: 0.8;
+color: #FFFFFF;
+height: 100%;
+font-weight: lighter;
+text-transform: uppercase;
+font-family: 'Century Gothic';
+z-index: 9999;
+}
+
+
+#challengeseries {
+text-align: center;
+margin: auto;
+padding: 10px;
+width: 800px;
+}
+
+#challengeseries h3{
+color: #001222;
+font-size: 18px;
+text-transform: uppercase;
+font-weight: bold;
+border-bottom: 1px solid #001222;
+font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
+}
+#agendatv{
+  width: 290px;
+  padding: 4px;
+  margin-left: 10px;
+  height: auto;
+  float: left;
+  background-color: #FFFFFF;
+  box-shadow: 0px 1px 3px #000000;
+  font-family: 'Free Sans', Arial, sans-serif;
+} 
+#agendatv h3 {
+  background-color: red;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  margin-top: -5px;
+  width: 99%;
+  margin-left: -5px;
+  padding: 6px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.tv {
+  width: 80px;
+}
+#sortiescine {
+  width: 300px;
+  border: 1px solid #00001A;
+  background-color: #000000;
+  color: #FFFFFF;
+  margin-left: 310px;
+  margin-top: -350px;
+  padding: 4px;
+  height: 200px;
+  float: left;
+}
+#sortiescine h3{
+  text-align: center;
+  font-family: 'Oswald', serif;
+  text-transform: uppercase;
+  border-bottom: 1px solid #FFFFFF;
+}
+
+*/
   ]]></b:skin>
   </head>
   <body>
@@ -1159,6 +1385,19 @@
     </ul>
     <b:include name='quickedit'/>
   </div>
+</b:includable>
+  </b:widget>
+  <b:widget id='HTML6' locked='false' title='' type='HTML' visible='true'>
+    <b:includable id='main'>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+
+  <b:include name='quickedit'/>
 </b:includable>
   </b:widget>
   <b:widget id='Attribution1' locked='false' title='' type='Attribution' visible='true'>
