@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <html xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
 <head>
+  <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'/>
 <title><data:blog.pageTitle/></title>
   <meta content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1' name='viewport'/>
 <b:skin><![CDATA[
-*/
+
 body {
-color: #FFFFFF;
-font-family: Arial,'Free Sans',sans-serif;
+color: #000000;
+font-family:'Quicksand', sans-serif;
 font-size: 14px;
 }
 
@@ -24,13 +25,13 @@ text-decoration: none;
 #barre_nav{
 position: fixed;
 top: -20px;
-width: 100%;
+width: 101%;
 left: 0px;
 z-index: 9999;
 }
 /* Espacement avant et après barre de navigation */ 
 #barre_nav {
-margin-top: -20px;
+margin-top: -15px;
 margin-bottom: 10px;
 margin-left: -10px;
 margin-right: 20px;
@@ -50,18 +51,19 @@ padding-left: 0px;}
 /* Fond et bordure barre de navigation */
 #barre_nav ul {
 text-align: center;
-padding: 8px;
-background-color: #011b1d;
+padding-top: 10px;
+padding-bottom: 10px;
+background-color: #000000;
 opacity: 0.8;
 top: -20px;}
 
 /* Police et couleur des liens */
 #barre_nav li a {
 font-family: 'Century Gothic','URW Gothic L', sans-serif;
-font-size: 18px;
+font-size: 16px;
 margin-right: 20px;
 text-transform: uppercase;
-color: #ffffff;
+color: #f4991A;
 }
 
 /* Visiblité liens */
@@ -71,7 +73,6 @@ overflow: visible;}
 /* Police et couleur des liens survolés */
 #barre_nav li.selected a, #barre_nav li a:hover {
 text-decoration: bold;
-padding: 5px;
 letter-spacing: 2px;
 -moz-transition-duration: 0.4s;
 -webkit-transition-duration: 0.4s;
@@ -85,32 +86,20 @@ transition-duration: 0.4s;
 display: inline-block;
 float: none;}
 
-/* Barre de recherche */
-#searchThis{
-float:right;
-margin-top: 10px;
+/-----Main, posts -----/
+#main {
+width: 100%;
 }
 
-#searchBox{
-border: 1px solid #FFFFFF;
-background: #011b1d;
-padding: 4px;
-border-radius: 12px;
-color: #FFFFFF;
-text-align:center;
-font-family: 'Century Gothic','URW Gothic L',sans-serif;
-}
-
-#searchButton{
-background: #FFFFFF;
-color: #011b1d;
-padding: 4px;
-text-transform: uppercase;
+h2.date-header{
 font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
-font-weight: bold;
-text-align:center;
-border: none;
-letter-spacing: 1px;
+font-size: 12px;
+}
+
+.post-outer {
+border: 1px solid black;
+width: 50%;
+margin-bottom: 10px;
 }
 
 
@@ -227,7 +216,63 @@ font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
   border-bottom: 1px solid #FFFFFF;
 }
 
-*/
+/----- Billets -----/
+
+h2 .date-header{
+width: 20px;
+background: #99CCFF;
+
+h3 .post-title .entry-title {
+text-transform: uppercase;
+
+
+/----- Boutons de partage ------/
+
+.share-bar {
+  margin-top: .5em;
+  vertical-align: bottom;
+  display: inline-block;
+  font-size: 0px;
+  line-height: 0px !important;
+}
+
+.share-button {
+  background: url(https://sites.google.com/site/bloggercodebc/home/share_buttons/share_buttons_BC_dark.png) no-repeat left !important;
+  background-size: auto 120px !important;
+  width: 30px !important;
+  height: 30px !important;
+  overflow: hidden !important;
+  margin-left: -1px !important;
+  position: relative !important;
+}
+
+.share-button-link-text {
+  text-align: left !important;
+}
+
+.sb-email { background-position: 0 -0px !important; }
+a:hover.sb-email { background-position: 0 -60px !important; }
+a:active.sb-email { background-position: 0 -100px !important; }
+.sb-blog { background-position: -20px -0px !important; }
+a:hover.sb-blog { background-position: -20px -60px !important; }
+a:active.sb-blog { background-position: -20px -100px !important; }
+.sb-twitter { background-position: -40px -0px !important; }
+a:hover.sb-twitter { background-position: -40px -60px !important; }
+a:active.sb-twitter { background-position: -40px -100px !important; }
+.sb-facebook { background-position: -60px -0px !important; }
+a:hover.sb-facebook { background-position: -60px -60px !important; }
+a:active.sb-facebook { background-position: -60px -100px !important; }
+.share-bar .sb-orkut { display: none; }
+.share-bar .sb-linkedin { display: none; }
+.sb-pinterest { background-position: -120px -0px !important; }
+a:hover.sb-pinterest { background-position: -120px -60px !important; }
+a:active.sb-pinterest { background-position: -120px -100px !important; }
+.share-bar .sb-gplus { display: none; }
+.share-bar .sb-stumble { display: none; }
+.sb-hc { background-position: -180px -0px !important; }
+a:hover.sb-hc { background-position: -180px -60px !important; }
+a:active.sb-hc { background-position: -180px -100px !important; }
+
   ]]></b:skin>
   </head>
   <body>
@@ -235,15 +280,15 @@ font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
 <div id='barre_nav'>
 <ul>
 <li><a href='http://cinetvevents.blogspot.fr'>Accueil</a></li>
+  <li><a href='#'/></li>
 <li>On en parle</li>
 <li><a href='http://cinetvevents.blogspot.fr/p/mes-series-cultes.html'>Du Petit...</a></li> 
 <li>au grand écran</li>
-  <li><a href='http://cinetvevents.blogspot.fr/p/blog-page_10.html'>Pages après pages</a></li>
-<li>Ici et là-bas</li>
 <li><a href='http://cinetvevents.blogspot.fr/p/blog-page_5.html'>A propos</a></li>
-<li><form action='/search' id='searchThis' method='get' style='display: inline;'><input id='searchBox' name='q' onblur='if(this.value==&apos;&apos;)this.value=this.defaultValue;' onfocus='if(this.value==this.defaultValue)this.value=&apos;&apos;;' type='text' value='Rechercher sur ce blog' vinput=''/> <input id='searchButton' type='submit' value='Go'/></form></li></ul>
+</ul>
 
 </div>
+
 </header>
 <b:section class='main' id='main' showaddelements='yes'>
   <b:widget id='Blog1' locked='true' title='Articles du blog' type='Blog' visible='true'>
@@ -1136,6 +1181,41 @@ font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
     </div>
     </div>
   </div>
+</b:includable>
+  </b:widget>
+  <b:widget id='Navbar1' locked='false' title='Navbar' type='Navbar' version='1' visible='true'>
+    <b:includable id='main'>&lt;script type=&quot;text/javascript&quot;&gt;
+    function setAttributeOnload(object, attribute, val) {
+      if(window.addEventListener) {
+        window.addEventListener(&#39;load&#39;,
+          function(){ object[attribute] = val; }, false);
+      } else {
+        window.attachEvent(&#39;onload&#39;, function(){ object[attribute] = val; });
+      }
+    }
+  &lt;/script&gt;
+&lt;div id=&quot;navbar-iframe-container&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://apis.google.com/js/plusone.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+      gapi.load(&quot;gapi.iframes:gapi.iframes.style.bubble&quot;, function() {
+        if (gapi.iframes &amp;&amp; gapi.iframes.getContext) {
+          gapi.iframes.getContext().openChild({
+              url: &#39;https://www.blogger.com/navbar.g?targetBlogID\x3d9197449548615089694\x26blogName\x3dtest+design\x26publishMode\x3dPUBLISH_MODE_BLOGSPOT\x26navbarType\x3dDISABLED\x26layoutType\x3dLAYOUTS\x26searchRoot\x3dhttps://testdesign99.blogspot.com/search\x26blogLocale\x3dfr\x26v\x3d2\x26homepageUrl\x3dhttps://testdesign99.blogspot.com/\x26vt\x3d-9000421383708886119&#39;,
+              where: document.getElementById(&quot;navbar-iframe-container&quot;),
+              id: &quot;navbar-iframe&quot;
+          });
+        }
+      });
+    &lt;/script&gt;&lt;script type=&quot;text/javascript&quot;&gt;
+(function() {
+var script = document.createElement(&#39;script&#39;);
+script.type = &#39;text/javascript&#39;;
+script.src = &#39;//pagead2.googlesyndication.com/pagead/js/google_top_exp.js&#39;;
+var head = document.getElementsByTagName(&#39;head&#39;)[0];
+if (head) {
+head.appendChild(script);
+}})();
+&lt;/script&gt;
 </b:includable>
   </b:widget>
 </b:section>
