@@ -10,6 +10,8 @@ body {
 color: #000000;
 font-family:'Quicksand', sans-serif;
 font-size: 14px;
+background-color: #CBCDD4;
+margin: 0px 0px 0px 0px;
 }
 
 a:link {
@@ -20,96 +22,6 @@ text-decoration: none;
 }
 a:visited {
 text-decoration: none;
-}
-/---- Slideshow---/
- /* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor:pointer;
-  height: 13px;
-  width: 13px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
 }
 
 .contenu {
@@ -158,19 +70,8 @@ text-decoration: none;
   text-transform: uppercase;
   border-bottom: 1px solid #FFFFFF;
 }
-#leonardnimoy {
-  width: 325px;
-  height: 200px;
-  padding: 4px;
-  margin-left: 10px;
-  border: 1px solid blue;
-  float: left;
-background: url('https://1.bp.blogspot.com/-R1u9Z81dwn0/VPRm7NoumkI/AAAAAAAAAOI/NPKn3qhByEA/s1600/leonardnimoy_01.jpg')no-repeat;
-}
 
-#leonardnimoy img{
-width: 100%;
-}
+
 #billetspop{
   width: 300px;
   height: 200px;
@@ -178,6 +79,40 @@ width: 100%;
   border: 1px solid yellow;
   padding: 4px;
   float: left;
+}
+
+/* Contenant de la barre de cookies */
+.cookie-choices-info, #cookieChoiceInfo {
+bottom: 0 !important;
+top: auto !important;
+background-color: #000003;
+}
+/* Barre de cookies */
+.cookie-choices-inner, #cookieChoiceInfo div {
+margin-top: -10px !important;
+margin-bottom: -10px !important;
+}
+
+/* Texte de la barre de cookies */
+.cookie-choices-text, #cookieChoiceInfo span {
+font-family: 'Quicksand', 'Arial', sans-serif;
+font-size: 12px;
+}
+
+/* Boutons de la barre de cookies */
+.cookie-choices-buttons a, #cookieChoiceInfo a {
+border-radius: 0 !important;
+font-family: 'Century Gothic', URW Gothic L', sans-serif,
+background-color: #000003;
+border: 1px solid #FFFFFF;
+letter-spacing: 1px;
+padding: 4px;
+}
+
+/* Boutons de la barre de cookies au survol de la souris */
+.cookie-choices-buttons a:hover, #cookieChoiceInfo a:hover {
+background-color: #FFFFFF;
+color: #000003;
 }
 
 *--- Fixer la navbar ----*/
@@ -211,7 +146,7 @@ padding-left: 0px;}
 text-align: center;
 padding-top: 10px;
 padding-bottom: 10px;
-background-color: #000000;
+background-color: #010521;
 top: -20px;}
 
 /* Police et couleur des liens */
@@ -220,7 +155,7 @@ font-family: 'Century Gothic','URW Gothic L', sans-serif;
 font-size: 16px;
 margin-right: 20px;
 text-transform: uppercase;
-color: #f4991A;
+color: #ffffff;
 }
 
 /* Visiblité liens */
@@ -250,41 +185,76 @@ width: 100%;
 
 h2.date-header{
 font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
-font-size: 12px;
+font-size: 18px;
+text-align: center;
+background-color: #010521;
+margin: auto;
+color: #ffffff;
+width: 400px;
+height: 400px:
+border-radius: 50px;
 }
 
 h3.post-title{
 font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
-font-size: 16px;
+font-size: 22px;
 text-transform: uppercase;
 text-align: center;
 }
 .post-outer {
-border: 1px solid black;
+padding: 20px;
 width: 100%;
 margin-bottom: 10px;
+background: #ffffff;
 }
 
 .post-body {
 padding: 10px;
 text-align: justify;
+background: #ffffff;
+color: #010521;
+font-size: 16px;
 }
 
 .post-body img{
 border: 0px;
 width: 100%;
+height: auto;
 }
 
-.jump-link{
-border: 1px solid #000000;
+.jump-link a{
+color: #010521;
 text-transform: uppercase;
 font-size: 16px;
 letter-spacing: 1px;
 font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
-text-align: center;
 padding: 6px;
+background: #ffffff;
+border: 1px solid #010521;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 20px;
+padding-right: 20px;
+}
+.jump-link {
+text-align: center;
+margin-bottom: 20px;
+
 }
 
+.jump-link a:hover{
+color: #ffffff;
+text-transform: uppercase;
+font-size: 16px;
+letter-spacing: 1px;
+font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 20px;
+padding-right: 20px;
+background: #010521;
+margin: auto;
+}
 .post-footer{
 text-align: center;
 }
@@ -458,23 +428,58 @@ a:active.sb-pinterest { background-position: -120px -100px !important; }
 a:hover.sb-hc { background-position: -180px -60px !important; }
 a:active.sb-hc { background-position: -180px -100px !important; }
 
+/-----Pied de page -----/
+#footer2{
+background-color: #000000;
+}
+
+#footer-column-container {
+clear:both;
+}
+
+.footer-column {
+padding: 10px;
+background-color: #000000;
+}
+
   ]]></b:skin>
-  </head>
+  <!-- Barre de Cookie Blogger -->
+<script type='text/javascript'>
+  cookieOptions = {
+    msg: &quot;Ce site utilise des cookies provenant de Google afin de fournir ses services, personnaliser les annonces et analyser le trafic. En acceptant ce site, vous acceptez l&#39;utilisation des cookies.&quot;,
+    link: &quot;https://www.blogger.com/go/blogspot-cookies&quot;,
+    close: &quot;Ok!&quot;,
+    learn: &quot;En savoir plus&quot; };
+</script></head>
   <body>
     <header>
 <div id='barre_nav'>
 <ul>
-<li><a href='http://cinetvevents.blogspot.fr'>Accueil</a></li>
+<li><a href='http://web-and-screens.blogspot.fr'>Accueil</a></li>
   <li><a href='#'>I.CODE</a></li>
   <li><a href='#'>On en parle</a></li>
-<li><a href='http://cinetvevents.blogspot.fr/p/mes-series-cultes.html'>Du Petit...</a></li> 
+<li><a href='http://web-and-screens.blogspot.fr/p/mes-series-cultes.html'>Du Petit...</a></li> 
   <li><a href='#'>au grand écran</a></li>
   <li><a href='#'>Divers</a></li>
-<li><a href='http://cinetvevents.blogspot.fr/p/blog-page_5.html'>A propos</a></li>
+<li><a href='http://web-and-screens.blogspot.fr/p/blog-page_5.html'>A propos</a></li>
 </ul>
 
 </div>
+      <b:section class='header' id='header' showaddelements='yes'>
+        <b:widget id='HTML5' locked='false' title='' type='HTML' visible='true'>
+          <b:includable id='main'>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
 
+  <b:include name='quickedit'/>
+</b:includable>
+        </b:widget>
+      </b:section>
 </header>
 <b:section class='main' id='main' showaddelements='yes'>
   <b:widget id='Blog1' locked='true' title='Articles du blog' type='Blog' visible='true'>
@@ -1369,7 +1374,7 @@ a:active.sb-hc { background-position: -180px -100px !important; }
   </div>
 </b:includable>
   </b:widget>
-  <b:widget id='Navbar1' locked='false' title='Navbar' type='Navbar' version='1' visible='true'>
+  <b:widget id='Navbar1' locked='false' title='Navbar' type='Navbar' visible='true'>
     <b:includable id='main'>&lt;script type=&quot;text/javascript&quot;&gt;
     function setAttributeOnload(object, attribute, val) {
       if(window.addEventListener) {
@@ -1386,7 +1391,7 @@ a:active.sb-hc { background-position: -180px -100px !important; }
       gapi.load(&quot;gapi.iframes:gapi.iframes.style.bubble&quot;, function() {
         if (gapi.iframes &amp;&amp; gapi.iframes.getContext) {
           gapi.iframes.getContext().openChild({
-              url: &#39;https://www.blogger.com/navbar.g?targetBlogID\x3d9197449548615089694\x26blogName\x3dtest+design\x26publishMode\x3dPUBLISH_MODE_BLOGSPOT\x26navbarType\x3dDISABLED\x26layoutType\x3dLAYOUTS\x26searchRoot\x3dhttps://testdesign99.blogspot.com/search\x26blogLocale\x3dfr\x26v\x3d2\x26homepageUrl\x3dhttps://testdesign99.blogspot.com/\x26vt\x3d-9000421383708886119&#39;,
+              url: &#39;https://www.blogger.com/navbar.g?targetBlogID\x3d5816737978367822208\x26blogName\x3dWeb+and+Screens\x26publishMode\x3dPUBLISH_MODE_BLOGSPOT\x26navbarType\x3dDISABLED\x26layoutType\x3dLAYOUTS\x26searchRoot\x3dhttps://web-and-screens.blogspot.com/search\x26blogLocale\x3dfr\x26v\x3d2\x26homepageUrl\x3dhttps://web-and-screens.blogspot.com/\x26vt\x3d-7751580962425854258&#39;,
               where: document.getElementById(&quot;navbar-iframe-container&quot;),
               id: &quot;navbar-iframe&quot;
           });
@@ -1498,8 +1503,14 @@ head.appendChild(script);
 </b:includable>
   </b:widget>
 </b:section>
-<b:section class='footer' id='footer' showaddelements='yes'>
-  <b:widget id='HTML4' locked='false' title='' type='HTML' visible='true'>
+
+  <b:section class='footer' id='footer' showaddelements='yes'/>
+<div id='footer-column-container'>
+
+<div id='footer2' style='width: 30%; float: left; margin:0; text-align: left;'>
+
+<b:section class='footer-column' id='col1' preferred='yes' style='float:left;'>
+  <b:widget id='HTML6' locked='false' title='' type='HTML' visible='true'>
     <b:includable id='main'>
   <!-- only display title if it's non-empty -->
   <b:if cond='data:title != &quot;&quot;'>
@@ -1512,7 +1523,7 @@ head.appendChild(script);
   <b:include name='quickedit'/>
 </b:includable>
   </b:widget>
-  <b:widget id='Stats1' locked='false' title='visiteurs' type='Stats' visible='true'>
+  <b:widget id='Stats1' locked='false' title='' type='Stats' visible='true'>
     <b:includable id='main'>
   <b:if cond='data:title != &quot;&quot;'><h2><data:title/></h2></b:if>
   <div class='widget-content'>
@@ -1529,7 +1540,7 @@ head.appendChild(script);
   </div>
 </b:includable>
   </b:widget>
-  <b:widget id='BlogArchive1' locked='false' title='Archives' type='BlogArchive' visible='true'>
+  <b:widget id='BlogArchive1' locked='false' title='Archives du blog' type='BlogArchive' visible='true'>
     <b:includable id='main'>
   <b:if cond='data:title != &quot;&quot;'>
     <h2><data:title/></h2>
@@ -1598,7 +1609,12 @@ head.appendChild(script);
   </a>
 </b:includable>
   </b:widget>
-  <b:widget id='HTML5' locked='false' title='' type='HTML' visible='true'>
+</b:section>
+</div>
+
+<div id='footer3' style='width: 40%; float: left; margin:0; text-align: left;'>
+<b:section class='footer-column' id='col2' preferred='yes' style='float:left;'>
+  <b:widget id='HTML4' locked='false' title='' type='HTML' visible='true'>
     <b:includable id='main'>
   <!-- only display title if it's non-empty -->
   <b:if cond='data:title != &quot;&quot;'>
@@ -1611,6 +1627,12 @@ head.appendChild(script);
   <b:include name='quickedit'/>
 </b:includable>
   </b:widget>
+</b:section>
+</div>
+
+<div id='footer4' style='width: 30%; float: right; margin:0; text-align: left;'>
+
+<b:section class='footer-column' id='col3' preferred='yes' style='float:right;'>
   <b:widget id='PopularPosts1' locked='false' title='Billets les plus consultés' type='PopularPosts' visible='true'>
     <b:includable id='main'>
   <b:if cond='data:title != &quot;&quot;'><h2><data:title/></h2></b:if>
@@ -1653,7 +1675,26 @@ head.appendChild(script);
   </div>
 </b:includable>
   </b:widget>
-  <b:widget id='HTML6' locked='false' title='' type='HTML' visible='true'>
+</b:section>
+</div>
+
+<div style='clear:both;'/>
+
+<div id='footer-bottom' style='text-align: center; padding: 10px; text-transform: lowercase;'>
+
+<b:section class='footer' id='col-bottom' preferred='yes'>
+  <b:widget id='Attribution1' locked='false' title='' type='Attribution' visible='true'>
+    <b:includable id='main'>
+    <div class='widget-content' style='text-align: center;'>
+      <b:if cond='data:attribution != &quot;&quot;'>
+       <data:attribution/>
+      </b:if>
+    </div>
+
+    <b:include name='quickedit'/>
+  </b:includable>
+  </b:widget>
+  <b:widget id='Text2' locked='false' title='' type='Text' visible='true'>
     <b:includable id='main'>
   <!-- only display title if it's non-empty -->
   <b:if cond='data:title != &quot;&quot;'>
@@ -1666,19 +1707,12 @@ head.appendChild(script);
   <b:include name='quickedit'/>
 </b:includable>
   </b:widget>
-  <b:widget id='Attribution1' locked='false' title='' type='Attribution' visible='true'>
-    <b:includable id='main'>
-    <div class='widget-content' style='text-align: center;'>
-      <b:if cond='data:attribution != &quot;&quot;'>
-       <data:attribution/>
-      </b:if>
-    </div>
-
-    <b:include name='quickedit'/>
-  </b:includable>
-  </b:widget>
 </b:section>
 
+</div>
+<div style='clear:both;'/>
+
+</div>
 </body>
 
 </html>
