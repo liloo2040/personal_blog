@@ -1,136 +1,43 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
 <html xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
-<head>
-  <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'/>
-<title><data:blog.pageTitle/></title>
-  <meta content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1' name='viewport'/>
-<b:skin><![CDATA[
+  <head>
+<link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'/>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'/>
+    <b:include data='blog' name='all-head-content'/>
+    <title><data:blog.pageTitle/></title>
 
-body {
+    <b:skin><![CDATA[/*
+*/
+
+]]></b:skin>
+    <style type='text/css'>
+body{
 color: #000000;
-font-family:'Quicksand', sans-serif;
 font-size: 14px;
-background-color: #CBCDD4;
-margin: 0px 0px 0px 0px;
+background-color: #D1E4FF;
+margin: 0 auto;
 }
 
-a:link {
-text-decoration: none;
-}
-a:hover {
-text-decoration: none;
-}
-a:visited {
+a:link{
 text-decoration: none;
 }
 
-.contenu {
-  overflow: auto;
-  margin-top: 20px;
-}
 
-#agendatv{
-  width: 290px;
-  padding: 4px;
-  margin-left: 10px;
-  height: auto;
-  float: left;
-  background-color: #FFFFFF;
-  box-shadow: 0px 1px 3px #000000;
-  font-family: 'Free Sans', Arial, sans-serif;
-} 
-#agendatv h3 {
-  background-color: red;
-  color: #FFFFFF;
-  text-transform: uppercase;
-  margin-top: -5px;
-  width: 99%;
-  margin-left: -5px;
-  padding: 6px;
-  font-size: 18px;
-  text-align: center;
-}
-
-.tv {
-  width: 80px;
-}
-#sortiescine {
-  width: 300px;
-  border: 1px solid #00001A;
-  background-color: #000000;
-  color: #FFFFFF;
-  margin-left: 10px;
-  padding: 4px;
-  height: 200px;
-  float: left;
-}
-#sortiescine h3{
-  text-align: center;
-  font-family: 'Open Sans', serif;
-  text-transform: uppercase;
-  border-bottom: 1px solid #FFFFFF;
-}
-
-
-#billetspop{
-  width: 300px;
-  height: 200px;
-  margin-left: 10px;
-  border: 1px solid yellow;
-  padding: 4px;
-  float: left;
-}
-
-/* Contenant de la barre de cookies */
-.cookie-choices-info, #cookieChoiceInfo {
-bottom: 0 !important;
-top: auto !important;
-background-color: #000003;
-}
-/* Barre de cookies */
-.cookie-choices-inner, #cookieChoiceInfo div {
-margin-top: -10px !important;
-margin-bottom: -10px !important;
-}
-
-/* Texte de la barre de cookies */
-.cookie-choices-text, #cookieChoiceInfo span {
-font-family: 'Quicksand', 'Arial', sans-serif;
-font-size: 12px;
-}
-
-/* Boutons de la barre de cookies */
-.cookie-choices-buttons a, #cookieChoiceInfo a {
-border-radius: 0 !important;
-font-family: 'Century Gothic', URW Gothic L', sans-serif,
-background-color: #000003;
-border: 1px solid #FFFFFF;
-letter-spacing: 1px;
-padding: 4px;
-}
-
-/* Boutons de la barre de cookies au survol de la souris */
-.cookie-choices-buttons a:hover, #cookieChoiceInfo a:hover {
-background-color: #FFFFFF;
-color: #000003;
-}
 
 *--- Fixer la navbar ----*/
 #barre_nav{
 position: fixed;
-top: -20px;
-width: 101%;
+top: 0px;
 left: 0px;
 }
 /* Espacement avant et après barre de navigation */ 
 #barre_nav {
-margin-top: -15px;
-margin-bottom: 10px;
-margin-left: -10px;
-margin-right: 20px;
+//margin-bottom: 10px;
+margin: 0 auto;
 width: 100%;
 position: fixed;
-top: 0px;
+top: -16px;
 }
 
 #barre_nav .section:last-child li {
@@ -146,12 +53,14 @@ padding-left: 0px;}
 text-align: center;
 padding-top: 10px;
 padding-bottom: 10px;
-background-color: #010521;
-top: -20px;}
+background-color: #004466;
+top: -20px;
+z-index: 999;
+opacity: 0.8;}
 
 /* Police et couleur des liens */
 #barre_nav li a {
-font-family: 'Century Gothic','URW Gothic L', sans-serif;
+font-family:&#39;Century Gothic&#39;,&#39;URW Gothic L&#39;, sans-serif;
 font-size: 16px;
 margin-right: 20px;
 text-transform: uppercase;
@@ -178,272 +87,286 @@ transition-duration: 0.4s;
 display: inline-block;
 float: none;}
 
-/-----Main, posts -----/
-#main {
+/---- Header ----/
+header{
+background-color: #00003A;
 width: 100%;
+height: 300px;
+border: 1px solid black;
+}
+header h1{
+font-size: 100px;
+text-align: center;
+font-family: 'Quicksand', sans-serif;
 }
 
-h2.date-header{
-font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
-font-size: 18px;
-text-align: center;
-background-color: #010521;
+/----- Cookies ------/
+/* Contenant de la barre de cookies */
+.cookie-choices-info, #cookieChoiceInfo {
+bottom: 0 !important;
+top: auto !important;
+background-color: #000003;
+}
+/* Barre de cookies */
+.cookie-choices-inner, #cookieChoiceInfo div {
+margin-top: -10px !important;
+margin-bottom: -10px !important;
+}
+
+/* Texte de la barre de cookies */
+.cookie-choices-text, #cookieChoiceInfo span {
+font-family: &#39;Quicksand&#39;, &#39;Arial&#39;, sans-serif;
+font-size: 12px;
+}
+
+/* Boutons de la barre de cookies */
+.cookie-choices-buttons a, #cookieChoiceInfo a {
+border-radius: 0 !important;
+font-family: &#39;Century Gothic&#39;, URW Gothic L&#39;, sans-serif,
+background-color: #000003;
+border: 1px solid #FFFFFF;
+letter-spacing: 1px;
+padding: 4px;
+}
+
+/* Boutons de la barre de cookies au survol de la souris */
+.cookie-choices-buttons a:hover, #cookieChoiceInfo a:hover {
+background-color: #FFFFFF;
+color: #000003;
+}
+
+/----Billets----/
+#main{
+
+}
+
+.blog-posts{
+background-color: #FFFFFF;
+color: #010521;
 margin: auto;
-color: #ffffff;
-width: 400px;
-height: 400px:
-border-radius: 50px;
-}
-
-h3.post-title{
-font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
-font-size: 22px;
-text-transform: uppercase;
-text-align: center;
-}
-.post-outer {
-padding: 20px;
-width: 100%;
-margin-bottom: 10px;
-background: #ffffff;
-}
-
-.post-body {
+width: 80%;
 padding: 10px;
 text-align: justify;
-background: #ffffff;
-color: #010521;
-font-size: 16px;
+font-family: 'Josefin Sans', 'Open Sans', sans-serif;
 }
 
-.post-body img{
-border: 0px;
-width: 100%;
-height: auto;
+
+.blog-posts h3{
+font-size: 40px; 
+}
+
+.date-header {
+margin: auto;
+margin-top: -43px;
+text-align: center;
+}
+
+.date-header span {
+color: #FFFFFF;
+background-color: #046B99;
+padding: 10px;
+font-size: 14px;
+font-family: 'Quicksand', 'Open Sans', sans-serif;
+text-align: center;
+}
+
+.jump-link{
+background-color: #004466;
+color: #FFFFFF;
+letter-spacing: 1px;
+padding: 10px;
+margin: auto; 
+width: 50%;
+margin-top: 20px;
+margin-bottom: 20px;
+text-align: center;
+text-transform: uppercase;
+font-family: 'Quicksand', 'Open Sans', sans-serif;
 }
 
 .jump-link a{
-color: #010521;
-text-transform: uppercase;
-font-size: 16px;
+background-color: #004466;
+color: #FFFFFF;
 letter-spacing: 1px;
-font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
-padding: 6px;
-background: #ffffff;
-border: 1px solid #010521;
-padding-top: 10px;
-padding-bottom: 10px;
-padding-left: 20px;
-padding-right: 20px;
-}
-.jump-link {
+padding: 10px;
+width: 50%;
 text-align: center;
-margin-bottom: 20px;
-
+text-transform: uppercase;
+font-family: 'Quicksand', 'Open Sans', sans-serif;
+margin: 20px;
 }
 
 .jump-link a:hover{
-color: #ffffff;
-text-transform: uppercase;
-font-size: 16px;
+background-color: #FFFFFF;
+color: #004466;
+border: 1px solid #004466;
 letter-spacing: 1px;
-font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
-padding-top: 10px;
+padding: 10px;
+width: 100%;
+text-align: center;
+text-transform: uppercase;
+font-family: 'Quicksand', 'Open Sans', sans-serif;
+margin: 20px;
+}
+
+/---- Pied de page -----/
+#footer{
+width: 100%;
+}
+footer{
+background-color: #010521;
+width: 100%;
+display: flex;
+justify-content: space-around;
+align-content: center;
+flex-wrap: wrap;
+flex-direction: row;
+margin-top: 10px;
+margin-left: -10px;
+margin-right: 20px;
 padding-bottom: 10px;
-padding-left: 20px;
-padding-right: 20px;
-background: #010521;
-margin: auto;
+padding-right: 10px;
+color: #CBCDD4;
+font-family: &#39;Open Sans&#39;, &#39;Arial&#39;, sans-serif;
 }
-.post-footer{
+
+
+footer h2, h3{
+font-family: &#39;Century Gothic&#39;, &#39;URW Gothic L&#39;, sans-serif;
+text-transform: uppercase;
 text-align: center;
+color: #ffffff;
 }
 
-/* Galerie Photo */
-#galerie_photo {
-max-width: 100%;
-text-align: center;
+footer li {
+list-style-type: none;
+font-family: &#39;Open Sans&#39;, &#39;Arial&#39;, sans-serif;
 }
-
-#galerie_photo .GPimg {
-max-width: 40%;
-width: 150px;
-height: 150px;
-display: inline-block;
-background-position: 50% 50%;
-background-size: cover;
-padding: 0;
-margin: 4px;
-border-radius: 70px;
-}
-
-#galerie_photo .GPimg:hover {
-transformation: scale (1.25);
-
-}
-
-.statut {
-color: transparent;
-}
-
-.statut:hover{
-background-color:#004445;
-opacity: 0.8;
+footer li a{
 color: #FFFFFF;
-font-weight: lighter;
-font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
-transition-duration: 0.4s;
-z-index: 9999;
-width: 150px;
-height: 150px;
-border-radius: 70px;
-font-size: 25px;
-vertical-align: middle;
+}
+/---Colonne 1---/
+
+#col-1 {
+display: flex;
+flex-direction: column;
+border: 1px solid #FFFFFF;
+align-items: center;
+margin: 10px;
 }
 
-.statuttermine {
-background-color: #022330;
-opacity: 0.8;
-color: #FFFFFF;
-height: 100%;
-font-weight: lighter;
+/--Présentation--/
+#encart-intro{
+border: 4px solid #046B99;
+padding: 10px;
+margin-top: 10px;
+font-family: &#39;Quicksand&#39;, &#39;Open Sans&#39;, sans-serif;
+}
+.encart-intro{
+border: 4px solid #004466;
+background-color: #046B99;
+padding: 10px;
+margin-top: 10px;
+width: 300px;
+text-align: center;
+font-family: &#39;Quicksand&#39;, &#39;Open Sans&#39;, sans-serif;
+}
+
+.encart-intro h2{
+margin-top: -5px;
+}
+
+/--Archives--/
+#BlogArchive1{
+background-color: red;
+width: 300px;
+align-content: center;
+}
+#BlogArchive1 ul li{
+font-family: &#39;Quicksand&#39;, &#39;Open Sans&#39;, sans-serif;
+margin-left: 10px;
+}
+
+#BlogArchive1 ul li a{
+color: #CBCDD4;
+}
+
+#BlogArchive1 h2{
 text-transform: uppercase;
-font-family: 'Century Gothic';
-z-index: 9999;
+color: #FFFFFF;
+font-family: &#39;Century Gothic&#39;, &#39;URW Gothic L&#39;, sans-serif;
+text-align:center;
 }
 
+#BlogArchive1_ArchiveMenu{
+background-color: #010521;
+color: #CBCDD4;
+border: none;
+padding: 5px;
+width: 300px;
+font-family: &#39;Arial&#39;, sans-serif;
+}
 
-#challengeseries {
+#Stats1_totalCount{
+font-size: 20px;
+font-family: &#39;Century Gothic&#39;, &#39;URW Gothic L&#39;, sans-serif;
+font-weight: normal;
 text-align: center;
 margin: auto;
+width: 300px;
+margin-top: 10px;
+}
+/---Colonne 2---/
+
+#col-2{
+display: flex;
+flex-direction: column;
+align-items;
+text-align: center;
+margin-bottom: 10px;
+}
+
+
+/---Colonne 3--/
+#footer-3{
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+}
+
+#PopularPosts1{
+margin-left: -10px;
+}
+
+/---Crédits---/
+.footer-3{
+background-color: #010521;
+font-family: &#39;Century Gothic&#39;, &#39;URW Gothic L&#39;, sans-serif;
+color: #FFFFFF;
 padding: 10px;
-width: 800px;
 }
-
-#challengeseries h3{
-color: #001222;
-font-size: 18px;
-text-transform: uppercase;
-font-weight: bold;
-border-bottom: 1px solid #001222;
-font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
-}
-#agendatv{
-  width: 290px;
-  padding: 4px;
-  margin-left: 10px;
-  height: auto;
-  float: left;
-  background-color: #FFFFFF;
-  box-shadow: 0px 1px 3px #000000;
-  font-family: 'Free Sans', Arial, sans-serif;
-} 
-#agendatv h3 {
-  background-color: red;
-  color: #FFFFFF;
-  text-transform: uppercase;
-  margin-top: -5px;
-  width: 99%;
-  margin-left: -5px;
-  padding: 6px;
-  font-size: 18px;
-  text-align: center;
-}
-
-.tv {
-  width: 80px;
-}
-#sortiescine {
-  width: 300px;
-  border: 1px solid #00001A;
-  background-color: #000000;
-  color: #FFFFFF;
-  margin-left: 310px;
-  margin-top: -350px;
-  padding: 4px;
-  height: 200px;
-  float: left;
-}
-#sortiescine h3{
-  text-align: center;
-  font-family: 'Oswald', serif;
-  text-transform: uppercase;
-  border-bottom: 1px solid #FFFFFF;
-}
-
-/----- Billets -----/
-
-h2 .date-header{
-width: 20px;
-background: #99CCFF;
-
-h3 .post-title .entry-title {
-text-transform: uppercase;
-
-
-/----- Boutons de partage ------/
-
-.share-bar {
-  margin-top: .5em;
-  vertical-align: bottom;
-  display: inline-block;
-  font-size: 0px;
-  line-height: 0px !important;
-}
-
-.share-button {
-  background: url(https://sites.google.com/site/bloggercodebc/home/share_buttons/share_buttons_BC_dark.png) no-repeat left !important;
-  background-size: auto 120px !important;
-  width: 30px !important;
-  height: 30px !important;
-  overflow: hidden !important;
-  margin-left: -1px !important;
-  position: relative !important;
-}
-
-.share-button-link-text {
-  text-align: left !important;
-}
-
-.sb-email { background-position: 0 -0px !important; }
-a:hover.sb-email { background-position: 0 -60px !important; }
-a:active.sb-email { background-position: 0 -100px !important; }
-.sb-blog { background-position: -20px -0px !important; }
-a:hover.sb-blog { background-position: -20px -60px !important; }
-a:active.sb-blog { background-position: -20px -100px !important; }
-.sb-twitter { background-position: -40px -0px !important; }
-a:hover.sb-twitter { background-position: -40px -60px !important; }
-a:active.sb-twitter { background-position: -40px -100px !important; }
-.sb-facebook { background-position: -60px -0px !important; }
-a:hover.sb-facebook { background-position: -60px -60px !important; }
-a:active.sb-facebook { background-position: -60px -100px !important; }
-.share-bar .sb-orkut { display: none; }
-.share-bar .sb-linkedin { display: none; }
-.sb-pinterest { background-position: -120px -0px !important; }
-a:hover.sb-pinterest { background-position: -120px -60px !important; }
-a:active.sb-pinterest { background-position: -120px -100px !important; }
-.share-bar .sb-gplus { display: none; }
-.share-bar .sb-stumble { display: none; }
-.sb-hc { background-position: -180px -0px !important; }
-a:hover.sb-hc { background-position: -180px -60px !important; }
-a:active.sb-hc { background-position: -180px -100px !important; }
-
-/-----Pied de page -----/
-#footer2{
-background-color: #000000;
-}
-
-#footer-column-container {
-clear:both;
-}
-
-.footer-column {
+#Attribution1{
+background-color: #010521;
+font-family: &#39;Century Gothic&#39;, &#39;URW Gothic L&#39;, sans-serif;
+color: #FFFFFF;
 padding: 10px;
-background-color: #000000;
 }
 
-  ]]></b:skin>
-  <!-- Barre de Cookie Blogger -->
+/----Back to Top---/
+.backtotop a{
+position: fixed; 
+bottom: 10px;
+right: 0px;
+background-color: #FFFFFF;
+color: #010521;
+padding: 10px;
+text-transform: uppercase;
+}
+
+
+</style>
+    <!-- Barre de Cookie Blogger -->
 <script type='text/javascript'>
   cookieOptions = {
     msg: &quot;Ce site utilise des cookies provenant de Google afin de fournir ses services, personnaliser les annonces et analyser le trafic. En acceptant ce site, vous acceptez l&#39;utilisation des cookies.&quot;,
@@ -452,7 +375,7 @@ background-color: #000000;
     learn: &quot;En savoir plus&quot; };
 </script></head>
   <body>
-    <header>
+  <header>  
 <div id='barre_nav'>
 <ul>
 <li><a href='http://web-and-screens.blogspot.fr'>Accueil</a></li>
@@ -465,9 +388,10 @@ background-color: #000000;
 </ul>
 
 </div>
-      <b:section class='header' id='header' showaddelements='yes'>
-        <b:widget id='HTML5' locked='false' title='' type='HTML' visible='true'>
-          <b:includable id='main'>
+
+   <b:section class='header' id='header' showaddelements='yes'>
+     <b:widget id='HTML5' locked='false' title='' type='HTML'>
+       <b:includable id='main'>
   <!-- only display title if it's non-empty -->
   <b:if cond='data:title != &quot;&quot;'>
     <h2 class='title'><data:title/></h2>
@@ -478,12 +402,13 @@ background-color: #000000;
 
   <b:include name='quickedit'/>
 </b:includable>
-        </b:widget>
-      </b:section>
+     </b:widget>
+   </b:section>
 </header>
-<b:section class='main' id='main' showaddelements='yes'>
-  <b:widget id='Blog1' locked='true' title='Articles du blog' type='Blog' visible='true'>
-    <b:includable id='main' var='top'>
+<div class='main'>
+  <b:section class='main' id='main' showaddelements='yes'>
+    <b:widget id='Blog1' locked='true' title='Articles du blog' type='Blog'>
+      <b:includable id='main' var='top'>
   <b:if cond='!data:mobile'>
     <!-- posts -->
     <div class='blog-posts hfeed'>
@@ -535,14 +460,14 @@ background-color: #000000;
   </b:if>
 
 </b:includable>
-    <b:includable id='backlinkDeleteIcon' var='backlink'>
+      <b:includable id='backlinkDeleteIcon' var='backlink'>
   <span expr:class='&quot;item-control &quot; + data:backlink.adminClass'>
     <a expr:href='data:backlink.deleteUrl' expr:title='data:top.deleteBacklinkMsg'>
       <img src='https://resources.blogblog.com/img/icon_delete13.gif'/>
     </a>
   </span>
 </b:includable>
-    <b:includable id='backlinks' var='post'>
+      <b:includable id='backlinks' var='post'>
   <a name='links'/><h4><data:post.backlinksLabel/></h4>
   <b:if cond='data:post.numBacklinks != 0'>
     <dl class='comments-block' id='comments-block'>
@@ -568,7 +493,7 @@ background-color: #000000;
     <a class='comment-link' expr:href='data:post.createLinkUrl' expr:id='data:widget.instanceId + &quot;_backlinks-create-link&quot;' target='_blank'><data:post.createLinkLabel/></a>
   </p>
 </b:includable>
-    <b:includable id='comment-form' var='post'>
+      <b:includable id='comment-form' var='post'>
   <div class='comment-form'>
     <a name='comment-form'/>
     <b:if cond='data:mobile'>
@@ -591,7 +516,7 @@ background-color: #000000;
     </script>
   </div>
 </b:includable>
-    <b:includable id='commentDeleteIcon' var='comment'>
+      <b:includable id='commentDeleteIcon' var='comment'>
   <span expr:class='&quot;item-control &quot; + data:comment.adminClass'>
     <b:if cond='data:showCmtPopup'>
       <div class='goog-toggle-button'>
@@ -604,7 +529,7 @@ background-color: #000000;
     </b:if>
   </span>
 </b:includable>
-    <b:includable id='comment_count_picker' var='post'>
+      <b:includable id='comment_count_picker' var='post'>
   <b:if cond='data:post.commentSource == 1'>
     <span class='cmt_count_iframe_holder' expr:data-count='data:post.numComments' expr:data-onclick='data:post.addCommentOnclick' expr:data-post-url='data:post.url' expr:data-url='data:post.url.canonical.http'>
     </span>
@@ -614,7 +539,7 @@ background-color: #000000;
     </a>
   </b:if>
 </b:includable>
-    <b:includable id='comment_picker' var='post'>
+      <b:includable id='comment_picker' var='post'>
   <b:if cond='data:post.commentSource == 1'>
     <b:include data='post' name='iframe_comments'/>
   <b:elseif cond='data:post.showThreadedComments'/>
@@ -623,7 +548,7 @@ background-color: #000000;
     <b:include data='post' name='comments'/>
   </b:if>
 </b:includable>
-    <b:includable id='comments' var='post'>
+      <b:includable id='comments' var='post'>
   <div class='comments' id='comments'>
     <a name='comments'/>
     <b:if cond='data:post.allowComments'>
@@ -734,7 +659,7 @@ background-color: #000000;
     </div>
   </div>
 </b:includable>
-    <b:includable id='feedLinks'>
+      <b:includable id='feedLinks'>
   <b:if cond='data:blog.pageType != &quot;item&quot;'> <!-- Blog feed links -->
     <b:if cond='data:feedLinks'>
       <div class='blog-feeds'>
@@ -750,7 +675,7 @@ background-color: #000000;
     </div>
   </b:if>
 </b:includable>
-    <b:includable id='feedLinksBody' var='links'>
+      <b:includable id='feedLinksBody' var='links'>
   <div class='feed-links'>
   <data:feedLinksMsg/>
   <b:loop values='data:links' var='f'>
@@ -758,7 +683,7 @@ background-color: #000000;
   </b:loop>
   </div>
 </b:includable>
-    <b:includable id='iframe_comments' var='post'>
+      <b:includable id='iframe_comments' var='post'>
 
   <b:if cond='data:post.allowIframeComments'>
     <script expr:src='data:post.iframeCommentSrc' type='text/javascript'/>
@@ -769,7 +694,7 @@ background-color: #000000;
     </b:if>
   </b:if>
 </b:includable>
-    <b:includable id='mobile-index-post' var='post'>
+      <b:includable id='mobile-index-post' var='post'>
   <div class='mobile-date-outer date-outer'>
     <b:if cond='data:post.dateHeader'>
       <div class='date-header'>
@@ -808,7 +733,7 @@ background-color: #000000;
     </div>
   </div>
 </b:includable>
-    <b:includable id='mobile-main' var='top'>
+      <b:includable id='mobile-main' var='top'>
     <!-- posts -->
     <div class='blog-posts hfeed'>
 
@@ -827,7 +752,7 @@ background-color: #000000;
 
    <b:include name='mobile-nextprev'/>
 </b:includable>
-    <b:includable id='mobile-nextprev'>
+      <b:includable id='mobile-nextprev'>
   <div class='blog-pager' id='blog-pager'>
     <b:if cond='data:newerPageUrl'>
       <div class='mobile-link-button' id='blog-pager-newer-link'>
@@ -852,7 +777,7 @@ background-color: #000000;
   </div>
   <div class='clear'/>
 </b:includable>
-    <b:includable id='mobile-post' var='post'>
+      <b:includable id='mobile-post' var='post'>
   <div class='date-outer'>
     <b:if cond='data:post.dateHeader'>
       <h2 class='date-header'><span><data:post.dateHeader/></span></h2>
@@ -942,7 +867,7 @@ background-color: #000000;
     </div>
   </div>
 </b:includable>
-    <b:includable id='nextprev'>
+      <b:includable id='nextprev'>
   <div class='blog-pager' id='blog-pager'>
     <b:if cond='data:newerPageUrl'>
       <span id='blog-pager-newer-link'>
@@ -967,7 +892,7 @@ background-color: #000000;
   </div>
   <div class='clear'/>
 </b:includable>
-    <b:includable id='post' var='post'>
+      <b:includable id='post' var='post'>
   <div class='post hentry uncustomized-post-template' itemprop='blogPost' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
     <b:if cond='data:post.firstImageUrl'>
       <meta expr:content='data:post.firstImageUrl' itemprop='image_url'/>
@@ -1110,7 +1035,7 @@ background-color: #000000;
     </div>
   </div>
 </b:includable>
-    <b:includable id='postQuickEdit' var='post'>
+      <b:includable id='postQuickEdit' var='post'>
   <b:if cond='data:post.editUrl'>
     <span expr:class='&quot;item-control &quot; + data:post.adminClass'>
       <a expr:href='data:post.editUrl' expr:title='data:top.editPostMsg'>
@@ -1119,10 +1044,10 @@ background-color: #000000;
     </span>
   </b:if>
 </b:includable>
-    <b:includable id='shareButtons' var='post'>
+      <b:includable id='shareButtons' var='post'>
   <b:if cond='data:top.showEmailButton'><a class='goog-inline-block share-button sb-email' expr:href='data:post.sharePostUrl + &quot;&amp;target=email&quot;' expr:title='data:top.emailThisMsg' target='_blank'><span class='share-button-link-text'><data:top.emailThisMsg/></span></a></b:if><b:if cond='data:top.showBlogThisButton'><a class='goog-inline-block share-button sb-blog' expr:href='data:post.sharePostUrl + &quot;&amp;target=blog&quot;' expr:onclick='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=270,width=475\&quot;); return false;&quot;' expr:title='data:top.blogThisMsg' target='_blank'><span class='share-button-link-text'><data:top.blogThisMsg/></span></a></b:if><b:if cond='data:top.showTwitterButton'><a class='goog-inline-block share-button sb-twitter' expr:href='data:post.sharePostUrl + &quot;&amp;target=twitter&quot;' expr:title='data:top.shareToTwitterMsg' target='_blank'><span class='share-button-link-text'><data:top.shareToTwitterMsg/></span></a></b:if><b:if cond='data:top.showFacebookButton'><a class='goog-inline-block share-button sb-facebook' expr:href='data:post.sharePostUrl + &quot;&amp;target=facebook&quot;' expr:onclick='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=430,width=640\&quot;); return false;&quot;' expr:title='data:top.shareToFacebookMsg' target='_blank'><span class='share-button-link-text'><data:top.shareToFacebookMsg/></span></a></b:if><b:if cond='data:top.showPinterestButton'><a class='goog-inline-block share-button sb-pinterest' expr:href='data:post.sharePostUrl + &quot;&amp;target=pinterest&quot;' expr:title='data:top.shareToPinterestMsg' target='_blank'><span class='share-button-link-text'><data:top.shareToPinterestMsg/></span></a></b:if><b:if cond='data:top.showPlusOne'><div class='goog-inline-block google-plus-share-container'><data:post.googlePlusShareTag/></div></b:if>
 </b:includable>
-    <b:includable id='status-message'>
+      <b:includable id='status-message'>
   <b:if cond='data:navMessage'>
   <div class='status-msg-wrap'>
     <div class='status-msg-body'>
@@ -1137,7 +1062,7 @@ background-color: #000000;
   <div style='clear: both;'/>
   </b:if>
 </b:includable>
-    <b:includable id='threaded-comment-form' var='post'>
+      <b:includable id='threaded-comment-form' var='post'>
   <div class='comment-form'>
     <a name='comment-form'/>
     <b:if cond='data:mobile'>
@@ -1157,7 +1082,7 @@ background-color: #000000;
     </script>
   </div>
 </b:includable>
-    <b:includable id='threaded_comment_js' var='post'>
+      <b:includable id='threaded_comment_js' var='post'>
   <script async='async' expr:src='data:post.commentSrc' type='text/javascript'/>
 
   <script type='text/javascript'>
@@ -1339,7 +1264,7 @@ background-color: #000000;
 // ]]>
   </script>
 </b:includable>
-    <b:includable id='threaded_comments' var='post'>
+      <b:includable id='threaded_comments' var='post'>
   <div class='comments' id='comments'>
     <a name='comments'/>
     <h4><data:post.commentLabelFull/>:</h4>
@@ -1373,46 +1298,15 @@ background-color: #000000;
     </div>
   </div>
 </b:includable>
-  </b:widget>
-  <b:widget id='Navbar1' locked='false' title='Navbar' type='Navbar' visible='true'>
-    <b:includable id='main'>&lt;script type=&quot;text/javascript&quot;&gt;
-    function setAttributeOnload(object, attribute, val) {
-      if(window.addEventListener) {
-        window.addEventListener(&#39;load&#39;,
-          function(){ object[attribute] = val; }, false);
-      } else {
-        window.attachEvent(&#39;onload&#39;, function(){ object[attribute] = val; });
-      }
-    }
-  &lt;/script&gt;
-&lt;div id=&quot;navbar-iframe-container&quot;&gt;&lt;/div&gt;
-&lt;script type=&quot;text/javascript&quot; src=&quot;https://apis.google.com/js/plusone.js&quot;&gt;&lt;/script&gt;
-&lt;script type=&quot;text/javascript&quot;&gt;
-      gapi.load(&quot;gapi.iframes:gapi.iframes.style.bubble&quot;, function() {
-        if (gapi.iframes &amp;&amp; gapi.iframes.getContext) {
-          gapi.iframes.getContext().openChild({
-              url: &#39;https://www.blogger.com/navbar.g?targetBlogID\x3d5816737978367822208\x26blogName\x3dWeb+and+Screens\x26publishMode\x3dPUBLISH_MODE_BLOGSPOT\x26navbarType\x3dDISABLED\x26layoutType\x3dLAYOUTS\x26searchRoot\x3dhttps://web-and-screens.blogspot.com/search\x26blogLocale\x3dfr\x26v\x3d2\x26homepageUrl\x3dhttps://web-and-screens.blogspot.com/\x26vt\x3d-7751580962425854258&#39;,
-              where: document.getElementById(&quot;navbar-iframe-container&quot;),
-              id: &quot;navbar-iframe&quot;
-          });
-        }
-      });
-    &lt;/script&gt;&lt;script type=&quot;text/javascript&quot;&gt;
-(function() {
-var script = document.createElement(&#39;script&#39;);
-script.type = &#39;text/javascript&#39;;
-script.src = &#39;//pagead2.googlesyndication.com/pagead/js/google_top_exp.js&#39;;
-var head = document.getElementsByTagName(&#39;head&#39;)[0];
-if (head) {
-head.appendChild(script);
-}})();
-&lt;/script&gt;
-</b:includable>
-  </b:widget>
-</b:section>
-<b:section class='sidebar' id='sidebar' showaddelements='yes'>
-  <b:widget id='HTML1' locked='false' title='' type='HTML' visible='true'>
-    <b:includable id='main'>
+    </b:widget>
+  </b:section>
+</div>
+<div class='sidebar'/>
+<footer>
+
+    <b:section class='footer' id='col-1' showaddelements='yes'>
+      <b:widget id='HTML2' locked='false' title='' type='HTML'>
+        <b:includable id='main'>
   <!-- only display title if it's non-empty -->
   <b:if cond='data:title != &quot;&quot;'>
     <h2 class='title'><data:title/></h2>
@@ -1423,125 +1317,9 @@ head.appendChild(script);
 
   <b:include name='quickedit'/>
 </b:includable>
-  </b:widget>
-  <b:widget id='HTML2' locked='false' title='' type='HTML' visible='true'>
-    <b:includable id='main'>
-  <!-- only display title if it's non-empty -->
-  <b:if cond='data:title != &quot;&quot;'>
-    <h2 class='title'><data:title/></h2>
-  </b:if>
-  <div class='widget-content'>
-    <data:content/>
-  </div>
-
-  <b:include name='quickedit'/>
-</b:includable>
-  </b:widget>
-  <b:widget id='HTML3' locked='false' title='' type='HTML' visible='true'>
-    <b:includable id='main'>
-  <!-- only display title if it's non-empty -->
-  <b:if cond='data:title != &quot;&quot;'>
-    <h2 class='title'><data:title/></h2>
-  </b:if>
-  <div class='widget-content'>
-    <data:content/>
-  </div>
-
-  <b:include name='quickedit'/>
-</b:includable>
-  </b:widget>
-  <b:widget id='HTML9' locked='false' title='' type='HTML' visible='true'>
-    <b:includable id='main'>
-  <!-- only display title if it's non-empty -->
-  <b:if cond='data:title != &quot;&quot;'>
-    <h2 class='title'><data:title/></h2>
-  </b:if>
-  <div class='widget-content'>
-    <data:content/>
-  </div>
-
-  <b:include name='quickedit'/>
-</b:includable>
-  </b:widget>
-  <b:widget id='Label1' locked='false' title='Tags' type='Label' visible='true'>
-    <b:includable id='main'>
-  <b:if cond='data:title != &quot;&quot;'>
-    <h2><data:title/></h2>
-  </b:if>
-  <div expr:class='&quot;widget-content &quot; + data:display + &quot;-label-widget-content&quot;'>
-    <b:if cond='data:display == &quot;list&quot;'>
-      <ul>
-        <b:loop values='data:labels' var='label'>
-          <li>
-            <b:if cond='data:blog.url == data:label.url'>
-              <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
-            <b:else/>
-              <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
-            </b:if>
-            <b:if cond='data:showFreqNumbers'>
-              <span dir='ltr'>(<data:label.count/>)</span>
-            </b:if>
-          </li>
-        </b:loop>
-      </ul>
-    <b:else/>
-      <b:loop values='data:labels' var='label'>
-        <span expr:class='&quot;label-size label-size-&quot; + data:label.cssSize'>
-          <b:if cond='data:blog.url == data:label.url'>
-            <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
-          <b:else/>
-            <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
-          </b:if>
-          <b:if cond='data:showFreqNumbers'>
-            <span class='label-count' dir='ltr'>(<data:label.count/>)</span>
-          </b:if>
-        </span>
-      </b:loop>
-    </b:if>
-    <b:include name='quickedit'/>
-  </div>
-</b:includable>
-  </b:widget>
-</b:section>
-
-  <b:section class='footer' id='footer' showaddelements='yes'/>
-<div id='footer-column-container'>
-
-<div id='footer2' style='width: 30%; float: left; margin:0; text-align: left;'>
-
-<b:section class='footer-column' id='col1' preferred='yes' style='float:left;'>
-  <b:widget id='HTML6' locked='false' title='' type='HTML' visible='true'>
-    <b:includable id='main'>
-  <!-- only display title if it's non-empty -->
-  <b:if cond='data:title != &quot;&quot;'>
-    <h2 class='title'><data:title/></h2>
-  </b:if>
-  <div class='widget-content'>
-    <data:content/>
-  </div>
-
-  <b:include name='quickedit'/>
-</b:includable>
-  </b:widget>
-  <b:widget id='Stats1' locked='false' title='' type='Stats' visible='true'>
-    <b:includable id='main'>
-  <b:if cond='data:title != &quot;&quot;'><h2><data:title/></h2></b:if>
-  <div class='widget-content'>
-    <!-- Content is going to be visible when data will be fetched from server. -->
-    <div expr:id='data:widget.instanceId + &quot;_content&quot;' style='display: none;'>
-      <!-- Counter and image will be injected later via AJAX call. -->
-      <b:if cond='data:showSparkline'>
-        <img alt='Sparkline' expr:id='data:widget.instanceId + &quot;_sparkline&quot;' height='30' width='75'/>
-      </b:if>
-      <span expr:class='&quot;counter-wrapper &quot; + (data:showGraphicalCounter ? &quot;graph-counter-wrapper&quot; : &quot;text-counter-wrapper&quot;)' expr:id='data:widget.instanceId + &quot;_totalCount&quot;'>
-      </span>
-      <b:include name='quickedit'/>
-    </div>
-  </div>
-</b:includable>
-  </b:widget>
-  <b:widget id='BlogArchive1' locked='false' title='Archives du blog' type='BlogArchive' visible='true'>
-    <b:includable id='main'>
+      </b:widget>
+      <b:widget id='BlogArchive1' locked='false' title='Archives' type='BlogArchive'>
+        <b:includable id='main'>
   <b:if cond='data:title != &quot;&quot;'>
     <h2><data:title/></h2>
   </b:if>
@@ -1556,7 +1334,7 @@ head.appendChild(script);
   <b:include name='quickedit'/>
   </div>
 </b:includable>
-    <b:includable id='flat' var='data'>
+        <b:includable id='flat' var='data'>
   <ul class='flat'>
     <b:loop values='data:data' var='i'>
       <li class='archivedate'>
@@ -1565,7 +1343,7 @@ head.appendChild(script);
     </b:loop>
   </ul>
 </b:includable>
-    <b:includable id='interval' var='intervalData'>
+        <b:includable id='interval' var='intervalData'>
   <b:loop values='data:intervalData' var='interval'>
     <ul class='hierarchy'>
       <li expr:class='&quot;archivedate &quot; + data:interval.expclass'>
@@ -1580,7 +1358,7 @@ head.appendChild(script);
     </ul>
   </b:loop>
 </b:includable>
-    <b:includable id='menu' var='data'>
+        <b:includable id='menu' var='data'>
   <select expr:id='data:widget.instanceId + &quot;_ArchiveMenu&quot;'>
     <option value=''><data:title/></option>
     <b:loop values='data:data' var='i'>
@@ -1588,14 +1366,14 @@ head.appendChild(script);
     </b:loop>
   </select>
 </b:includable>
-    <b:includable id='posts' var='posts'>
+        <b:includable id='posts' var='posts'>
   <ul class='posts'>
     <b:loop values='data:posts' var='post'>
       <li><a expr:href='data:post.url'><data:post.title/></a></li>
     </b:loop>
   </ul>
 </b:includable>
-    <b:includable id='toggle' var='interval'>
+        <b:includable id='toggle' var='interval'>
   <a class='toggle' href='javascript:void(0)'>
     <span expr:class='&quot;zippy&quot; + (data:interval.expclass == &quot;expanded&quot; ? &quot; toggle-open&quot; : &quot;&quot;)'>
       <b:if cond='data:interval.expclass == &quot;expanded&quot;'>
@@ -1608,13 +1386,27 @@ head.appendChild(script);
     </span>
   </a>
 </b:includable>
-  </b:widget>
-</b:section>
-</div>
-
-<div id='footer3' style='width: 40%; float: left; margin:0; text-align: left;'>
-<b:section class='footer-column' id='col2' preferred='yes' style='float:left;'>
-  <b:widget id='HTML4' locked='false' title='' type='HTML' visible='true'>
+      </b:widget>
+      <b:widget id='Stats1' locked='false' title='' type='Stats'>
+        <b:includable id='main'>
+  <b:if cond='data:title != &quot;&quot;'><h2><data:title/></h2></b:if>
+  <div class='widget-content'>
+    <!-- Content is going to be visible when data will be fetched from server. -->
+    <div expr:id='data:widget.instanceId + &quot;_content&quot;' style='display: none;'>
+      <!-- Counter and image will be injected later via AJAX call. -->
+      <b:if cond='data:showSparkline'>
+        <img alt='Sparkline' expr:id='data:widget.instanceId + &quot;_sparkline&quot;' height='30' width='75'/>
+      </b:if>
+      <span expr:class='&quot;counter-wrapper &quot; + (data:showGraphicalCounter ? &quot;graph-counter-wrapper&quot; : &quot;text-counter-wrapper&quot;)' expr:id='data:widget.instanceId + &quot;_totalCount&quot;'>
+      </span>
+      <b:include name='quickedit'/>
+    </div>
+  </div>
+</b:includable>
+      </b:widget>
+    </b:section>
+<b:section class='footer' id='col-2' showaddelements='yes'>
+  <b:widget id='HTML1' locked='false' title='Liens' type='HTML'>
     <b:includable id='main'>
   <!-- only display title if it's non-empty -->
   <b:if cond='data:title != &quot;&quot;'>
@@ -1628,12 +1420,8 @@ head.appendChild(script);
 </b:includable>
   </b:widget>
 </b:section>
-</div>
-
-<div id='footer4' style='width: 30%; float: right; margin:0; text-align: left;'>
-
-<b:section class='footer-column' id='col3' preferred='yes' style='float:right;'>
-  <b:widget id='PopularPosts1' locked='false' title='Billets les plus consultés' type='PopularPosts' visible='true'>
+<b:section class='footer' id='col-3' showaddelements='yes'>
+  <b:widget id='PopularPosts1' locked='false' title='Billets les plus consultés' type='PopularPosts'>
     <b:includable id='main'>
   <b:if cond='data:title != &quot;&quot;'><h2><data:title/></h2></b:if>
   <div class='widget-content popular-posts'>
@@ -1676,14 +1464,9 @@ head.appendChild(script);
 </b:includable>
   </b:widget>
 </b:section>
-</div>
-
-<div style='clear:both;'/>
-
-<div id='footer-bottom' style='text-align: center; padding: 10px; text-transform: lowercase;'>
-
-<b:section class='footer' id='col-bottom' preferred='yes'>
-  <b:widget id='Attribution1' locked='false' title='' type='Attribution' visible='true'>
+</footer>
+<b:section class='footer-3' id='footer' showaddelements='no'>
+  <b:widget id='Attribution1' locked='false' title='' type='Attribution'>
     <b:includable id='main'>
     <div class='widget-content' style='text-align: center;'>
       <b:if cond='data:attribution != &quot;&quot;'>
@@ -1694,25 +1477,29 @@ head.appendChild(script);
     <b:include name='quickedit'/>
   </b:includable>
   </b:widget>
-  <b:widget id='Text2' locked='false' title='' type='Text' visible='true'>
-    <b:includable id='main'>
-  <!-- only display title if it's non-empty -->
-  <b:if cond='data:title != &quot;&quot;'>
-    <h2 class='title'><data:title/></h2>
-  </b:if>
-  <div class='widget-content'>
-    <data:content/>
-  </div>
+</b:section><script src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js'/>
+<script>
+jQuery(document).ready(function() {
+var offset = 300;
+var duration = 500;
+jQuery(window).scroll(function() {
+if (jQuery(this).scrollTop() &gt; offset) {
+jQuery(&#39;.backtotop&#39;).fadeIn(duration);
+} else {
+jQuery(&#39;.backtotop&#39;).fadeOut(duration);
+}
+});
 
-  <b:include name='quickedit'/>
-</b:includable>
-  </b:widget>
-</b:section>
+jQuery(&#39;.backtotop&#39;).click(function(event) {
+event.preventDefault();
+jQuery(&#39;html, body&#39;).animate({scrollTop: 0}, duration);
+return false;
+})
+});
+</script>
 
-</div>
-<div style='clear:both;'/>
+<a class='backtotop' href='#'>Back to Top</a>
 
-</div>
-</body>
-
+  </body>
 </html>
+ 
