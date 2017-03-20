@@ -3,6 +3,8 @@
 <html xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
   <head>
 <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'/>
+<link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet'/>
+<link href='//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' rel='stylesheet'/>
     <meta content='width=device-width, initial-scale=1.0' name='viewport'/>
     <b:include data='blog' name='all-head-content'/>
     <title><data:blog.pageTitle/></title>
@@ -97,7 +99,7 @@ border: 1px solid black;
 header h1{
 font-size: 100px;
 text-align: center;
-font-family: 'Quicksand', sans-serif;
+font-family: &#39;Quicksand&#39;, sans-serif;
 }
 
 /----- Cookies ------/
@@ -146,18 +148,26 @@ color: #010521;
 margin: auto;
 width: 80%;
 padding: 10px;
+font-family: &#39;Josefin Sans&#39;, &#39;Open Sans&#39;, sans-serif;
+}
+
+
+
+.post-title.entry-title a{
+font-size: 40px;
+color: #004466;
+letter-spacing: 6px; }
+
+.post-body.entry-content{
 text-align: justify;
-font-family: 'Josefin Sans', 'Open Sans', sans-serif;
+font-size: 16px;
+font-weight: lighter;
+font-family: &#39;Aileron Thin&#39;, &#39;Arial&#39;, sans-serif;
+padding: 60px;
 }
-
-
-.blog-posts h3{
-font-size: 40px; 
-}
-
 .date-header {
 margin: auto;
-margin-top: -43px;
+margin-top: -39px;
 text-align: center;
 }
 
@@ -166,33 +176,25 @@ color: #FFFFFF;
 background-color: #046B99;
 padding: 10px;
 font-size: 14px;
-font-family: 'Quicksand', 'Open Sans', sans-serif;
+font-family: &#39;Quicksand&#39;, &#39;Open Sans&#39;, sans-serif;
 text-align: center;
 }
 
 .jump-link{
-background-color: #004466;
-color: #FFFFFF;
-letter-spacing: 1px;
-padding: 10px;
-margin: auto; 
-width: 50%;
-margin-top: 20px;
-margin-bottom: 20px;
-text-align: center;
-text-transform: uppercase;
-font-family: 'Quicksand', 'Open Sans', sans-serif;
-}
-
+margin-left: 425px;
+margin-bottom: 40px;
+      }
 .jump-link a{
 background-color: #004466;
 color: #FFFFFF;
+font-size: 18px;
 letter-spacing: 1px;
 padding: 10px;
-width: 50%;
+width: 80%;
+font-weight: lighter;
 text-align: center;
 text-transform: uppercase;
-font-family: 'Quicksand', 'Open Sans', sans-serif;
+font-family:&#39;Century Gothic&#39;, &#39;URW Gothic L&#39;, sans-serif;
 margin: 20px;
 }
 
@@ -202,14 +204,111 @@ color: #004466;
 border: 1px solid #004466;
 letter-spacing: 1px;
 padding: 10px;
-width: 100%;
 text-align: center;
 text-transform: uppercase;
-font-family: 'Quicksand', 'Open Sans', sans-serif;
+font-family: &#39;Quicksand&#39;, &#39;Open Sans&#39;, sans-serif;
 margin: 20px;
 }
 
-/---- Pied de page -----/
+/---Pied d article---/
+.post-footer{
+margin: auto;
+}
+
+
+/---Libelles--/
+
+.post-footer{
+text-align:center;
+}
+
+.post-footer a{
+color: #046B99;
+ }
+.post-footer-line{
+margin: auto;
+}
+.post-footer-line-1{
+text-align:center;
+margin: auto;
+margin-top: 10px;
+margin-bottom: 10px;
+font-size: 16px;
+}
+
+.post-footer-line-2{
+text-align:center;
+margin: auto;
+margin-top: 10px;
+margin-bottom: 10px;
+font-size: 16px;
+}
+
+.post-comment-link{
+margin-left: 50px;
+}
+.post-footer-line-2{
+text-align:center;
+margin: auto;
+margin-top: 10px;
+margin-bottom: 10px;
+font-size: 16px;
+}
+.post-share-buttons.goog-inline-block{
+display: none !important;
+}
+.post-labels a {
+font-family: 16px;
+text-transform: uppercase;
+letter-spacing: 1px;
+background-color: #D1E4FF;
+padding: 6px;
+font-family: &#39;Josefin Sans&#39;, &#39;Quicksand&#39;, sans-serif;
+color: #046B99;
+margin-right: 10px;
+}
+/--Boutons de partage--/
+.btn-partage{
+margin-right: 0px !important;
+margin-bottom: 10px;
+}
+
+.btn-partage a{
+display: inline-block;
+margin-bottom: 20px;
+width: 30px;
+height: 30px;
+background-color: #046B99;
+color: #ffffff;
+}
+
+.btn-partage a:hover{
+display: inline-block;
+margin-bottom: 10px;
+width: 30px;
+height: 30px;
+background-color: #FFFFFF;
+color: #05A8DF;
+border: 1px solid #05A8DF;
+}
+
+.btn-partage .fa{
+margin-top: 5px;
+font-size: 16px;
+padding: 4px; }
+
+
+/--Commentaires--/
+
+.comments{
+
+      }
+.comments h4{
+font-size: 16px;
+font-family: &#39;Century Gothic&#39;, &#39;URW Gothic L&#39;, sans-serif;
+margin-left: 400px;
+text-transform: uppercase;      }
+/---- PIED DE PAGE -----/
 #footer{
 width: 100%;
 }
@@ -379,12 +478,15 @@ text-transform: uppercase;
 <div id='barre_nav'>
 <ul>
 <li><a href='http://web-and-screens.blogspot.fr'>Accueil</a></li>
-  <li><a href='#'>I.CODE</a></li>
+  <li><a href='http://template-blogtest.blogspot.fr/p/icode.html'>I.CODE</a></li>
   <li><a href='#'>On en parle</a></li>
 <li><a href='http://web-and-screens.blogspot.fr/p/mes-series-cultes.html'>Du Petit...</a></li> 
   <li><a href='#'>au grand écran</a></li>
   <li><a href='#'>Divers</a></li>
 <li><a href='http://web-and-screens.blogspot.fr/p/blog-page_5.html'>A propos</a></li>
+  <li><i aria-hidden='true' class='fa fa-github fa-2x'/></li>
+  <li><i aria-hidden='true' class='fa fa-rss fa-2x'/>
+</li>
 </ul>
 
 </div>
@@ -407,7 +509,7 @@ text-transform: uppercase;
 </header>
 <div class='main'>
   <b:section class='main' id='main' showaddelements='yes'>
-    <b:widget id='Blog1' locked='true' title='Articles du blog' type='Blog'>
+    <b:widget id='Blog1' locked='true' title='Articles du blog' type='Blog' version='1'>
       <b:includable id='main' var='top'>
   <b:if cond='!data:mobile'>
     <!-- posts -->
@@ -455,10 +557,7 @@ text-transform: uppercase;
     <b:include name='mobile-main'/>
   </b:if>
 
-  <b:if cond='data:top.showPlusOne'>
-    <data:top.googlePlusBootstrap/>
-  </b:if>
-
+  <b:include cond='data:top.showPlusOne' name='googlePlusBootstrap'/>
 </b:includable>
       <b:includable id='backlinkDeleteIcon' var='backlink'>
   <span expr:class='&quot;item-control &quot; + data:backlink.adminClass'>
@@ -857,6 +956,7 @@ text-transform: uppercase;
               <b:if cond='data:top.showDummy'>
                 <div class='goog-inline-block dummy-container'><data:post.dummyTag/></div>
               </b:if>
+
             </div>
 
           </div>
@@ -1001,11 +1101,32 @@ text-transform: uppercase;
       </div>
 
       <div class='post-footer-line post-footer-line-2'>
+<!--Boutons de partage CSS-->
+              <div class="btn-partage">
+<!-- Twitter-->
+<a expr:href='&quot;https://twitter.com/share?url=&quot; + data:post.url + &quot;&amp;title=&quot; + data:post.title' rel='nofollow' target='_blank' title='Partager sur Twitter'>
+  <i class='fa fa-twitter' /></a>
+
+<!-- Google+ -->
+<a expr:href='&quot;https://plus.google.com/share?url=&quot; + data:post.url' rel='nofollow' target='_blank' title='Partager sur Google+'>
+  <i class='fa fa-google-plus'/>
+</a>
+<!-- E-mail -->
+<a expr:href='&quot;mailto:?Subject=Un%20super%20article%20de%20&quot; + data:blog.title + &quot;&amp;body=&quot; + data:post.url' rel='nofollow' target='_blank' title='Partager par Email'>
+  <i class="fa fa-envelope"/>
+</a>
+<!-- Facebook -->
+<a expr:href='&quot;http://www.facebook.com/sharer.php?u=&quot; + data:post.url + &quot;&amp;t=&quot; + data:post.title' rel='nofollow' target='_blank' title='Partager sur Facebook'>
+  <i class='fa fa-facebook'/>
+</a>
+
+</div>
+
+<!--Fin boutons de partage-->
       <span class='post-labels'>
         <b:if cond='data:top.showPostLabels and data:post.labels'>
-          <data:postLabelsLabel/>
           <b:loop values='data:post.labels' var='label'>
-            <a expr:href='data:label.url' rel='tag'><data:label.name/></a><b:if cond='not data:label.isLast'>,</b:if>
+            <a expr:href='data:label.url' rel='tag'><data:label.name/></a><b:if cond='not data:label.isLast'>  </b:if>
           </b:loop>
         </b:if>
       </span>
@@ -1301,7 +1422,7 @@ text-transform: uppercase;
     </b:widget>
   </b:section>
 </div>
-<div class='sidebar'/>
+    <aside/>
 <footer>
 
     <b:section class='footer' id='col-1' showaddelements='yes'>
@@ -1477,7 +1598,7 @@ text-transform: uppercase;
     <b:include name='quickedit'/>
   </b:includable>
   </b:widget>
-</b:section><script src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js'/>
+</b:section><script crossorigin='anonymous' integrity='sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I=' src='https://code.jquery.com/jquery-3.2.0.min.js'/>
 <script>
 jQuery(document).ready(function() {
 var offset = 300;
@@ -1502,4 +1623,3 @@ return false;
 
   </body>
 </html>
- 
