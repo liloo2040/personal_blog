@@ -28,40 +28,43 @@ text-decoration: none;
 
 
 *--- Fixer la navbar ----*/
-#barre_nav{
+nav{
 position: fixed;
 top: 0px;
 left: 0px;
 }
 /* Espacement avant et après barre de navigation */ 
-#barre_nav {
-//margin-bottom: 10px;
+nav {
 margin: 0 auto;
 width: 100%;
 position: fixed;
 top: -16px;
 }
 
-#barre_nav .section:last-child li {
+nav .section:last-child li {
 padding-right: 0
 }
 
 /* Espacement et bordure premier lien */
-#barre_nav .section:first-child li {
+nav .section:first-child li {
 padding-left: 0px;}
 
 /* Fond et bordure barre de navigation */
-#barre_nav ul {
+nav ul {
 text-align: center;
 padding-top: 10px;
 padding-bottom: 10px;
 background-color: #004466;
 top: -20px;
 z-index: 999;
-opacity: 0.8;}
+opacity: 0.8;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;}
 
 /* Police et couleur des liens */
-#barre_nav li a {
+nav li a {
 font-family:&#39;Century Gothic&#39;,&#39;URW Gothic L&#39;, sans-serif;
 font-size: 16px;
 margin-right: 20px;
@@ -70,11 +73,11 @@ color: #ffffff;
 }
 
 /* Visiblité liens */
-#barre_nav ul {
+nav ul {
 overflow: visible;}
 
 /* Police et couleur des liens survolés */
-#barre_nav li.selected a, #barre_nav li a:hover {
+nav li.selected a, nav li a:hover {
 text-decoration: bold;
 letter-spacing: 2px;
 -moz-transition-duration: 0.4s;
@@ -85,7 +88,7 @@ transition-duration: 0.4s;
 }
 
 /* Centrer la barre de navigation */
-#barre_nav li, #barre_nav li {
+nav li, nav li {
 display: inline-block;
 float: none;}
 
@@ -148,7 +151,7 @@ color: #010521;
 margin: auto;
 width: 80%;
 padding: 10px;
-font-family: &#39;Josefin Sans&#39;, &#39;Open Sans&#39;, sans-serif;
+font-family: &#39;Quicksand&#39;, sans-serif;
 }
 
 
@@ -160,14 +163,14 @@ letter-spacing: 6px; }
 
 .post-body.entry-content{
 text-align: justify;
-font-size: 16px;
+font-size: 14px;
 font-weight: lighter;
-font-family: &#39;Aileron Thin&#39;, &#39;Arial&#39;, sans-serif;
+font-family: &#39;Quicksand&#39;, sans-serif;
 padding: 60px;
 }
 .date-header {
 margin: auto;
-margin-top: -39px;
+margin-top: -44px;
 text-align: center;
 }
 
@@ -181,7 +184,7 @@ text-align: center;
 }
 
 .jump-link{
-margin-left: 425px;
+margin-left: 415px;
 margin-bottom: 40px;
       }
 .jump-link a{
@@ -196,6 +199,8 @@ text-align: center;
 text-transform: uppercase;
 font-family:&#39;Century Gothic&#39;, &#39;URW Gothic L&#39;, sans-serif;
 margin: 20px;
+transition: background-color 2s;
+-webkit-transition: 2s;
 }
 
 .jump-link a:hover{
@@ -233,7 +238,9 @@ text-align:center;
 margin: auto;
 margin-top: 10px;
 margin-bottom: 10px;
-font-size: 16px;
+font-size: 14px;
+font-family: &#39;Quicksand&#39;, sans-serif;
+text-transform: uppercase;
 }
 
 .post-footer-line-2{
@@ -241,30 +248,28 @@ text-align:center;
 margin: auto;
 margin-top: 10px;
 margin-bottom: 10px;
-font-size: 16px;
+font-size: 14px;
 }
 
 .post-comment-link{
 margin-left: 50px;
 }
-.post-footer-line-2{
-text-align:center;
-margin: auto;
-margin-top: 10px;
-margin-bottom: 10px;
-font-size: 16px;
+
+.post-comment-link a{
+color: #16304A;
 }
+
 .post-share-buttons.goog-inline-block{
 display: none !important;
 }
 .post-labels a {
-font-family: 16px;
+font-family: 14px;
 text-transform: uppercase;
 letter-spacing: 1px;
 background-color: #D1E4FF;
 padding: 6px;
-font-family: &#39;Josefin Sans&#39;, &#39;Quicksand&#39;, sans-serif;
-color: #046B99;
+font-family: &#39;Quicksand&#39;, sans-serif;
+color: #010521;
 margin-right: 10px;
 }
 /--Boutons de partage--/
@@ -464,7 +469,7 @@ text-transform: uppercase;
 }
 
 
-</style>
+</style><script crossorigin='anonymous' integrity='sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I=' src='https://code.jquery.com/jquery-3.2.0.min.js'/>
     <!-- Barre de Cookie Blogger -->
 <script type='text/javascript'>
   cookieOptions = {
@@ -475,7 +480,7 @@ text-transform: uppercase;
 </script></head>
   <body>
   <header>  
-<div id='barre_nav'>
+<nav>
 <ul>
 <li><a href='http://web-and-screens.blogspot.fr'>Accueil</a></li>
   <li><a href='http://template-blogtest.blogspot.fr/p/icode.html'>I.CODE</a></li>
@@ -484,12 +489,12 @@ text-transform: uppercase;
   <li><a href='#'>au grand écran</a></li>
   <li><a href='#'>Divers</a></li>
 <li><a href='http://web-and-screens.blogspot.fr/p/blog-page_5.html'>A propos</a></li>
-  <li><i aria-hidden='true' class='fa fa-github fa-2x'/></li>
-  <li><i aria-hidden='true' class='fa fa-rss fa-2x'/>
+  <li><a href='#'><i aria-hidden='true' class='fa fa-github fa-2x'/></a></li>
+  <li><a href='#'><i aria-hidden='true' class='fa fa-rss fa-2x'/></a>
 </li>
 </ul>
 
-</div>
+</nav>
 
    <b:section class='header' id='header' showaddelements='yes'>
      <b:widget id='HTML5' locked='false' title='' type='HTML'>
@@ -658,7 +663,7 @@ text-transform: uppercase;
     </span>
   <b:else/>
     <a class='comment-link' expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick'>
-      <data:post.commentLabelFull/>:
+      <data:post.commentLabelFull/>
     </a>
   </b:if>
 </b:includable>
@@ -675,7 +680,7 @@ text-transform: uppercase;
   <div class='comments' id='comments'>
     <a name='comments'/>
     <b:if cond='data:post.allowComments'>
-      <h4><data:post.commentLabelFull/>:</h4>
+      <h4>Commentaires</h4>
 
       <b:if cond='data:post.commentPagingRequired'>
         <span class='paging-control-container'>
@@ -967,7 +972,7 @@ text-transform: uppercase;
               </span>
 
               <span class='post-comment-link'>
-                <b:include cond='data:blog.pageType not in {&quot;item&quot;,&quot;static_page&quot;}                                  and data:post.allowComments' data='post' name='comment_count_picker'/>
+                <a class='comment-link' expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick'><b:if cond='data:post.numComments == 1'>1 <data:top.commentLabel/><b:else/><data:post.numComments/> <data:top.commentLabelPlural/></b:if></a>
               </span>
             </div>
 
@@ -1777,7 +1782,7 @@ sdfghjklrtyuiofghjklhjkdfghjk
     <b:include name='quickedit'/>
   </b:includable>
   </b:widget>
-</b:section><script crossorigin='anonymous' integrity='sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I=' src='https://code.jquery.com/jquery-3.2.0.min.js'/>
+</b:section>
 <script>
 jQuery(document).ready(function() {
 var offset = 300;
