@@ -3,7 +3,6 @@
 <html xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
   <head>
 <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'/>
-<link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet'/>
 <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' rel='stylesheet'/>
     <meta content='width=device-width, initial-scale=1.0' name='viewport'/>
     <b:include data='blog' name='all-head-content'/>
@@ -24,7 +23,6 @@ margin: 0 auto;
 a:link{
 text-decoration: none;
 }
-
 
 
 *--- Fixer la navbar ----*/
@@ -70,6 +68,10 @@ font-size: 16px;
 margin-right: 20px;
 text-transform: uppercase;
 color: #ffffff;
+-moz-transition-duration: 0.4s;
+-webkit-transition-duration: 0.4s;
+-o-transition-duration: 0.4s;
+transition-duration: 0.4s;
 }
 
 /* Visiblité liens */
@@ -80,10 +82,7 @@ overflow: visible;}
 nav li.selected a, nav li a:hover {
 text-decoration: bold;
 letter-spacing: 2px;
--moz-transition-duration: 0.4s;
--webkit-transition-duration: 0.4s;
--o-transition-duration: 0.4s;
-transition-duration: 0.4s;
+
 
 }
 
@@ -91,6 +90,28 @@ transition-duration: 0.4s;
 nav li, nav li {
 display: inline-block;
 float: none;}
+
+nav #search{
+background-color: #004466;
+width: 200px;
+border: 1px solid #FFFFFF;
+padding: 4px; 
+color: #FFFFFF;
+font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
+text-align: center;
+}
+nav #search-btn{
+margin-left: 5px;
+margin-right: 5px;
+background-color: #FFFFFF;
+color: #004466;
+text-transform: uppercase;
+border: none;  
+padding: 4px;
+font-weight: bold;
+font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
+letter-spacing: 1px;
+font-size: 16px;    }
 
 /---- Header ----/
 header{
@@ -159,7 +180,8 @@ font-family: &#39;Quicksand&#39;, sans-serif;
 .post-title.entry-title a{
 font-size: 40px;
 color: #004466;
-letter-spacing: 6px; }
+letter-spacing: 6px; 
+margin-top: 20px;}
 
 .post-body.entry-content{
 text-align: justify;
@@ -298,7 +320,7 @@ border: 1px solid #05A8DF;
 }
 
 .btn-partage .fa{
-margin-top: 5px;
+margin-top: 4px;
 font-size: 16px;
 padding: 4px; }
 
@@ -312,7 +334,26 @@ padding: 4px; }
 font-size: 16px;
 font-family: &#39;Century Gothic&#39;, &#39;URW Gothic L&#39;, sans-serif;
 margin-left: 400px;
-text-transform: uppercase;      }
+text-transform: uppercase;}
+
+.comments .comment-thread.inline-thread {
+background-color: #046B99;
+padding: 10px;
+      }
+
+.comments .comment-block {
+background-color: #05A8DF;
+border: 1px solid #004466;
+      }
+
+.comments .continue{
+border-top:none;
+      }
+
+#comments .avatar-container-img{
+max-width: 50px;
+max-height: 50px;
+      }
 /---- PIED DE PAGE -----/
 #footer{
 width: 100%;
@@ -489,6 +530,10 @@ text-transform: uppercase;
   <li><a href='#'>au grand écran</a></li>
   <li><a href='#'>Divers</a></li>
 <li><a href='http://web-and-screens.blogspot.fr/p/blog-page_5.html'>A propos</a></li>
+  <li><form action="/search" id="searchthis" method="get">
+    <input id="search" name="q" type="text" placeholder="Votre recherche"/>
+    <input id="search-btn" type="submit" value="GO"/>
+</form></li>
   <li><a href='#'><i aria-hidden='true' class='fa fa-github fa-2x'/></a></li>
   <li><a href='#'><i aria-hidden='true' class='fa fa-rss fa-2x'/></a>
 </li>
