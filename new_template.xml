@@ -493,6 +493,9 @@ text-transform: uppercase;
 
    <b:section class='header' id='header' showaddelements='yes'>
      <b:widget id='HTML5' locked='false' title='' type='HTML'>
+       <b:widget-settings>
+         <b:widget-setting name='content'><![CDATA[<h1>Bannière</h1>]]></b:widget-setting>
+       </b:widget-settings>
        <b:includable id='main'>
   <!-- only display title if it's non-empty -->
   <b:if cond='data:title != &quot;&quot;'>
@@ -510,6 +513,27 @@ text-transform: uppercase;
 <div class='main'>
   <b:section class='main' id='main' showaddelements='yes'>
     <b:widget id='Blog1' locked='true' title='Articles du blog' type='Blog' version='1'>
+      <b:widget-settings>
+        <b:widget-setting name='showDateHeader'>true</b:widget-setting>
+        <b:widget-setting name='style.textcolor'>#000000</b:widget-setting>
+        <b:widget-setting name='showShareButtons'>true</b:widget-setting>
+        <b:widget-setting name='showCommentLink'>true</b:widget-setting>
+        <b:widget-setting name='style.urlcolor'>#008000</b:widget-setting>
+        <b:widget-setting name='showAuthor'>true</b:widget-setting>
+        <b:widget-setting name='style.linkcolor'>#0000ff</b:widget-setting>
+        <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+        <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+        <b:widget-setting name='showAuthorProfile'>false</b:widget-setting>
+        <b:widget-setting name='style.layout'>1x1</b:widget-setting>
+        <b:widget-setting name='showLabels'>true</b:widget-setting>
+        <b:widget-setting name='showLocation'>false</b:widget-setting>
+        <b:widget-setting name='showTimestamp'>false</b:widget-setting>
+        <b:widget-setting name='postsPerAd'>1</b:widget-setting>
+        <b:widget-setting name='showBacklinks'>false</b:widget-setting>
+        <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
+        <b:widget-setting name='showInlineAds'>false</b:widget-setting>
+        <b:widget-setting name='showReactions'>false</b:widget-setting>
+      </b:widget-settings>
       <b:includable id='main' var='top'>
   <b:if cond='!data:mobile'>
     <!-- posts -->
@@ -1102,10 +1126,10 @@ text-transform: uppercase;
 
       <div class='post-footer-line post-footer-line-2'>
 <!--Boutons de partage CSS-->
-              <div class="btn-partage">
+              <div class='btn-partage'>
 <!-- Twitter-->
 <a expr:href='&quot;https://twitter.com/share?url=&quot; + data:post.url + &quot;&amp;title=&quot; + data:post.title' rel='nofollow' target='_blank' title='Partager sur Twitter'>
-  <i class='fa fa-twitter' /></a>
+  <i class='fa fa-twitter'/></a>
 
 <!-- Google+ -->
 <a expr:href='&quot;https://plus.google.com/share?url=&quot; + data:post.url' rel='nofollow' target='_blank' title='Partager sur Google+'>
@@ -1113,7 +1137,7 @@ text-transform: uppercase;
 </a>
 <!-- E-mail -->
 <a expr:href='&quot;mailto:?Subject=Un%20super%20article%20de%20&quot; + data:blog.title + &quot;&amp;body=&quot; + data:post.url' rel='nofollow' target='_blank' title='Partager par Email'>
-  <i class="fa fa-envelope"/>
+  <i class='fa fa-envelope'/>
 </a>
 <!-- Facebook -->
 <a expr:href='&quot;http://www.facebook.com/sharer.php?u=&quot; + data:post.url + &quot;&amp;t=&quot; + data:post.title' rel='nofollow' target='_blank' title='Partager sur Facebook'>
@@ -1422,11 +1446,120 @@ text-transform: uppercase;
     </b:widget>
   </b:section>
 </div>
-    <aside/>
+    <aside>
+      <b:section class='sidebar' id='sidebar' showaddelements='yes'>
+        <b:widget id='HTML6' locked='false' title='' type='HTML'>
+          <b:widget-settings>
+            <b:widget-setting name='content'>leonard nimoy</b:widget-setting>
+          </b:widget-settings>
+          <b:includable id='main'>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+
+  <b:include name='quickedit'/>
+</b:includable>
+        </b:widget>
+        <b:widget id='HTML4' locked='false' title='' type='HTML'>
+          <b:widget-settings>
+            <b:widget-setting name='content'>programme tv</b:widget-setting>
+          </b:widget-settings>
+          <b:includable id='main'>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+
+  <b:include name='quickedit'/>
+</b:includable>
+        </b:widget>
+        <b:widget id='HTML3' locked='false' title='' type='HTML'>
+          <b:widget-settings>
+            <b:widget-setting name='content'>sorties ciné/blu-ray</b:widget-setting>
+          </b:widget-settings>
+          <b:includable id='main'>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+
+  <b:include name='quickedit'/>
+</b:includable>
+        </b:widget>
+        <b:widget id='Label1' locked='false' title='Tags' type='Label'>
+          <b:widget-settings>
+            <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
+            <b:widget-setting name='display'>CLOUD</b:widget-setting>
+            <b:widget-setting name='selectedLabelsList'>first post,lorem ipsum</b:widget-setting>
+            <b:widget-setting name='showType'>USER_SELECTED</b:widget-setting>
+            <b:widget-setting name='showFreqNumbers'>false</b:widget-setting>
+          </b:widget-settings>
+          <b:includable id='main'>
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2><data:title/></h2>
+  </b:if>
+  <div expr:class='&quot;widget-content &quot; + data:display + &quot;-label-widget-content&quot;'>
+    <b:if cond='data:display == &quot;list&quot;'>
+      <ul>
+        <b:loop values='data:labels' var='label'>
+          <li>
+            <b:if cond='data:blog.url == data:label.url'>
+              <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
+            <b:else/>
+              <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
+            </b:if>
+            <b:if cond='data:showFreqNumbers'>
+              <span dir='ltr'>(<data:label.count/>)</span>
+            </b:if>
+          </li>
+        </b:loop>
+      </ul>
+    <b:else/>
+      <b:loop values='data:labels' var='label'>
+        <span expr:class='&quot;label-size label-size-&quot; + data:label.cssSize'>
+          <b:if cond='data:blog.url == data:label.url'>
+            <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
+          <b:else/>
+            <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
+          </b:if>
+          <b:if cond='data:showFreqNumbers'>
+            <span class='label-count' dir='ltr'>(<data:label.count/>)</span>
+          </b:if>
+        </span>
+      </b:loop>
+    </b:if>
+    <b:include name='quickedit'/>
+  </div>
+</b:includable>
+        </b:widget>
+      </b:section>
+      
+
+</aside>
 <footer>
 
     <b:section class='footer' id='col-1' showaddelements='yes'>
       <b:widget id='HTML2' locked='false' title='' type='HTML'>
+        <b:widget-settings>
+          <b:widget-setting name='content'>&lt;div id=&quot;encart-intro&quot; class=&quot;encart-intro&quot;&gt;
+&lt;h2&gt;A Propos&lt;/h2&gt;
+sdfghjklrtyuiofghjklhjkdfghjk
+
+
+
+
+&lt;/div&gt;</b:widget-setting>
+        </b:widget-settings>
         <b:includable id='main'>
   <!-- only display title if it's non-empty -->
   <b:if cond='data:title != &quot;&quot;'>
@@ -1440,6 +1573,17 @@ text-transform: uppercase;
 </b:includable>
       </b:widget>
       <b:widget id='BlogArchive1' locked='false' title='Archives' type='BlogArchive'>
+        <b:widget-settings>
+          <b:widget-setting name='showStyle'>MENU</b:widget-setting>
+          <b:widget-setting name='yearPattern'>yyyy</b:widget-setting>
+          <b:widget-setting name='showWeekEnd'>true</b:widget-setting>
+          <b:widget-setting name='monthPattern'>MMMM</b:widget-setting>
+          <b:widget-setting name='dayPattern'>MMM dd</b:widget-setting>
+          <b:widget-setting name='weekPattern'>MM/dd</b:widget-setting>
+          <b:widget-setting name='chronological'>false</b:widget-setting>
+          <b:widget-setting name='showPosts'>false</b:widget-setting>
+          <b:widget-setting name='frequency'>MONTHLY</b:widget-setting>
+        </b:widget-settings>
         <b:includable id='main'>
   <b:if cond='data:title != &quot;&quot;'>
     <h2><data:title/></h2>
@@ -1509,6 +1653,13 @@ text-transform: uppercase;
 </b:includable>
       </b:widget>
       <b:widget id='Stats1' locked='false' title='' type='Stats'>
+        <b:widget-settings>
+          <b:widget-setting name='showGraphicalCounter'>false</b:widget-setting>
+          <b:widget-setting name='showAnimatedCounter'>false</b:widget-setting>
+          <b:widget-setting name='showSparkline'>false</b:widget-setting>
+          <b:widget-setting name='sparklineStyle'>BLACK_TRANSPARENT</b:widget-setting>
+          <b:widget-setting name='timeRange'>ALL_TIME</b:widget-setting>
+        </b:widget-settings>
         <b:includable id='main'>
   <b:if cond='data:title != &quot;&quot;'><h2><data:title/></h2></b:if>
   <div class='widget-content'>
@@ -1528,6 +1679,25 @@ text-transform: uppercase;
     </b:section>
 <b:section class='footer' id='col-2' showaddelements='yes'>
   <b:widget id='HTML1' locked='false' title='Liens' type='HTML'>
+    <b:widget-settings>
+      <b:widget-setting name='content'>&lt;h3 class=&quot;links&quot;&gt;Liens web développement/webdesign&lt;/h3&gt;
+
+-Link 1
+-Link 2
+-Link 3
+
+&lt;h3 class=&quot;links&quot;&gt;Liens sériephiles/cinéphiles&lt;/h3&gt;
+
+-Link 1
+-Link 2
+-Link 3
+
+&lt;h3 class=&quot;links&quot;&gt;Liens divers&lt;/h3&gt;
+
+-Link 1
+-Link 2
+-Link 3</b:widget-setting>
+    </b:widget-settings>
     <b:includable id='main'>
   <!-- only display title if it's non-empty -->
   <b:if cond='data:title != &quot;&quot;'>
@@ -1543,6 +1713,12 @@ text-transform: uppercase;
 </b:section>
 <b:section class='footer' id='col-3' showaddelements='yes'>
   <b:widget id='PopularPosts1' locked='false' title='Billets les plus consultés' type='PopularPosts'>
+    <b:widget-settings>
+      <b:widget-setting name='numItemsToShow'>4</b:widget-setting>
+      <b:widget-setting name='showThumbnails'>true</b:widget-setting>
+      <b:widget-setting name='showSnippets'>false</b:widget-setting>
+      <b:widget-setting name='timeRange'>LAST_YEAR</b:widget-setting>
+    </b:widget-settings>
     <b:includable id='main'>
   <b:if cond='data:title != &quot;&quot;'><h2><data:title/></h2></b:if>
   <div class='widget-content popular-posts'>
@@ -1588,6 +1764,9 @@ text-transform: uppercase;
 </footer>
 <b:section class='footer-3' id='footer' showaddelements='no'>
   <b:widget id='Attribution1' locked='false' title='' type='Attribution'>
+    <b:widget-settings>
+      <b:widget-setting name='copyright'>2017 - Web and Screens</b:widget-setting>
+    </b:widget-settings>
     <b:includable id='main'>
     <div class='widget-content' style='text-align: center;'>
       <b:if cond='data:attribution != &quot;&quot;'>
