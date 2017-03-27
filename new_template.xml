@@ -65,8 +65,9 @@ justify-content: center;}
 nav li a {
 font-family:&#39;Century Gothic&#39;,&#39;URW Gothic L&#39;, sans-serif;
 font-size: 16px;
-margin-right: 20px;
+margin-right: 10px;
 text-transform: uppercase;
+margin-left: 10px;
 color: #ffffff;
 -moz-transition-duration: 0.4s;
 -webkit-transition-duration: 0.4s;
@@ -97,8 +98,9 @@ width: 200px;
 border: 1px solid #FFFFFF;
 padding: 4px; 
 color: #FFFFFF;
-font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
+font-family: &#39;Century Gothic&#39;, &#39;URW Gothic L&#39;, sans-serif;
 text-align: center;
+margin-left: 10px;
 }
 nav #search-btn{
 margin-left: 5px;
@@ -109,7 +111,7 @@ text-transform: uppercase;
 border: none;  
 padding: 4px;
 font-weight: bold;
-font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
+font-family: &#39;Century Gothic&#39;, &#39;URW Gothic L&#39;, sans-serif;
 letter-spacing: 1px;
 font-size: 16px;    }
 
@@ -119,12 +121,13 @@ background-color: #00003A;
 width: 100%;
 height: 300px;
 border: 1px solid black;
+
 }
-header h1{
-font-size: 100px;
-text-align: center;
-font-family: &#39;Quicksand&#39;, sans-serif;
-}
+
+header img{
+width: 100%;
+height: 300px;
+margin-bottom: 100px;      }
 
 /----- Cookies ------/
 /* Contenant de la barre de cookies */
@@ -178,7 +181,14 @@ font-family: &#39;Quicksand&#39;, sans-serif;
 
 
 .post-title.entry-title a{
-font-size: 40px;
+font-size: 30px;
+color: #004466;
+letter-spacing: 6px; 
+margin-top: 20px;
+transition: 2s;}
+
+.post-title.entry-title a:hover{
+font-size: 30px;
 color: #004466;
 letter-spacing: 6px; 
 margin-top: 20px;}
@@ -204,6 +214,7 @@ font-size: 14px;
 font-family: &#39;Quicksand&#39;, &#39;Open Sans&#39;, sans-serif;
 text-align: center;
 }
+
 
 .jump-link{
 margin-left: 415px;
@@ -354,6 +365,90 @@ border-top:none;
 max-width: 50px;
 max-height: 50px;
       }
+
+/-----------PAGINATION-------------/
+#blog-pager,.blog-pager{
+display: block;
+padding: 5px 0;
+      }
+.showpage a, .pagenumber a, .totalpages, .current{
+position: relative;
+display: inline-block;
+padding: 5px 10px;
+margin: 0 2px;
+background-color: #004466;
+color: #FFFFFF;
+font-size: 14px;
+font-family: &#39;Quicksand&#39;, sans-serif;
+text-transform: uppercase;      }
+
+.showpage a:hover; .pagenumber a:hover, .current{
+ background-color: #046B99;
+color: #D1E4FF;
+text-decoration: none;
+text-transform: uppercase;
+font-family: &#39;Quicksand&#39;, sans-serif;
+font-weight: bold; 
+    }
+
+/----- SIDEBAR -----/
+aside{   }
+
+table{
+display: flex;
+justify-content: space-around;
+align-content: center;
+flex-wrap: wrap;
+flex-direction: row;
+width: 100%;
+height: 250px;
+color: #ffffff;
+border-spacing: 0px; 
+margin-top: 20px;
+padding: 20px;}
+
+th.progtv{
+font-size: 20px;
+font-family: &#39;Century Gothic&#39;, &#39;URW Gothic L&#39;, sans-serif;
+text-transform: uppercase;
+padding: 4px; }
+
+
+th.sortiescine{
+width: 300px;
+font-size: 20px;
+text-transform: uppercase;
+padding: 4px;
+font-family: &#39;Ubuntu&#39;, &#39;Arial&#39;, sans-serif;
+background-color: #000000;      }
+
+th.series{
+font-size: 20px;
+font-family: &#39;Quicksand&#39;, sans-serif;
+background-color: #05A8DF;
+width: 300px; 
+     }
+.progtv {
+width: 300px; 
+background-color: #16304A;
+text-align: center; 
+padding: 2px;
+font-family: &#39;Century Gothic&#39;, &#39;URW Gothic L&#39;, sans-serif;
+      }
+.sortiescine{
+width: 300px;
+background-color: #000000; 
+text-align: center;
+font-family: &#39;Free Sans&#39;, &#39;Arial&#39;, sans-serif; 
+padding: 2px;       }
+
+.series{
+width: 300px;  
+background-color: #05A8DF;
+text-align: center; 
+font-family: &#39;Quicksand&#39;, sans-serif; 
+padding: 2px;  }
+
 /---- PIED DE PAGE -----/
 #footer{
 width: 100%;
@@ -390,9 +485,9 @@ font-family: &#39;Open Sans&#39;, &#39;Arial&#39;, sans-serif;
 footer li a{
 color: #FFFFFF;
 }
-/---Colonne 1---/
+/---Colonne 4---/
 
-#col-1 {
+#col-4 {
 display: flex;
 flex-direction: column;
 border: 1px solid #FFFFFF;
@@ -461,19 +556,18 @@ margin: auto;
 width: 300px;
 margin-top: 10px;
 }
-/---Colonne 2---/
+/---Colonne 5---/
 
-#col-2{
+#col-5{
 display: flex;
 flex-direction: column;
-align-items;
 text-align: center;
 margin-bottom: 10px;
 }
 
 
-/---Colonne 3--/
-#footer-3{
+/---Colonne 6--/
+#col-6{
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -503,13 +597,135 @@ padding: 10px;
 position: fixed; 
 bottom: 10px;
 right: 0px;
-background-color: #FFFFFF;
+background-color: #010521;
+color: #ffffff;
+padding: 10px;
+text-transform: uppercase;
+}
+.backtotop {
+position: fixed; 
+bottom: 10px;
+right: 0px;
+background-color: #ffffff;
 color: #010521;
 padding: 10px;
 text-transform: uppercase;
 }
 
+.backtotop a:hover{
+position: fixed; 
+bottom: 10px;
+right: 0px;
+background-color: #046B99;
+color: #ffffff;
+padding: 10px;
+text-transform: uppercase;
+}
 
+/--------------- MEDIA QUERIES  ------------------------/
+@media screen and (min-width: 320px){
+body{
+color: #000000;
+font-size: 14px;
+background-color: #D1E4FF;
+margin: 0 auto;
+}
+
+a:link{
+text-decoration: none;
+}
+*--- Navbar ----*/
+nav{
+position: fixed;
+top: 0px;
+left: 0px;
+}
+/* Espacement avant et après barre de navigation */ 
+nav {
+margin: 0 auto;
+width: 100%;
+position: fixed;
+top: -16px;
+}
+
+nav .section:last-child li {
+padding-right: 0
+}
+
+/* Espacement et bordure premier lien */
+nav .section:first-child li {
+padding-left: 0px;}
+
+/* Fond et bordure barre de navigation */
+nav ul {
+text-align: center;
+padding-top: 10px;
+padding-bottom: 10px;
+background-color: #004466;
+top: -20px;
+width: 100%;
+z-index: 999;
+opacity: 0.8;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;}
+
+/* Police et couleur des liens */
+nav li a {
+font-family:&#39;Century Gothic&#39;,&#39;URW Gothic L&#39;, sans-serif;
+font-size: 16px;
+margin-right: 10px;
+text-transform: uppercase;
+margin-left: 10px;
+width: 100%;
+color: #ffffff;
+-moz-transition-duration: 0.4s;
+-webkit-transition-duration: 0.4s;
+-o-transition-duration: 0.4s;
+transition-duration: 0.4s;
+}
+
+/* Visiblité liens */
+nav ul {
+overflow: visible;}
+
+/* Police et couleur des liens survolés */
+nav li.selected a, nav li a:hover {
+text-decoration: bold;
+letter-spacing: 2px;
+
+
+}
+
+/* Centrer la barre de navigation */
+nav li, nav li {
+display: inline-block;
+float: none;}
+
+nav #search{
+background-color: #004466;
+width: 200px;
+border: 1px solid #FFFFFF;
+padding: 4px; 
+color: #FFFFFF;
+font-family: &#39;Century Gothic&#39;, &#39;URW Gothic L&#39;, sans-serif;
+text-align: center;
+margin-left: 10px;
+}
+nav #search-btn{
+margin-left: 5px;
+margin-right: 5px;
+background-color: #FFFFFF;
+color: #004466;
+text-transform: uppercase;
+border: none;  
+padding: 4px;
+font-weight: bold;
+font-family: &#39;Century Gothic&#39;, &#39;URW Gothic L&#39;, sans-serif;
+letter-spacing: 1px;
+font-size: 16px;    }
+      }
 </style><script crossorigin='anonymous' integrity='sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I=' src='https://code.jquery.com/jquery-3.2.0.min.js'/>
     <!-- Barre de Cookie Blogger -->
 <script type='text/javascript'>
@@ -520,9 +736,10 @@ text-transform: uppercase;
     learn: &quot;En savoir plus&quot; };
 </script></head>
   <body>
-  <header>  
+    
 <nav>
 <ul>
+  <li id='#'></li>
 <li><a href='http://web-and-screens.blogspot.fr'>Accueil</a></li>
   <li><a href='http://template-blogtest.blogspot.fr/p/icode.html'>I.CODE</a></li>
   <li><a href='#'>On en parle</a></li>
@@ -530,35 +747,19 @@ text-transform: uppercase;
   <li><a href='#'>au grand écran</a></li>
   <li><a href='#'>Divers</a></li>
 <li><a href='http://web-and-screens.blogspot.fr/p/blog-page_5.html'>A propos</a></li>
-  <li><form action="/search" id="searchthis" method="get">
-    <input id="search" name="q" type="text" placeholder="Votre recherche"/>
-    <input id="search-btn" type="submit" value="GO"/>
+  <li><form action='/search' id='searchthis' method='get'>
+    <input id='search' name='q' placeholder='Votre recherche' type='text'/>
+    <input id='search-btn' type='submit' value='GO'/>
 </form></li>
-  <li><a href='#'><i aria-hidden='true' class='fa fa-github fa-2x'/></a></li>
-  <li><a href='#'><i aria-hidden='true' class='fa fa-rss fa-2x'/></a>
+  <li><a href='#'><i aria-hidden='true' class='fa fa-github'/></a></li>
+  <li><a href='#'><i aria-hidden='true' class='fa fa-rss'/></a>
 </li>
 </ul>
 
 </nav>
 
-   <b:section class='header' id='header' showaddelements='yes'>
-     <b:widget id='HTML5' locked='false' title='' type='HTML'>
-       <b:widget-settings>
-         <b:widget-setting name='content'><![CDATA[<h1>Bannière</h1>]]></b:widget-setting>
-       </b:widget-settings>
-       <b:includable id='main'>
-  <!-- only display title if it's non-empty -->
-  <b:if cond='data:title != &quot;&quot;'>
-    <h2 class='title'><data:title/></h2>
-  </b:if>
-  <div class='widget-content'>
-    <data:content/>
-  </div>
-
-  <b:include name='quickedit'/>
-</b:includable>
-     </b:widget>
-   </b:section>
+ <header>  
+   <img src="banniere.png" />
 </header>
 <div class='main'>
   <b:section class='main' id='main' showaddelements='yes'>
@@ -1495,110 +1696,25 @@ text-transform: uppercase;
 </b:includable>
     </b:widget>
   </b:section>
-</div>
-    <aside>
-      <b:section class='sidebar' id='sidebar' showaddelements='yes'>
-        <b:widget id='HTML6' locked='false' title='' type='HTML'>
-          <b:widget-settings>
-            <b:widget-setting name='content'>leonard nimoy</b:widget-setting>
-          </b:widget-settings>
-          <b:includable id='main'>
-  <!-- only display title if it's non-empty -->
-  <b:if cond='data:title != &quot;&quot;'>
-    <h2 class='title'><data:title/></h2>
-  </b:if>
-  <div class='widget-content'>
-    <data:content/>
-  </div>
-
-  <b:include name='quickedit'/>
-</b:includable>
-        </b:widget>
-        <b:widget id='HTML4' locked='false' title='' type='HTML'>
-          <b:widget-settings>
-            <b:widget-setting name='content'>programme tv</b:widget-setting>
-          </b:widget-settings>
-          <b:includable id='main'>
-  <!-- only display title if it's non-empty -->
-  <b:if cond='data:title != &quot;&quot;'>
-    <h2 class='title'><data:title/></h2>
-  </b:if>
-  <div class='widget-content'>
-    <data:content/>
-  </div>
-
-  <b:include name='quickedit'/>
-</b:includable>
-        </b:widget>
-        <b:widget id='HTML3' locked='false' title='' type='HTML'>
-          <b:widget-settings>
-            <b:widget-setting name='content'>sorties ciné/blu-ray</b:widget-setting>
-          </b:widget-settings>
-          <b:includable id='main'>
-  <!-- only display title if it's non-empty -->
-  <b:if cond='data:title != &quot;&quot;'>
-    <h2 class='title'><data:title/></h2>
-  </b:if>
-  <div class='widget-content'>
-    <data:content/>
-  </div>
-
-  <b:include name='quickedit'/>
-</b:includable>
-        </b:widget>
-        <b:widget id='Label1' locked='false' title='Tags' type='Label'>
-          <b:widget-settings>
-            <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
-            <b:widget-setting name='display'>CLOUD</b:widget-setting>
-            <b:widget-setting name='selectedLabelsList'>first post,lorem ipsum</b:widget-setting>
-            <b:widget-setting name='showType'>USER_SELECTED</b:widget-setting>
-            <b:widget-setting name='showFreqNumbers'>false</b:widget-setting>
-          </b:widget-settings>
-          <b:includable id='main'>
-  <b:if cond='data:title != &quot;&quot;'>
-    <h2><data:title/></h2>
-  </b:if>
-  <div expr:class='&quot;widget-content &quot; + data:display + &quot;-label-widget-content&quot;'>
-    <b:if cond='data:display == &quot;list&quot;'>
-      <ul>
-        <b:loop values='data:labels' var='label'>
-          <li>
-            <b:if cond='data:blog.url == data:label.url'>
-              <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
-            <b:else/>
-              <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
-            </b:if>
-            <b:if cond='data:showFreqNumbers'>
-              <span dir='ltr'>(<data:label.count/>)</span>
-            </b:if>
-          </li>
-        </b:loop>
-      </ul>
-    <b:else/>
-      <b:loop values='data:labels' var='label'>
-        <span expr:class='&quot;label-size label-size-&quot; + data:label.cssSize'>
-          <b:if cond='data:blog.url == data:label.url'>
-            <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
-          <b:else/>
-            <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
-          </b:if>
-          <b:if cond='data:showFreqNumbers'>
-            <span class='label-count' dir='ltr'>(<data:label.count/>)</span>
-          </b:if>
-        </span>
-      </b:loop>
-    </b:if>
-    <b:include name='quickedit'/>
-  </div>
-</b:includable>
-        </b:widget>
-      </b:section>
-      
-
+  <aside>
+    <table>
+<tr>
+  <th class='progtv'>Programme TV</th>
+<th class='sortiescine'>Sorties Cinéma - Blu-Ray</th>
+  <th class='series'>Séries en cours</th>
+      </tr>
+<tr>
+<td class='progtv'>sdfghjkl</td>
+  <td class='sortiescine'>sdfghjkl</td>
+  <td class='series'>sdfghjkl</td>
+      </tr>
+</table>
 </aside>
+</div>
+
 <footer>
 
-    <b:section class='footer' id='col-1' showaddelements='yes'>
+    <b:section class='footer' id='col-4' showaddelements='yes'>
       <b:widget id='HTML2' locked='false' title='' type='HTML'>
         <b:widget-settings>
           <b:widget-setting name='content'>&lt;div id=&quot;encart-intro&quot; class=&quot;encart-intro&quot;&gt;
@@ -1727,7 +1843,7 @@ sdfghjklrtyuiofghjklhjkdfghjk
 </b:includable>
       </b:widget>
     </b:section>
-<b:section class='footer' id='col-2' showaddelements='yes'>
+<b:section class='footer' id='col-5' showaddelements='yes'>
   <b:widget id='HTML1' locked='false' title='Liens' type='HTML'>
     <b:widget-settings>
       <b:widget-setting name='content'>&lt;h3 class=&quot;links&quot;&gt;Liens web développement/webdesign&lt;/h3&gt;
@@ -1761,7 +1877,7 @@ sdfghjklrtyuiofghjklhjkdfghjk
 </b:includable>
   </b:widget>
 </b:section>
-<b:section class='footer' id='col-3' showaddelements='yes'>
+<b:section class='footer' id='col-6' showaddelements='yes'>
   <b:widget id='PopularPosts1' locked='false' title='Billets les plus consultés' type='PopularPosts'>
     <b:widget-settings>
       <b:widget-setting name='numItemsToShow'>4</b:widget-setting>
@@ -1828,6 +1944,10 @@ sdfghjklrtyuiofghjklhjkdfghjk
   </b:includable>
   </b:widget>
 </b:section>
+<script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
 <script>
 jQuery(document).ready(function() {
 var offset = 300;
@@ -1848,7 +1968,15 @@ return false;
 });
 </script>
 
-<a class='backtotop' href='#'>Back to Top</a>
-
+<a class='backtotop' href='#'><i class="fa fa-arrow-up fa-2x" aria-hidden="true"></i>
+</a>
+<b:if cond='data:blog.pageType == &quot;index&quot;'>
+<!-- Start XOmisse Pagination -->
+<script type='text/javascript'> //<![CDATA[ /** WRITTEN BY XOMISSE.COM **/
+var postperpage=3; var numshowpage=4; var prevpage ='Previous'; var nextpage ='Next'; var urlactivepage=location.href; var home_page="/";
+//]]> </script>
+<script src='https://gist.githubusercontent.com/xomisse/ac8ccfa4b8fb2c26d5cf76270db92201/raw/f957494b1691cce3d5a8cb92e5b4ed57cded9729/pagination.js' type='text/javascript'/>
+<!-- End XOmisse Pagination -->
+</b:if>
   </body>
 </html>
