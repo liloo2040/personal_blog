@@ -266,7 +266,7 @@ div.widget > h2,
 div.widget h3.title {
   margin: auto;
 
-  font-size: 18px;
+  font-size: 16px;
   color: $(widget.title.text.color);
 }
 
@@ -279,7 +279,7 @@ div.widget h3.title {
 }
 
 .widget .popular-posts ul {
-  list-style: none;
+  list-style-type: none;
 }
 
 /* Posts
@@ -293,7 +293,7 @@ margin-bottom: 5px;
 
 .date-header span {
 color: #FFFFFF;
-background-color: #010;
+background-color: #010521;
 padding: 10px;
 font-size: 14px;
 text-transform: uppercase;
@@ -312,16 +312,16 @@ transition: 2s;}
 
 h3 a{
 padding: 10px;
-font-size: 30px;
+font-size: 20px;
 color: #004466;
-letter-spacing: 4px; 
+letter-spacing: 2px; 
 padding: 20px;
 transition: 2s;}
 
 h3 a:hover{
 font-size: 30px;
 color: #004466;
-letter-spacing: 6px; 
+letter-spacing: 4px; 
 margin-top: 20px;}
 
 .post-body.entry-content{
@@ -564,31 +564,11 @@ body.mobile  {
   background-size: 100%;
 }
 
-.mobile .body-fauxcolumn-outer {
-  background: $(mobile.background.overlay);
-}
-
-.mobile .body-fauxcolumn-outer .cap-top {
-  background-size: 100% auto;
-}
-
-.mobile .content-outer {
-  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, .15);
-  box-shadow: 0 0 3px rgba(0, 0, 0, .15);
-}
-
-.mobile .tabs-inner .widget ul {
-  margin-left: 0;
-  margin-right: 0;
-}
-
 .mobile .post {
   margin: 0;
+background-size: 100%;
 }
 
-.mobile .main-inner .column-center-inner .section {
-  margin: 0;
-}
 
 .mobile .date-header span {
   padding: 0.1em 10px;
@@ -635,7 +615,7 @@ body.mobile  {
 }
 
 .mobile .tabs-inner .PageList .widget-content .pagelist-arrow {
-  border-$startSide: 1px solid $(tabs.border.color);
+  border-$startSide: none;
 }
 
 .post-labels a {
@@ -650,6 +630,7 @@ color: #010521;
 margin-right: 5px;
 margin-bottom: 10px;
 margin-top: 10px;
+transition: all 2s;
 }
 
 .post-labels a:hover {
