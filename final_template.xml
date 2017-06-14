@@ -162,7 +162,7 @@ letter-spacing: 1px;
 font-size: 16px;    }
 
 /* Centrer la barre de navigation */
-nav li, nav li {
+nav li{
 display: inline-block;
 float: none;}
 
@@ -436,33 +436,52 @@ font-size: 14px;
 padding: 10px;
 }
 
+/*----Commentaires-----*/
 .post-comment-link{
-margin-left: 50px;
+margin-left: 10px;
 }
 
 .post-comment-link a{
 color: #16304A;
 }
 
-
-#comments .comment-author {
-  padding-top: 1.5em;
-
-  border-top: 1px solid $(body.rule.color);
-  background-position: 0 1.5em;
+.comment {
+padding: 10px;
+}
+.comments .comments-content .user a{
+  font-family: 'Quicksand', sans-serif;
+text-transform: uppercase;
+font-size: 16px;
+color: #004466;
+padding-top: 20px;
+font-weight: bold;
 }
 
-#comments .comment-author:first-child {
-  padding-top: 0;
-  border-top: none;
+.comments .comments-content .user a:hover {
+  letter-spacing: 1px;
+}
+
+.comments .comments-content .datetime a{
+font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
+font-size: 14px;
+color: #010521;
+margin-left: 30px;
+}
+
+.comments .comments-content .comment-content{
+text-align: justify;
+font-family: 'Raleway', sans-serif;
+color: #046B99;
 }
 
 .avatar-image-container {
-  margin: .2em 0 0;
+
 }
 
 #comments .avatar-image-container img {
-  border: 1px solid $(image.border.color);
+max-height: 50px !important;
+width: 50px !important;
+height: 50px! important;
 }
 
 /* Comments
@@ -470,15 +489,17 @@ color: #16304A;
 .comments .comments-content .icon.blog-author {
   background-repeat: no-repeat;
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEgAACxIB0t1+/AAAAAd0SU1FB9sLFwMeCjjhcOMAAAD+SURBVDjLtZSvTgNBEIe/WRRnm3U8RC1neQdsm1zSBIU9VVF1FkUguQQsD9ITmD7ECZIJSE4OZo9stoVjC/zc7ky+zH9hXwVwDpTAWWLrgS3QAe8AZgaAJI5zYAmc8r0G4AHYHQKVwII8PZrZFsBFkeRCABYiMh9BRUhnSkPTNCtVXYXURi1FpBDgArj8QU1eVXUzfnjv7yP7kwu1mYrkWlU33vs1QNu2qU8pwN0UpKoqokjWwCztrMuBhEhmh8bD5UDqur75asbcX0BGUB9/HAMB+r32hznJgXy2v0sGLBcyAJ1EK3LFcbo1s91JeLwAbwGYu7TP/3ZGfnXYPgAVNngtqatUNgAAAABJRU5ErkJggg==);
+
 }
 
 .comments .comments-content .loadmore a {
-  border-top: 1px solid $(widget.alternate.text.color);
-  border-bottom: 1px solid $(widget.alternate.text.color);
+font-family: 'Railway', sans-serif;
+font-size: 12px;
 }
 
 .comments .comment-thread.inline-thread {
   background-color: $(post.footer.background.color);
+
 }
 
 .comments .continue {
@@ -839,7 +860,8 @@ font-weight: bold;
 
    <nav>
 <ul>
-<li><a href='http://code-and-screens.blogspot.fr'>Accueil</a><a href='http://template-blogtest.blogspot.fr/p/icode.html'>I.CODE</a></li>
+  <li><a href='http://code-and-screens.blogspot.fr'>Accueil</a></li>
+<li><a href='http://template-blogtest.blogspot.fr/p/icode.html'>I.CODE</a></li>
   <li><a href='#'>On en parle</a></li>
   <li><a href='http://web-and-screens.blogspot.fr/p/mes-series-cultes.html'>Du Petit...</a></li>
   <li><a href='#'>au grand écran</a></li>
@@ -2087,7 +2109,7 @@ return false;
 <b:if cond='data:blog.pageType == &quot;index&quot;'>
 <!-- Start XOmisse Pagination -->
 <script type='text/javascript'> //<![CDATA[ /** WRITTEN BY XOMISSE.COM **/
-var postperpage=2; var numshowpage=4; var prevpage ='Previous'; var nextpage ='Next'; var urlactivepage=location.href; var home_page="/";
+var postperpage=3; var numshowpage=4; var prevpage ='Previous'; var nextpage ='Next'; var urlactivepage=location.href; var home_page="/";
 //]]> </script>
 <script src='https://gist.githubusercontent.com/xomisse/ac8ccfa4b8fb2c26d5cf76270db92201/raw/f957494b1691cce3d5a8cb92e5b4ed57cded9729/pagination.js' type='text/javascript'/>
 <!-- End XOmisse Pagination -->
