@@ -445,8 +445,18 @@ margin-left: 10px;
 color: #16304A;
 }
 
+.post-comment-link a:hover{
+color: #004466;
+}
+
+.post-comment-link a:visited{
+color: #000000;
+}
 .comment {
-padding: 10px;
+background-color: #FFFFFF;
+border-color: #004466;
+padding-top: 5px;
+padding-bottom: 5px;
 }
 .comments .comments-content .user a{
   font-family: 'Quicksand', sans-serif;
@@ -472,16 +482,44 @@ margin-left: 30px;
 text-align: justify;
 font-family: 'Raleway', sans-serif;
 color: #046B99;
+font-size: 14px;
+padding: 4px;
+}
+
+/*----Liens répondre/supprimer ----*/
+
+.comments .comment .comment-actions a {
+font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
+text-transform: uppercase;
+background-color: #010521;
+color: #FFFFFF;
+padding: 4px;
+margin: 5px;
+text-decoration: none;
+}
+
+.comments .comment .comment-actions a:hover {
+font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
+text-transform: uppercase;
+background-color: #FFFFFF;
+border-color: #010521;
+border-width: 1px;
+border-style: solid;
+color: #010521;
+padding: 4px;
+text-decoration: none;
+margin: 5px;
 }
 
 .avatar-image-container {
+width: 50px !important;
+height: 50px !important;
 
 }
 
-#comments .avatar-image-container img {
-max-height: 50px !important;
-width: 50px !important;
-height: 50px! important;
+.comments .avatar-image-container img {
+padding: 4px;
+
 }
 
 /* Comments
@@ -489,21 +527,24 @@ height: 50px! important;
 .comments .comments-content .icon.blog-author {
   background-repeat: no-repeat;
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEgAACxIB0t1+/AAAAAd0SU1FB9sLFwMeCjjhcOMAAAD+SURBVDjLtZSvTgNBEIe/WRRnm3U8RC1neQdsm1zSBIU9VVF1FkUguQQsD9ITmD7ECZIJSE4OZo9stoVjC/zc7ky+zH9hXwVwDpTAWWLrgS3QAe8AZgaAJI5zYAmc8r0G4AHYHQKVwII8PZrZFsBFkeRCABYiMh9BRUhnSkPTNCtVXYXURi1FpBDgArj8QU1eVXUzfnjv7yP7kwu1mYrkWlU33vs1QNu2qU8pwN0UpKoqokjWwCztrMuBhEhmh8bD5UDqur75asbcX0BGUB9/HAMB+r32hznJgXy2v0sGLBcyAJ1EK3LFcbo1s91JeLwAbwGYu7TP/3ZGfnXYPgAVNngtqatUNgAAAABJRU5ErkJggg==);
-
 }
 
 .comments .comments-content .loadmore a {
-font-family: 'Railway', sans-serif;
-font-size: 12px;
+margin: 5px;
 }
 
 .comments .comment-thread.inline-thread {
-  background-color: $(post.footer.background.color);
-
+background-color: #046B99;
 }
 
+.inline-thread .comment-block {
+border-color: #004466;
+border-width: 1px;
+padding: 10px;
+}
 .comments .continue {
-  border-top: 1px solid $(widget.alternate.text.color);
+  border-top: none;
+margin-bottom: 5px;
 }
 
 .comments h4{
@@ -1122,12 +1163,7 @@ font-weight: bold;
   </span>
 </b:includable>
               <b:includable id='comment_count_picker' var='post'>
-  <b:if cond='data:post.commentSource == 1'>
-    <span class='cmt_count_iframe_holder' expr:data-count='data:post.numComments' expr:data-onclick='data:post.addCommentOnclick' expr:data-post-url='data:post.url' expr:data-url='data:post.url.canonical.http'>
-    </span>
-  <b:else/>
-     <a class='comment-link' expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick'><b:if cond='data:post.numComments == 1'>1 <data:top.commentLabel/><b:else/><data:post.numComments/> <data:top.commentLabelPlural/></b:if></a>
-  </b:if>
+     <a class='comment-link' expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick'><b:if cond='data:post.numComments == 1'>1 Commentaire<b:else/><data:post.numComments/> Commentaires</b:if></a>
 </b:includable>
               <b:includable id='comment_picker' var='post'>
   <b:if cond='data:post.commentSource == 1'>
@@ -1318,7 +1354,7 @@ font-weight: bold;
       </a>
 
       <div class='mobile-index-comment'>
-        <b:include cond='data:blog.pageType != &quot;static_page&quot;                          and data:post.allowComments                          and data:post.numComments != 0' data='post' name='comment_count_picker'/>
+       
       </div>
     </div>
   </div>
@@ -1882,7 +1918,7 @@ font-weight: bold;
               <b:includable id='threaded_comments' var='post'>
   <div class='comments' id='comments'>
     <a name='comments'/>
-    <h4><data:post.commentLabelFull/>:</h4>
+    <h4><data:post.commentLabelFull/> </h4>
 
     <div class='comments-content'>
       <b:include cond='data:post.embedCommentForm' data='post' name='threaded_comment_js'/>
