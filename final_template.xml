@@ -18,6 +18,7 @@ Designer: Josh Peterson
 URL:      www.noaesthetic.com
 ----------------------------------------------- */
 
+
 /* Content
 ----------------------------------------------- */
 body{
@@ -84,41 +85,29 @@ $(content.background.color.selector) {
 }
 
 *--- Fixer la navbar ----*/
-nav{
+#barre_nav{
 position: fixed;
+margin: 0 auto;
+width: 100%;
 top: -10px;
 left: 0px;
 }
-/* Espacement avant et après barre de navigation */ 
-nav {
-top: -18px;
-margin: 0 auto;
-width: 100%;
-position: fixed;
-
-}
-
-nav .section:last-child li {
-padding-right: 0;
-}
-
-/* Espacement et bordure premier lien */
-nav .section:first-child li{
-padding-left: 0px;}
 
 /* Fond et bordure barre de navigation */
-nav ul {
+#barre_nav ul {
 text-align: center;
 padding-top: 10px;
 padding-bottom: 10px;
 background-color: #004466;
+list-style-type: none;
+dislay: inline: block;
 z-index: 999;
 opacity: 0.8;
 
 }
 
 /* Police et couleur des liens */
-nav li a {
+#barre_nav li a {
 font-family: 'Century Gothic','URW Gothic L', sans-serif;
 font-size: 16px;
 margin-right: 10px;
@@ -132,13 +121,13 @@ transition-duration: 0.4s;
 }
 
 /* Police et couleur des liens survolés */
-nav li .selected a, nav li a:hover {
+#barre_nav li .selected a, #barre_nav li a:hover {
 text-decoration: bold;
 letter-spacing: 2px;
 
 }
 
-nav li #search{
+#barre_nav li #search{
 background-color: #004466;
 width: 200px;
 border: 1px solid #FFFFFF;
@@ -148,7 +137,7 @@ font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
 text-align: center;
 margin-left: 10px;
 }
-nav li #search-btn{
+#barre_nav li #search-btn{
 margin-left: 5px;
 margin-right: 5px;
 background-color: #FFFFFF;
@@ -162,7 +151,7 @@ letter-spacing: 1px;
 font-size: 16px;    }
 
 /* Centrer la barre de navigation */
-nav li{
+#barre_nav li{
 display: inline-block;
 float: none;}
 
@@ -181,7 +170,42 @@ height: 300px;
 margin-bottom: 100px;      }
 
 
+/*---- Tabs Barre de navigation -----*/
 
+/* Espacement et bordure premier lien */
+.tabs-inner .section:first-child ul {
+}
+
+/* Fond et bordure de la barre */
+.tabs-inner .widget ul{
+}
+
+/* Police et couleurs des liens */
+.tabs-inner .widget li a{
+font-family: 'Century Gothic','URW Gothic L', sans-serif;
+font-size: 16px;
+margin-right: 10px;
+text-transform: uppercase;
+margin-left: 10px;
+color: #ffffff;
+-moz-transition-duration: 0.4s;
+-webkit-transition-duration: 0.4s;
+-o-transition-duration: 0.4s;
+transition-duration: 0.4s;
+}
+
+
+/* Police et couleurs des liens survoles */
+.tabs-inner .widget li.selected a, .tabs-inner .widget li a:hover{
+text-decoration: bold;
+letter-spacing: 2px;
+}
+
+/* Centrage barre */
+.tabs .widget li, .tabs .widget li {
+display: inline-block;
+float: none;
+}
 
 
 /----Back to Top---/
@@ -281,6 +305,8 @@ div.widget h3.title {
 .widget .popular-posts ul {
   list-style-type: none;
 }
+
+
 
 /* Posts
 ----------------------------------------------- */
@@ -806,13 +832,13 @@ font-weight: bold;
       <b:variable default='310px' name='main.column.right.width' type='length' value='0px'/>
 
       <![CDATA[
-      body {
+        body {
         min-width: $(content.width);
       }
 
       .content-outer, .content-fauxcolumn-outer, .region-inner {
         min-width: $(content.width);
-        max-width: $(content.width);
+        max-width: 100%;
         _width: $(content.width);
       }
 
@@ -862,14 +888,9 @@ font-weight: bold;
         min-width: 0;
         width: auto;
       }
-
-      body#layout div.add_widget {
-        padding: 8px;
-      }
-
-      body#layout div.add_widget a {
-        margin-left: 32px;
-      }
+      .main-outer {
+max-width: $(content.width);
+margin: 0 auto;}
       ]]>
     </b:template-skin>
 
@@ -898,25 +919,44 @@ font-weight: bold;
       </b:if>
     </div>
   </b:if>
+<div class='region-inner tabs-inner'>
+<b:section class='tabs' id='crosscol' maxwidgets='1' name='cross-column' showaddelement='yes'>
+  <b:widget id='HTML6' locked='false' title='' type='HTML'>
+    <b:widget-settings>
+      <b:widget-setting name='content'>&lt;div class=&#39;barre_nav&#39;&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&#39;http://code-and-screens.blogspot.fr&#39;&gt;Accueil&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#39;http://code-and-screens.blogspot.fr/p/icode.html&#39;&gt;I.CODE&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#39;#&#39;&gt;On en parle&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#39;http://code-and-screens.blogspot.fr/p/mes-series-cultes.html&#39;&gt;Du Petit...&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#39;#&#39;&gt;au grand écran&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#39;#&#39;&gt;Divers&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#39;http://code-and-screens.blogspot.fr/p/blog-page_5.html&#39;&gt;A propos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;form action=&#39;/search&#39; id=&#39;searchthis&#39; method=&#39;get&#39;&gt;
+    &lt;input id=&#39;search&#39; name=&#39;q&#39; placeholder=&#39;Votre recherche&#39; type=&#39;text&#39;/&gt;
+    &lt;input id=&#39;search-btn&#39; type=&#39;submit&#39; value=&#39;GO&#39;/&gt;
+  &lt;/form&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#39;#&#39;&gt;&lt;i aria-hidden=&#39;true&#39; class=&#39;fa fa-github&#39;/&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#39;#&#39;&gt;&lt;i aria-hidden=&#39;true&#39; class=&#39;fa fa-rss&#39;/&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
 
-   <nav>
-<ul>
-  <li><a href='http://code-and-screens.blogspot.fr'>Accueil</a></li>
-<li><a href='http://template-blogtest.blogspot.fr/p/icode.html'>I.CODE</a></li>
-  <li><a href='#'>On en parle</a></li>
-  <li><a href='http://web-and-screens.blogspot.fr/p/mes-series-cultes.html'>Du Petit...</a></li>
-  <li><a href='#'>au grand écran</a></li>
-  <li><a href='#'>Divers</a></li>
-  <li><a href='http://web-and-screens.blogspot.fr/p/blog-page_5.html'>A propos</a></li>
-<li><form action='/search' id='searchthis' method='get'>
-    <input id='search' name='q' placeholder='Votre recherche' type='text'/>
-    <input id='search-btn' type='submit' value='GO'/>
-  </form></li>
-  <li><a href='#'><i aria-hidden='true' class='fa fa-github'/></a></li>
-  <li><a href='#'><i aria-hidden='true' class='fa fa-rss'/></a></li>
-    </ul>
+&lt;/div&gt;</b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main'>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
 
-</nav> 
+  <b:include name='quickedit'/>
+</b:includable>
+  </b:widget>
+</b:section>
+    </div>
+  
 
 <header>
       <b:section class='header' id='header' maxwidgets='1' name='Header' showaddelement='no'>
