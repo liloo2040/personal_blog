@@ -84,76 +84,6 @@ $(content.background.color.selector) {
   background-color: $(content.background.color);
 }
 
-*--- Fixer la navbar ----*/
-#barre_nav{
-position: fixed;
-margin: 0 auto;
-width: 100%;
-top: -10px;
-left: 0px;
-}
-
-/* Fond et bordure barre de navigation */
-#barre_nav ul {
-text-align: center;
-padding-top: 10px;
-padding-bottom: 10px;
-background-color: #004466;
-list-style-type: none;
-dislay: inline: block;
-z-index: 999;
-opacity: 0.8;
-
-}
-
-/* Police et couleur des liens */
-#barre_nav li a {
-font-family: 'Century Gothic','URW Gothic L', sans-serif;
-font-size: 16px;
-margin-right: 10px;
-text-transform: uppercase;
-margin-left: 10px;
-color: #ffffff;
--moz-transition-duration: 0.4s;
--webkit-transition-duration: 0.4s;
--o-transition-duration: 0.4s;
-transition-duration: 0.4s;
-}
-
-/* Police et couleur des liens survolés */
-#barre_nav li .selected a, #barre_nav li a:hover {
-text-decoration: bold;
-letter-spacing: 2px;
-
-}
-
-#barre_nav li #search{
-background-color: #004466;
-width: 200px;
-border: 1px solid #FFFFFF;
-padding: 4px; 
-color: #FFFFFF;
-font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
-text-align: center;
-margin-left: 10px;
-}
-#barre_nav li #search-btn{
-margin-left: 5px;
-margin-right: 5px;
-background-color: #FFFFFF;
-color: #004466;
-text-transform: uppercase;
-border: none;  
-padding: 4px;
-font-weight: bold;
-font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
-letter-spacing: 1px;
-font-size: 16px;    }
-
-/* Centrer la barre de navigation */
-#barre_nav li{
-display: inline-block;
-float: none;}
 
 /----Header-----/
 header{
@@ -174,17 +104,29 @@ margin-bottom: 100px;      }
 
 /* Espacement et bordure premier lien */
 .tabs-inner .section:first-child ul {
+position: fixed;
+margin: 0;
+width: 100%;
+left: 0;
+right: 0;
 }
 
 /* Fond et bordure de la barre */
 .tabs-inner .widget ul{
+text-align: center;
+padding-top: 10px;
+padding-bottom: 10px;
+background-color: #004466;
+list-style-type: none;
+display: inline-block;
+z-index: 999;
+opacity: 0.8;
 }
 
 /* Police et couleurs des liens */
 .tabs-inner .widget li a{
 font-family: 'Century Gothic','URW Gothic L', sans-serif;
 font-size: 16px;
-margin-right: 10px;
 text-transform: uppercase;
 margin-left: 10px;
 color: #ffffff;
@@ -194,6 +136,31 @@ color: #ffffff;
 transition-duration: 0.4s;
 }
 
+/* Barre de recherche */
+.tabs-inner .widget li #search{
+background-color: #004466;
+width: 200px;
+border: 1px solid #FFFFFF;
+padding: 4px; 
+color: #FFFFFF;
+font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
+text-align: center;
+margin-left: 10px;
+}
+
+/* Bouton recherche */
+.tabs-inner .widget li #search-btn{
+margin-left: 5px;
+margin-right: 5px;
+background-color: #FFFFFF;
+color: #004466;
+text-transform: uppercase;
+border: none;  
+padding: 4px;
+font-weight: bold;
+font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
+letter-spacing: 1px;
+font-size: 16px;    }
 
 /* Police et couleurs des liens survoles */
 .tabs-inner .widget li.selected a, .tabs-inner .widget li a:hover{
