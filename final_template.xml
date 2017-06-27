@@ -35,7 +35,8 @@ text-decoration: none;
 html body $(page.width.selector) {
   min-width: 0;
   max-width: 100%;
-  width: $(page.width);
+  width: 100% ;
+padding: 0;
 }
 
 
@@ -77,7 +78,7 @@ a:hover {
 }
 
 .content-inner {
-  padding: $(content.padding) $(content.padding.horizontal);
+  padding: 0;
 }
 
 $(content.background.color.selector) {
@@ -448,15 +449,23 @@ color: #000000;
 .comment {
 background-color: #FFFFFF;
 border-color: #004466;
-padding-top: 5px;
+padding-top: 2px;
 padding-bottom: 5px;
 }
+
+.comments. comments-content .comment-header {
+margin: auto;
+width: 500px;
+margin-left: 300px;
+}
+
 .comments .comments-content .user a{
   font-family: 'Quicksand', sans-serif;
 text-transform: uppercase;
 font-size: 16px;
 color: #004466;
-padding-top: 20px;
+width: 200px;
+padding-top: 10px;
 font-weight: bold;
 }
 
@@ -476,7 +485,10 @@ text-align: justify;
 font-family: 'Raleway', sans-serif;
 color: #046B99;
 font-size: 14px;
+width: 90%;
 padding: 4px;
+margin: auto;
+margin-top: -10px;
 }
 
 /*----Liens répondre/supprimer ----*/
@@ -487,8 +499,10 @@ text-transform: uppercase;
 background-color: #010521;
 color: #FFFFFF;
 padding: 4px;
-margin: 5px;
+margin: auto;
+margin-right: 300px
 text-decoration: none;
+margin-left: 300px;
 }
 
 .comments .comment .comment-actions a:hover {
@@ -501,18 +515,21 @@ border-style: solid;
 color: #010521;
 padding: 4px;
 text-decoration: none;
-margin: 5px;
+margin-right: 300px;
 }
 
 .avatar-image-container {
-width: 50px !important;
-height: 50px !important;
-
+width: 100px;
+height: 100px;
+overflow: visible;
+margin: auto;
 }
 
 .comments .avatar-image-container img {
-padding: 4px;
-
+width: 100px;
+height: 100px;
+overflow: visible;
+margin: auto;
 }
 
 /* Comments
@@ -2037,7 +2054,7 @@ margin: 0 auto;}
     <b:widget id='HTML2' locked='false' title='' type='HTML'>
       <b:widget-settings>
         <b:widget-setting name='content'>&lt;div class=&quot;sortiescine&quot;&gt;
-&lt;h3&gt;Sorties cinéma et Blu-Ray Avril 2017&lt;/h3&gt;
+&lt;h3&gt;Sorties cinéma et Blu-Ray Juille 2017&lt;/h3&gt;
 &lt;b&gt;Les Gardiens de la Galaxie - Vol.2&lt;b&gt; de James Gunn&lt;br/&gt;
 avec Chris Pratt, Zoe Saldana, Michael Rooker, Dave Bautista, Pom Klementieff, Karen Gillan, Ben Browder, Bradley Cooper, Kurt Russell, Elizabeth Debicki, Tommy Flanagan 
 
@@ -2079,7 +2096,6 @@ Sortie
     <div class='cap-left'/>
     <div class='cap-right'/>
 </div>
-
   <footer>
     <div class='footer-outer'>
     <div class='footer-cap-top cap-top'>
@@ -2088,6 +2104,7 @@ Sortie
     </div>
     <div class='fauxborder-left footer-fauxborder-left'>
     <div class='fauxborder-right footer-fauxborder-right'/>
+	<div class='region-inner footer-inner'>
       <macro:include id='footer-sections' name='sections'>
         <macro:param default='2' name='num' value='3'/>
         <macro:param default='footer' name='idPrefix'/>
@@ -2116,6 +2133,7 @@ Sortie
     <div class='footer-cap-bottom cap-bottom'>
       <div class='cap-left'/>
       <div class='cap-right'/>
+    </div>
     </div>
     </footer>
 
