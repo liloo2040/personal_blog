@@ -26,6 +26,7 @@ color: #000000;
 font-size: 14px;
 background-color: #D1E4FF;
 margin: 0 auto;
+padding: 0;
 }
 
 a:link{
@@ -73,7 +74,6 @@ a:hover {
   -webkit-box-shadow: 0 0 $(content.shadow.spread.webkit) rgba(0, 0, 0, .15);
   -goog-ms-box-shadow: 0 0 $(content.shadow.spread.ie) #333333;
   box-shadow: 0 0 $(content.shadow.spread) rgba(0, 0, 0, .15);
-
   margin-bottom: 1px;
 }
 
@@ -566,20 +566,24 @@ text-transform: uppercase;
 
 /* Accents
 ---------------------------------------------- */
+
+.footer-outer {
+width: 100%;
+}
+
 footer {
 width: 100%;
 background-color: #010521;
 width: 100%;
+margin-right: -20px;
 margin-top: 10px;
-margin-left: -10px;
-margin-right: 20px;
 padding-bottom: 10px;
 padding-right: 10px;
 color: #CBCDD4;
 font-family: 'Open Sans', 'Arial', sans-serif;
 }
 
-footer h2, h3{
+footer .widget h2{
 font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
 text-transform: uppercase;
 text-align: center;
@@ -594,16 +598,12 @@ footer li a{
 color: #FFFFFF;
 }
 
-#BlogArchive1 ul li{
-font-family: &#39;Quicksand&#39;, &#39;Open Sans&#39;, sans-serif;
-margin-left: 10px;
-}
 
-#BlogArchive1 ul li a{
+footer .widget ul li a{
 color: #CBCDD4;
 }
 
-#BlogArchive1 h2{
+footer .widget h2{
 text-transform: uppercase;
 color: #FFFFFF;
 font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
@@ -620,7 +620,7 @@ font-family: 'Arial', sans-serif;
 }
 
 #Stats1_totalCount{
-font-size: 20px;
+font-size: 18px;
 font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
 font-weight: normal;
 text-align: center;
@@ -808,6 +808,53 @@ text-transform: uppercase;
 font-family: &#39;Quicksand&#39;, sans-serif;
 font-weight: bold; 
     }
+
+.tabs-inner{
+padding: 0px;
+}
+
+.section{
+margin: 0px;
+}
+
+.header-inner .widget{
+margin: 0px;
+}
+
+/*--------------------------Media Queries ------------------------------*/
+
+@media only screen and (min-width: 320px) {
+
+body{
+color: #000000;
+font-size: 14px;
+background-color: #D1E4FF;
+margin: 0 auto;
+padding: 0;
+}
+
+a:link{
+text-decoration: none;
+}
+
+html body $(page.width.selector) {
+  min-width: 0;
+  max-width: 100%;
+  width: 100% ;
+padding: 0;
+}
+
+
+a:visited {
+  text-decoration:none;
+  color: $(link.visited.color);
+}
+
+a:hover {
+  text-decoration:none;
+  color: $(link.hover.color);
+}
+}
 ]]></b:skin>
 
     <b:template-skin>
@@ -903,7 +950,7 @@ margin: 0 auto;}
       </b:if>
     </div>
   </b:if>
-<div class='region-inner tabs-inner'>
+<nav class='region-inner tabs-inner'>
 <b:section class='tabs' id='crosscol' maxwidgets='1' name='cross-column' showaddelement='yes'>
   <b:widget id='HTML6' locked='false' title='' type='HTML'>
     <b:widget-settings>
@@ -939,7 +986,7 @@ margin: 0 auto;}
 </b:includable>
   </b:widget>
 </b:section>
-    </div>
+    </nav>
   
 
 <header>
@@ -2018,7 +2065,7 @@ margin: 0 auto;}
       <div class='cap-right'/>
     </div>
     </div>
-
+<aside>
   <b:section id='sidebar'>
     <b:widget id='HTML1' locked='false' title='' type='HTML'>
       <b:widget-settings>
@@ -2089,20 +2136,18 @@ Sortie
 </b:includable>
     </b:widget>
   </b:section>
+    </aside>
 
   <!-- content -->
  
-  <div class='content-cap-bottom cap-bottom'>
-    <div class='cap-left'/>
-    <div class='cap-right'/>
-</div>
+ 
   <footer>
     <div class='footer-outer'>
     <div class='footer-cap-top cap-top'>
       <div class='cap-left'/>
       <div class='cap-right'/>
     </div>
-    <div class='fauxborder-left footer-fauxborder-left'>
+      <div class='fauxborder-left footer-fauxborder-left'/>
     <div class='fauxborder-right footer-fauxborder-right'/>
 	<div class='region-inner footer-inner'>
       <macro:include id='footer-sections' name='sections'>
@@ -2128,11 +2173,6 @@ Sortie
   </b:includable>
         </b:widget>
       </b:section>
-    </div>
-    </div>
-    <div class='footer-cap-bottom cap-bottom'>
-      <div class='cap-left'/>
-      <div class='cap-right'/>
     </div>
     </div>
     </footer>
