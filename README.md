@@ -7,6 +7,7 @@
 * Git/Github
 * HTML
 * Javascript
+* jQuery
 
 **Updates from latest version**
 * Search form in navbar
