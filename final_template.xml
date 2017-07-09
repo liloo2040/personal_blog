@@ -228,6 +228,11 @@ font-family: 'Quicksand', 'Open Sans', sans-serif;
 margin-top: -5px;
 }
 
+aside {
+display: flex;
+height: 400px;
+}
+
 .progtv {
 width: 300px; 
 background-color: #16304A;
@@ -241,8 +246,19 @@ width: 300px;
 background-color: #000000; 
 text-align: center;
 font-family: 'Free Sans', 'Arial', sans-serif; 
-padding: 2px;
-margin-right: 20px;        }
+padding: 10px;
+color: #FFFFFF;
+margin-right: 20px; 
+margin: 10px;
+border-bottom: 6px dashed #FFFFFF;       }
+
+.sortiescine h3{
+text-transform: uppercase;
+font-size: 20px;
+}
+.titre {
+text-transform: uppercase;
+}
 
 .series{
 width: 300px;  
@@ -255,7 +271,7 @@ padding: 2px;
 /* Headings
 ----------------------------------------------- */
 div.widget > h2,
-div.widget h3.title {
+div.widget h2.title {
   margin: auto;
 
   font-size: 16px;
@@ -295,16 +311,19 @@ font-family: 'Quicksand', 'Open Sans', sans-serif;
 text-align: center;
 }
 
-h3{
+h3.post-title{
 padding: 10px;
 font-size: 30px;
 color: #004466;
 font-size: 30px;
 letter-spacing: 4px; 
 padding: 20px;
+font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
+text-transform: uppercase;
+text-align: center;
 transition: 2s;}
 
-h3 a{
+h3.post-title a{
 padding: 10px;
 font-size: 20px;
 color: #004466;
@@ -312,7 +331,7 @@ letter-spacing: 2px;
 padding: 20px;
 transition: 2s;}
 
-h3 a:hover{
+h3.post-title a:hover{
 font-size: 30px;
 color: #004466;
 letter-spacing: 4px; 
@@ -326,9 +345,8 @@ font-weight: lighter;
 margin: auto;
 font-family: 'Railway', sans-serif;
 width: 95%;
+padding: 20px;
 }
-
-
 
 
 .post{
@@ -2084,45 +2102,14 @@ margin: 0 auto;}
 
 &lt;!-- Fin --&gt;
 
-&lt;/div&gt;&lt;/div&gt;</b:widget-setting>
+&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;sortiescine&quot;&gt;
+&lt;h3&gt;Sorties cinéma et Blu-Ray Juillet 2017&lt;/h3&gt;
+
+&lt;b class=&quot;titre&quot;&gt;Logan&lt;/b&gt;&lt;br /&gt;de James Mangold&lt;br/&gt;
+avec Hugh Jackman, Sir Patrick Stewart, Dafne Keen, Erik Lasalle&lt;br /&gt;
+Sortie le 5 juillet
+&lt;/div&gt;</b:widget-setting>
       </b:widget-settings>
-      <b:includable id='main'>
-  <!-- only display title if it's non-empty -->
-  <b:if cond='data:title != &quot;&quot;'>
-    <h2 class='title'><data:title/></h2>
-  </b:if>
-  <div class='widget-content'>
-    <data:content/>
-  </div>
-
-  <b:include name='quickedit'/>
-</b:includable>
-    </b:widget>
-    <b:widget id='HTML2' locked='false' title='' type='HTML'>
-      <b:widget-settings>
-        <b:widget-setting name='content'>&lt;div class=&quot;sortiescine&quot;&gt;
-&lt;h3&gt;Sorties cinéma et Blu-Ray Juille 2017&lt;/h3&gt;
-&lt;b&gt;Les Gardiens de la Galaxie - Vol.2&lt;b&gt; de James Gunn&lt;br/&gt;
-avec Chris Pratt, Zoe Saldana, Michael Rooker, Dave Bautista, Pom Klementieff, Karen Gillan, Ben Browder, Bradley Cooper, Kurt Russell, Elizabeth Debicki, Tommy Flanagan 
-
-&lt;b&gt;Rogue One : A Star Wars Story&lt;/b&gt;de Gareth Edwards&lt;br/&gt;
-avec Felicity Jones, Riz Ahmed, Diego Luna, Madds Mikkaelsen, Forest Whitaker, Donnie Yen, Jimmy Smits
-Sortie 
-&lt;/b&gt;&lt;/b&gt;&lt;/div&gt;</b:widget-setting>
-      </b:widget-settings>
-      <b:includable id='main'>
-  <!-- only display title if it's non-empty -->
-  <b:if cond='data:title != &quot;&quot;'>
-    <h2 class='title'><data:title/></h2>
-  </b:if>
-  <div class='widget-content'>
-    <data:content/>
-  </div>
-
-  <b:include name='quickedit'/>
-</b:includable>
-    </b:widget>
-    <b:widget id='HTML9' locked='false' title='' type='HTML'>
       <b:includable id='main'>
   <!-- only display title if it's non-empty -->
   <b:if cond='data:title != &quot;&quot;'>
