@@ -230,7 +230,7 @@ margin-top: -5px;
 
 aside {
 display: flex;
-height: 400px;
+flex-direction: row;
 }
 
 .progtv {
@@ -241,6 +241,12 @@ padding: 2px;
 font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
 margin-right: 20px;       }
 
+.progtv h3{
+font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
+text-transform: uppercase;
+color: #FFFFFF;
+}
+
 .sortiescine{
 width: 300px;
 background-color: #000000; 
@@ -250,7 +256,7 @@ padding: 10px;
 color: #FFFFFF;
 margin-right: 20px; 
 margin: 10px;
-border-bottom: 6px dashed #FFFFFF;       }
+border-bottom: 6px dashed #FFFFFF;   }
 
 .sortiescine h3{
 text-transform: uppercase;
@@ -2108,6 +2114,11 @@ margin: 0 auto;}
 &lt;b class=&quot;titre&quot;&gt;Logan&lt;/b&gt;&lt;br /&gt;de James Mangold&lt;br/&gt;
 avec Hugh Jackman, Sir Patrick Stewart, Dafne Keen, Erik Lasalle&lt;br /&gt;
 Sortie le 5 juillet
+&lt;/div&gt;
+
+&lt;div class=&quot;progtv&quot;&gt;
+&lt;h3&gt;Programme TV&lt;/h3&gt;
+-The Durrells - France 3
 &lt;/div&gt;</b:widget-setting>
       </b:widget-settings>
       <b:includable id='main'>
