@@ -3,7 +3,7 @@
 <html b:version='2' class='v2' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
   <head>
 <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'/>
-    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'/> 
+    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet" /> 
 <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' rel='stylesheet'/>
 
     <meta expr:content='data:blog.isMobile         ? &quot;width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0&quot;         : &quot;width=1100&quot;' name='viewport'/>
@@ -24,7 +24,14 @@ URL:      www.noaesthetic.com
 body{
 color: #000000;
 font-size: 14px;
-background-color: #D1E4FF;
+background: #D1E4FF;
+background: -webkit-linear-gradient(top, #010521, #D1E4FF);
+background: -o-linear-gradient(bottom, #010521, #D1E4FF);
+background: -moz-linear-gradient(bottom, #010521, #D1E4FF);
+background: linear-gradient(bottom, #010521, #D1E4FF);
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
 margin: 0 auto;
 padding: 0;
 }
@@ -142,9 +149,9 @@ transition-duration: 0.4s;
 background-color: #004466;
 width: 200px;
 border: 1px solid #FFFFFF;
-padding: 4px; 
+padding: 2px; 
 color: #FFFFFF;
-font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
+font-family: 'Didact Gothic', 'URW Gothic L', sans-serif;
 text-align: center;
 margin-left: 10px;
 }
@@ -157,7 +164,7 @@ background-color: #FFFFFF;
 color: #004466;
 text-transform: uppercase;
 border: none;  
-padding: 4px;
+padding: 2px;
 font-weight: bold;
 font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
 letter-spacing: 1px;
@@ -349,7 +356,7 @@ font-size: 14px;
 color: #010521;
 font-weight: lighter;
 margin: auto;
-font-family: 'Railway', sans-serif;
+font-family: 'Didact Gothic', sans-serif;
 width: 95%;
 padding: 20px;
 }
@@ -506,7 +513,7 @@ margin-left: 30px;
 
 .comments .comments-content .comment-content{
 text-align: justify;
-font-family: 'Raleway', sans-serif;
+font-family: 'Didact Gothic', sans-serif;
 color: #046B99;
 font-size: 14px;
 width: 90%;
@@ -593,18 +600,19 @@ text-transform: uppercase;
 
 .footer-outer {
 width: 100%;
+margin: 5px;
+margin-left: 5px;
 }
 
-footer {
-width: 100%;
+footer {opacity: 0.6;
+z-index: 999;
 background-color: #010521;
 width: 100%;
-margin-right: -20px;
 margin-top: 10px;
 padding-bottom: 10px;
 padding-right: 10px;
 color: #CBCDD4;
-font-family: 'Open Sans', 'Arial', sans-serif;
+font-family: 'Didact Gothic', sans-serif;
 }
 
 footer .widget h2{
@@ -612,6 +620,11 @@ font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
 text-transform: uppercase;
 text-align: center;
 color: #ffffff;
+font-size: 20px;
+margin: 5px;
+}
+footer .widget {
+margin-left: 10px;
 }
 
 footer li {
@@ -624,32 +637,35 @@ color: #FFFFFF;
 
 
 footer .widget ul li a{
-color: #CBCDD4;
+color: #010521;
 }
 
-footer .widget h2{
+footer a{
 text-transform: uppercase;
 color: #FFFFFF;
-font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
-text-align:center;
+transition: 0.5s all;
 }
 
-#BlogArchive1_ArchiveMenu{
+footer a:hover{
+line-spacing: 1px;
+}
+
+#ArchiveList, #BlogArchive1_ArchiveMenu{
 background-color: #010521;
-color: #CBCDD4;
+color: #ffffff;
 border: none;
 padding: 5px;
-width: 300px;
-font-family: 'Arial', sans-serif;
+font-family: 'Didact Gothic', sans-serif;
+margin: auto;
+text-align: center;
 }
 
-#Stats1_totalCount{
+#Stats1_content, #Stats1_totalCount{
 font-size: 18px;
-font-family: 'Century Gothic', 'URW Gothic L', sans-serif;
+font-family: 'Didact Gothic',sans-serif;
 font-weight: normal;
 text-align: center;
 margin: auto;
-width: 300px;
 margin-top: 10px;
 }
 
@@ -852,7 +868,14 @@ margin: 0px;
 body{
 color: #000000;
 font-size: 14px;
-background-color: #D1E4FF;
+background: #D1E4FF;
+background: -webkit-linear-gradient(top, #010521, #D1E4FF);
+background: -o-linear-gradient(bottom, #010521, #D1E4FF);
+background: -moz-linear-gradient(bottom, #010521, #D1E4FF);
+background: linear-gradient(bottom, #010521, #D1E4FF);
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
 margin: 0 auto;
 padding: 0;
 }
@@ -2118,7 +2141,7 @@ Sortie le 5 juillet
 
 &lt;div class=&quot;progtv&quot;&gt;
 &lt;h3&gt;Programme TV&lt;/h3&gt;
--The Durrells - France 3
+
 &lt;/div&gt;</b:widget-setting>
       </b:widget-settings>
       <b:includable id='main'>
@@ -2141,13 +2164,6 @@ Sortie le 5 juillet
  
   <footer>
     <div class='footer-outer'>
-    <div class='footer-cap-top cap-top'>
-      <div class='cap-left'/>
-      <div class='cap-right'/>
-    </div>
-      <div class='fauxborder-left footer-fauxborder-left'/>
-    <div class='fauxborder-right footer-fauxborder-right'/>
-	<div class='region-inner footer-inner'>
       <macro:include id='footer-sections' name='sections'>
         <macro:param default='2' name='num' value='3'/>
         <macro:param default='footer' name='idPrefix'/>
@@ -2171,7 +2187,6 @@ Sortie le 5 juillet
   </b:includable>
         </b:widget>
       </b:section>
-    </div>
     </div>
     </footer>
 
@@ -2256,7 +2271,7 @@ var postperpage=3; var numshowpage=4; var prevpage ='Previous'; var nextpage ='N
 
 
   
-<b:section-contents id='footer-1'/><b:section-contents id='footer-2-1'>
+<b:section-contents id='footer-2-1'>
   <b:widget id='HTML3' locked='false' title='' type='HTML'>
     <b:widget-settings>
       <b:widget-setting name='content'>&lt;h2&gt;Web and Screens&lt;/h2&gt;
@@ -2274,7 +2289,7 @@ Lorem Ipsum</b:widget-setting>
   <b:include name='quickedit'/>
 </b:includable>
   </b:widget>
-  <b:widget id='BlogArchive1' locked='false' title='Archives' type='BlogArchive'>
+<b:widget id='BlogArchive1' locked='false' title='Archives' type='BlogArchive'>
     <b:widget-settings>
       <b:widget-setting name='showStyle'>MENU</b:widget-setting>
       <b:widget-setting name='yearPattern'>yyyy</b:widget-setting>
@@ -2378,6 +2393,7 @@ Lorem Ipsum</b:widget-setting>
   </div>
 </b:includable>
   </b:widget>
+  
 </b:section-contents><b:section-contents id='footer-2-2'>
   <b:widget id='HTML4' locked='false' title='' type='HTML'>
     <b:widget-settings>
